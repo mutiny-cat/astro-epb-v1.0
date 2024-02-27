@@ -1,0 +1,23 @@
+---
+
+---
+
+<main>
+  <div class="wrapper">
+    <slot></slot>
+  </div>
+</main>
+
+<style>
+  main {
+    background-color: white;
+    flex-grow: 1;
+  }
+
+  .wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: var(--header-height);
+  }
+</style>

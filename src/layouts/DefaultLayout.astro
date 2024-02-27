@@ -1,4 +1,10 @@
 ---
+import '@fontsource-variable/cinzel'
+import '@fontsource/jaldi/400.css'
+import '@fontsource/jaldi/700.css'
+import "../styles/myfonts.css"
+import "../styles/vars.css"
+
 import Header from "../components/header/DefaultHeader.astro"
 import Footer from "../components/footer/DefaultFooter.astro"
 
@@ -17,7 +23,7 @@ const { pageTitle } = Astro.props
   <body>
     <Header></Header>
     <main>
-      <h1>Astro Build</h1>
+      <slot></slot>
     </main>
     <Footer></Footer>
   </body>

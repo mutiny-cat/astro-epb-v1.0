@@ -1,0 +1,106 @@
+---
+import Button from "../buttons/button.astro"
+---
+
+<section>
+  <div class="wrapper">
+    <div class="superior">
+      <div class="copy">
+        <h1>Puntaires de Barcelona</h1>
+        <strong>L'escola de la punta</strong>
+      </div>
+      <div class="image">
+        <img class="img" src="/assets/images/heros/puntaire.svg" alt="Imatge d'una puntaire">
+      </div>
+    </div>
+    <div class="cta">
+      <Button typeButton="ghost" url="#diferents" textButton="Comencem?" iconName="icon-button-magic" />
+      <Button typeButton="" url="/contacta" textButton="Contacta" iconName="icon-button-magic" />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background: radial-gradient(ellipse at bottom,#BBFFEF,transparent,transparent,#FFE7DC),radial-gradient(ellipse at top,#BBFFEF,transparent,#CCC9A1,transparent);
+    padding: var(--header-height) 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .superior {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (width < 1366px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .copy {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cinzel Variable', serif;
+    color: #033d2e;
+  }
+
+  h1 {
+    font-size: 52px;
+
+    @media (width < 768px) {
+      font-size: 24px;
+    }
+  }
+
+  strong {
+    font-size: 24px;
+
+    @media (width < 768px) {
+      font-size: 20px;
+    }
+  }
+
+  .image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    @media (width < 1366px) {
+      margin-top: 2rem;
+    }
+  }
+
+  .img {
+    max-width: 75%;
+
+    @media (width < 768px) {
+      max-width: 100%;
+    }
+  }
+
+  .cta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    @media (width < 640px) {
+      flex-direction: column;
+    }
+  }
+</style>

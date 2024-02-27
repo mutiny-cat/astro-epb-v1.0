@@ -1,0 +1,58 @@
+:root {
+  --fg-primary: #00684F;
+  --fg-primaryAlt: #00AA82;
+  --fg-secondary: #033D2E;
+  --fg-secondaryAlt: #001410;
+  --fg-white: #FFFFFF;
+  --fg-black: #121212;
+  --fg-error: #DC143CFF;
+
+  --bg-light: #ECF0F3;
+  --bg-lighter: #F9FAFB;
+  --bg-lightest: #FBFDFE;
+  --bg-white: #FFFFFF;
+  --bg-dark: #00684F;
+  --bg-darker: #033D2E;
+  --bg-darkest: #001410;
+  --bg-black: #121212;
+  --bg-dark-rgba: 0, 104, 79;
+  --bg-darker-rgba: 3, 61, 46;
+  --bg-darkest-rgba: 0, 20, 16;
+
+  --color-text: #687782;
+  --color-title: #687782;
+
+  --sh-header: rgba(30, 136, 143, .1);
+  --sh-card: rgba(27, 54, 92, .1);
+
+  --border-light: #cccccc;
+  --border-color: 204, 204, 204;
+  --border-radius: .25rem;
+
+  --transition: all .5s ease-in-out;
+  --transition-menu-view: all .5s ease-in-out;
+  --transition-button: all .5s ease-in-out;
+  --transition-link: all .5s ease-in-out;
+  --transition-card: background-color .5s ease-in-out;
+
+  --accent: #2337ff;
+  --accent-dark: #000d8a;
+  --black: 15, 18, 25;
+  --gray: 96, 115, 159;
+  --gray-light: 229, 233, 240;
+  --gray-dark: 34, 41, 57;
+  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+
+  --box-shadow: 0 2px 6px rgba(var(--border-color), 25%), 0 8px 24px rgba(var(--border-color), 15%), 0 16px 32px rgba(var(--border-color), 15%);
+  --box-shadow2: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 15%), 0 16px 32px rgba(var(--gray), 15%);
+}
+
+:root {
+  --header-height: 96px;
+  --footer-height: 32px;
+
+  @media (width < 1366px) {
+    --header-height: 48px;
+    --footer-height: 48px;
+  }
+}

@@ -2,11 +2,130 @@
 
 ---
 
-<header>Default header</header>
+<header>
+  <div class="wrapper">
+    <a class="header-logo" href="/" title="Inici">
+      <picture>
+        <source srcset="/assets/images/logotips/panot-bcn.svg" media="(max-width: 1079px)" />
+        <img class="header-img" src="/assets/images/logotips/logo-escola.svg" alt="Escola de Puntaires de Barcelona" />
+      </picture>
+    </a>
+    <button class="header-toggle">
+      <span class="header-icon icon-menu-open"></span>
+    </button>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#" title="#">option 1</a></li>
+        <li><a href="#" title="#">option 2</a></li>
+        <li><a href="#" title="#">option 3</a></li>
+        <li><a href="#" title="#">option 4</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <style>
   header {
-    background-color: chocolate;
-    padding: 1rem 0;
+    background-color: var(--bg-lightest);
+    border-color: 10px solid var(--sh-header);
+    box-shadow: var(--box-shadow);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    & .header-logo {
+      width: calc(var(--header-height) * 1.7);
+
+      @media (width < 1366px) {
+        width: calc(var(--header-height) / 1.5);
+        height: calc(var(--header-height) / 1.5);
+      }
+    }
+
+    & .header-img {
+      display: block;
+      width: 100%;
+    }
+
+    & .header-toggle {
+      background-color: transparent;
+      color: var(--fg-primary);
+      border: none;
+      outline: none;
+      cursor : pointer;
+      font-size: calc(var(--header-height) / 1.5);
+      line-height: 0;
+
+      @media (width >= 1366px) {
+        display: none;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 90%;
+    height: calc(var(--header-height) / 1.5);
+  }
+
+  nav {
+
+    @media (width < 1366px) {
+      display: none;
+
+      &.is-active {
+        width: 100%;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        height: calc(100vh - calc(var(--header-height) + var(--footer-height)));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--fg-primaryAlt);
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+
+    @media (width < 1366px) {
+      background-color: coral;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 1rem;
+      gap: .5rem;
+      width: 100%;
+    }
+  }
+
+  li {
+    background-color: cyan;
+    padding: .5rem;
+    text-align: center;
   }
 </style>
+
+<script>
+  const button = document.querySelector('.header-toggle')
+  const nav = document.querySelector('.header-nav')
+  const changeIcon = document.querySelector('.header-icon')
+
+  button.addEventListener('click', () => {
+    nav.classList.toggle('is-active')
+    changeIcon.classList.toggle('icon-menu-close')
+  })
+</script>

@@ -10,6 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/cinzel": "^5.0.8",
+    "@fontsource/jaldi": "^5.0.8",
     "astro": "^4.4.5"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
   }
 }

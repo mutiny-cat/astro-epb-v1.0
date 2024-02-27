@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'epbcardbold';
+    src: url('/assets/fonts/epbcardbold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'epbcardbold';
+    src: url('/assets/fonts/epbcardbold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "epbicons";
+    src:url("/assets/fonts/epbicons.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+[data-icon]:before {
+    font-family: "epbicons" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "epbicons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu-open:before {
+    content: "\61";
+}
+.icon-menu-close:before {
+    content: "\62";
+}
+.icon-arrow-bottom:before {
+    content: "\63";
+}
+.icon-arrow-down:before {
+    content: "\64";
+}
+.icon-arrow-gototop:before {
+    content: "\65";
+}
+.icon-arrow-left:before {
+    content: "\66";
+}
+.icon-arrow-right:before {
+    content: "\67";
+}
+.icon-arrow-top:before {
+    content: "\68";
+}
+.icon-arrow-up:before {
+    content: "\69";
+}
+.icon-blog-article:before {
+    content: "\6a";
+}
+.icon-blog-author:before {
+    content: "\6b";
+}
+.icon-blog-date:before {
+    content: "\6c";
+}
+.icon-contact-envelope:before {
+    content: "\6d";
+}
+.icon-contact-geo:before {
+    content: "\6e";
+}
+.icon-contact-mobile:before {
+    content: "\6f";
+}
+.icon-contact-phone:before {
+    content: "\70";
+}
+.icon-contact-whatsapp:before {
+    content: "\71";
+}
+.icon-form-checkempty:before {
+    content: "\72";
+}
+.icon-form-checkmarked:before {
+    content: "\73";
+}
+.icon-link-external:before {
+    content: "\74";
+}
+.icon-link-share:before {
+    content: "\75";
+}
+.icon-button-magic:before {
+    content: "\76";
+}
+.icon-button-sendmessage:before {
+    content: "\77";
+}
+.icon-send-messageerror:before {
+    content: "\78";
+}
+.icon-send-messageok:before {
+    content: "\79";
+}
+.icon-visit-adapted:before {
+    content: "\7a";
+}
+.icon-visit-calendar:before {
+    content: "\42";
+}
+.icon-visit-geo:before {
+    content: "\43";
+}
+.icon-visit-hour:before {
+    content: "\44";
+}
+.icon-visit-metro:before {
+    content: "\41";
+}
+.icon-visit-train:before {
+    content: "\45";
+}
+.icon-visit-tram:before {
+    content: "\46";
+}
+.icon-visit-bus:before {
+    content: "\47";
+}
+.icon-xxss-facebook:before {
+    content: "\48";
+}
+.icon-xxss-instagram:before {
+    content: "\49";
+}
+.icon-xxss-linkedin:before {
+    content: "\4a";
+}
+.icon-xxss-meta:before {
+    content: "\4b";
+}
+.icon-xxss-twitter:before {
+    content: "\4c";
+}
+.icon-xxss-xt:before {
+    content: "\4d";
+}
+.icon-canal-twitch:before {
+    content: "\4e";
+}
+.icon-canal-youtube:before {
+    content: "\4f";
+}
+.icon-special-at:before {
+    content: "\50";
+}
+.icon-special-quote:before {
+    content: "\51";
+}
+.icon-button-flower:before {
+    content: "\52";
+}
+.icon-arrow-gotobottom:before {
+    content: "\53";
+}
+.icon-arrow-gotoleft:before {
+    content: "\54";
+}
+.icon-arrow-gotoright:before {
+    content: "\55";
+}
