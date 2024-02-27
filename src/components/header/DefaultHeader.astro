@@ -1,12 +1,22 @@
 ---
-
+const menuItems = [
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "#", "title": "L'escola"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/formacio", "title": "Formació"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/historia-de-la-punta", "title": "Història de la punta"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/punta-de-barcelona", "title": "Punta de Barcelona"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/estils-i-mostres", "title": "Estils i mostres"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/projectes", "title": "Projectes"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/de-puntes-i-puntaires", "title": "De puntes i puntaires"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/visita", "title": "Visita'ns"},
+  {"classItemLi": "menu-li", "classItemA": "menu-a menu-a-button", "url": "#", "title": "Contacta"}
+]
 ---
 
 <header>
   <div class="wrapper">
     <a class="header-logo" href="/" title="Inici">
       <picture>
-        <source srcset="/assets/images/logotips/panot-bcn.svg" media="(max-width: 1079px)" />
+        <source srcset="/assets/images/logotips/panot-bcn.svg" media="(max-width: 1365px)" />
         <img class="header-img" src="/assets/images/logotips/logo-escola.svg" alt="Escola de Puntaires de Barcelona" />
       </picture>
     </a>
@@ -14,11 +24,12 @@
       <span class="header-icon icon-menu-open"></span>
     </button>
     <nav class="header-nav">
-      <ul>
-        <li><a href="#" title="#">option 1</a></li>
-        <li><a href="#" title="#">option 2</a></li>
-        <li><a href="#" title="#">option 3</a></li>
-        <li><a href="#" title="#">option 4</a></li>
+      <ul class="menu-ul">
+        {
+          menuItems.map((menuItem) =>
+            <li class={menuItem.classItemLi}><a class={menuItem.classItemA} href={menuItem.url} title={menuItem.title}>{menuItem.title}</a></li>
+          )
+        }
       </ul>
     </nav>
   </div>
@@ -101,9 +112,9 @@
     list-style-type: none;
     margin: 0;
     display: flex;
+    align-items: center;
 
     @media (width < 1366px) {
-      background-color: coral;
       flex-direction: column;
       justify-content: center;
       padding: 0 1rem;
@@ -113,9 +124,59 @@
   }
 
   li {
-    background-color: cyan;
-    padding: .5rem;
+    background-color: transparent;
+    padding: .2rem;
     text-align: center;
+  }
+
+  .menu-a {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    color: var(--fg-primary);
+    padding: 0 .5rem;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Jaldi', sans-serif;
+
+    &:hover {
+      color: var(--fg-primary);
+      border-bottom: 1px solid var(--fg-primary);
+    }
+
+    &.is-active {
+      color: var(--fg-primaryAlt);
+      border-bottom: 1px solid var(--fg-primaryAlt);
+    }
+
+    @media (width < 1366px) {
+      color: white;
+
+      &:hover {
+        color: var(--fg-primary);
+      }
+    }
+  }
+
+  .menu-a-button {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--fg-primary);
+    color: var(--fg-white);
+    transition: var(--transition-button);
+
+    &:hover {
+      background-color: var(--fg-primaryAlt);
+      border: none;
+      color: white;
+    }
+
+    &.is-active {
+      background-color: var(--fg-primaryAlt);
+      border: none;
+      color: white;
+    }
   }
 </style>
 
@@ -124,8 +185,23 @@
   const nav = document.querySelector('.header-nav')
   const changeIcon = document.querySelector('.header-icon')
 
+  const menuLi = document.querySelectorAll('.menu-li')
+  const menuItem = document.querySelectorAll('.menu-a')
+
   button.addEventListener('click', () => {
     nav.classList.toggle('is-active')
     changeIcon.classList.toggle('icon-menu-close')
+  })
+
+  menuLi.forEach((cadLi, i) => {
+    menuLi[i].addEventListener('click', () => {
+      menuLi.forEach((cadaLi, i) => {
+        menuLi[i].classList.remove('is-active')
+        menuItem[i].classList.remove('is-active')
+      })
+
+      menuLi[i].classList.add('is-active')
+      menuItem[i].classList.add('is-active')
+    })
   })
 </script>
