@@ -1,2 +1,3 @@
 # Escola de Puntaires de Barcelona
-## Web de l'Escola
+## Web de l'Escola de Puntaires
+
