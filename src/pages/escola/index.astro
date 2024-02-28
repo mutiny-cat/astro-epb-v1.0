@@ -10,17 +10,21 @@ const pageTitle = "L'escola"
 
 <Layout pageTitle={pageTitle}>
   <Aside slot="aside" url={url} pageTitle={pageTitle} Menu={Menu} />
-  <h1>Banner</h1>
+  <div class="hero">
+    <h1>Hero Banner L'escola</h1>
+    <p>Fotografia de l'escola</p>
+    <span class="line-separator"></span>
+  </div>
 
   <section>
     <article>
-      <p>L’ Escola de Puntaires de Barcelona es dedica a l’ensenyament de tot tipus de puntes, des de les més elementals fins a les d’estil propi, ja sigui en les tècniques de coixí o agulla, tant del nostre país com de la resta d’Europa. En són exemples en coixí les puntes belgues, angleses i italianes, i en agulla, les italianes i les franceses.</p>
-      <p>L’especialitat de l’Escola és la ”Punta de Barcelona” creada al segle XX per les seves fundadores, les germanes Raventós. Es tracta d’una punta elegant i original de característiques pròpies.</p>
-      <p>Els coneixements i les investigacions de les esmentades germanes Raventós, les portaren a publicar el llibre ”Puntes“ un ampli tractat de les dues tècniques.</p>
-      <p>La Fundació té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
+      <p><strong>L'Escola de Puntaires de Barcelona</strong> es dedica a l’ensenyament de tot tipus de puntes, des de les més elementals fins a les d’estil propi, ja sigui en les tècniques de <em>coixí</em> o <em>agulla</em>, tant del nostre país com de la resta d’Europa. En són exemples en coixí les puntes belgues, angleses i italianes, i en agulla, les italianes i les franceses.</p>
+      <p>L’especialitat de l’Escola és la <em>Punta de Barcelona</em> creada al segle XX per les seves fundadores, les germanes Raventós. Es tracta d’una punta elegant i original de característiques pròpies.</p>
+      <p>Els coneixements i les investigacions de les esmentades germanes Raventós, les portaren a publicar el llibre <em>Puntes</em> un ampli tractat de les dues tècniques.</p>
+      <p>La <strong>Fundació</strong> té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
       <p>En l’ànim de l’Escola està combinar, en una perfecta simbiosi, d’una banda la promoció de les puntes a l’agulla i al coixí, per tal d’evitar que es perdin definitivament les més belles i antigues tècniques, i d’una altra la formació de puntaires capaces de crear nous punts i nous dissenys.</p>
-      <p>Aquest mateix fou l’esperit de les germanes Raventós, conegudes com “les senyoretes” en iniciar la nova escola, i l’esperit amb què el 1952 reberen, amb motiu de la celebració del Congrés Eucarístic, l’encàrrec d’elaborar unes tovalles per l’altar major de la catedral de Barcelona, combinant la punta a l’agulla i la punta al coixí. El resultat fou una peça amb caràcter propi, nou i diferent, que donà origen al que aleshores es batejà com a “Punta de Barcelona”, reconeguda arreu del món.</p>
-      <p>Des fa anys l’Escola de Puntaires de Barcelona és considerada la “universitat de les puntes”, ja que es dedica a l’ensenyament de la major part de les puntes que es fan a Europa. Els seus treballs són reproduïts en llibres i revistes de tot el món.</p>
+      <p>Aquest mateix fou l’esperit de les germanes Raventós, conegudes com <em>les senyoretes</em> en iniciar la nova escola, i l’esperit amb què el 1952 reberen, amb motiu de la celebració del Congrés Eucarístic, l’encàrrec d’elaborar unes tovalles per l’altar major de la catedral de Barcelona, combinant la punta a l’agulla i la punta al coixí. El resultat fou una peça amb caràcter propi, nou i diferent, que donà origen al que aleshores es batejà com a <strong>Punta de Barcelona</strong>, reconeguda arreu del món.</p>
+      <p>Des fa anys l’Escola de Puntaires de Barcelona és considerada la <em>Universitat de les puntes</em>, ja que es dedica a l’ensenyament de la major part de les puntes que es fan a Europa. Els seus treballs són reproduïts en llibres i revistes de tot el món.</p>
     </article>
   </section>
 
@@ -80,21 +84,251 @@ const pageTitle = "L'escola"
   </section>
 
   <section id="cronologia">
-    <h2>Cronologia</h2>
     <article>
+      <h2>Cronologia</h2>
 
+      <div>
+        <div class="accordionItem">
+          <h3 class="accordionTitle">1890 - 1899</h3>
+          <div class="accordionContent">
+            <ul>
+              <li><strong>1985:</strong> Neix <em>Antònia Raventós i Ventura</em>.</li>
+              <li><strong>1989:</strong> Neix <em>Montserrat Raventós i Ventura</em>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordionItem">
+          <h3 class="accordionTitle">1910 - 1919</h3>
+          <div class="accordionContent">
+            <ul>
+              <li><strong>1910:</strong> Montserrat i Antònia Raventós i Ventura van iniciar un procés d’investigació i estudi de les puntes catalanes a la bibliografia de la col·lecció Massana, que les portà a recuperar els punts i les tècniques que s’havien perdut a casa nostra.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordionItem">
+          <h3 class="accordionTitle">1930 - 1939</h3>
+          <div class="accordionContent">
+            <ul>
+              <li><strong>1931:</strong> Adelaida Ferrer publica l’article ”Col·lecció de patrons de puntes al coixí” al Butlletí dels Museus d’Art de Barcelona.</li>
+              <li>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol•licitades per impartir els seus coneixements com a professores a la mateixa escola.</li>
+              <li><strong>1932:</strong> Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol•licitades per impartir els seus coneixements com a professores a la mateixa escola.</li>
+              <li><strong>1934:</strong> Adelaida Ferrer publica l’article ”Estris per a fer una punts de coixí ” al Butlletí dels Museus d’Art de Barcelona.</li>
+              <li><strong>1935:</strong> Aquest any varen participar en una exposició a la Casa de l’Ardiaca de Barcelona, seu de l’Institut de Cultura i Biblioteca Popular de La Dona, actual Arxiu Històric de la Ciutat. Els documents antics ja ens parlen d’aquesta exposició de l’any 35, possiblement dins del programa d’actes de l’Institut de Cultura de l’època. Dissortadament dins dels arxius de l’Escola de Puntaires de Barcelona no se’n conserva cap imatge.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </article>
   </section>
 
   <section id="estatuts">
     <article>
       <h2>Estatuts</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam amet beatae, blanditiis consequatur culpa cum deserunt dicta dolor dolorum eaque eos eveniet ex excepturi facilis fuga harum id illo iste, itaque laboriosam minima molestias natus nisi nostrum obcaecati quasi quidem quis reiciendis repellat, saepe similique sunt voluptatum. Doloribus dolorum laborum minus nihil. A ab asperiores corporis earum eum excepturi expedita facere id inventore iusto libero molestias nemo non praesentium provident quae repellat, tempora tempore? Adipisci, culpa cum eius exercitationem illum nihil omnis placeat provident tenetur velit. Esse eum nobis quae reprehenderit totam velit. Aspernatur, consequuntur delectus doloribus earum explicabo hic impedit iste mollitia necessitatibus nesciunt nisi non nostrum optio perferendis quis ratione rem. Ab beatae corporis distinctio eius est et impedit in modi, nulla numquam optio pariatur perferendis placeat provident quas repudiandae sunt totam vel vero vitae. Assumenda doloremque dolorum ducimus eaque, molestiae natus nihil qui reiciendis! Aliquid delectus, exercitationem facere minus quaerat unde? A aliquam asperiores aut blanditiis consectetur debitis dolores ducimus eius eligendi enim facere fugiat maiores necessitatibus numquam provident qui quidem quis quod suscipit, tempora, veniam, voluptates voluptatum? Alias autem corporis culpa doloribus illo quo sapiente tenetur ut. Assumenda beatae explicabo incidunt nostrum sunt vel veniam. Aperiam, consequatur cumque dolorem doloremque ex, fuga fugiat incidunt laborum modi officiis praesentium tempora vero voluptatum! Distinctio dolorem doloribus itaque modi nisi, porro quisquam? Adipisci aliquam amet asperiores at cum eius id minima modi molestiae natus officia placeat quos recusandae repellendus sapiente totam, ullam. Accusantium aspernatur beatae consequuntur corporis cupiditate illo impedit, iste labore magnam minima nesciunt quaerat quidem ratione recusandae sapiente sequi sint. Ab accusamus alias aliquid consequatur dignissimos dolorem dolores error ex facere inventore, ipsum iste libero nam nemo officia praesentium provident quas qui quibusdam reiciendis sequi sint tempora unde ut veniam voluptas voluptates voluptatibus. Dicta dolore eveniet neque pariatur placeat quibusdam. Accusamus adipisci at aut commodi dolorum error excepturi fugiat id ipsum iure laboriosam laudantium magni necessitatibus nobis nulla odit quasi, quis ratione, recusandae soluta suscipit tempora ut vero! Accusantium aperiam architecto aut, cumque dignissimos doloremque doloribus ducimus est exercitationem facere illum impedit inventore ipsam laudantium magni maiores nemo nesciunt nisi odit officia optio perferendis praesentium provident qui, quibusdam recusandae reiciendis repudiandae sint sit totam unde vel, velit voluptate. Assumenda commodi dignissimos earum eligendi eos facilis hic illum ipsum, laboriosam, laborum non pariatur quisquam ratione saepe, sapiente tempore temporibus voluptates? Commodi, deserunt fuga in iure neque obcaecati? Ad asperiores autem consequatur culpa, ea, facere fugit iusto nam nulla praesentium provident quod quos sed sit veniam? Accusantium autem blanditiis, eaque eius esse nisi quibusdam soluta? Animi asperiores ea impedit in incidunt ipsam minima perferendis provident quas vitae? Autem, quas, tempore. Ab ad, culpa delectus ducimus eaque hic nemo non nulla obcaecati omnis pariatur repellat repellendus sapiente sed tenetur totam veniam voluptatibus voluptatum. Consequuntur dolorem ducimus, eos et eveniet hic recusandae. A ab alias dolore dolorem dolorum eaque enim eos error id illo magni maxime minus nam nesciunt, odit porro provident rem repellendus ullam, voluptatem. A aliquid animi assumenda delectus dolore doloremque est eveniet illum reiciendis, rerum sint soluta tempore. Ab aspernatur dolorum explicabo molestiae, voluptate voluptatibus! Ad aliquid, aspernatur assumenda autem, distinctio dolorum explicabo ipsam ipsum minima modi nihil officia possimus, reiciendis repudiandae sapiente. Architecto assumenda dolorem ea eos eum hic ipsa repellat repudiandae. Ab accusamus ad adipisci alias aspernatur assumenda at aut consectetur consequuntur cumque cupiditate distinctio dolorem doloremque, enim eos excepturi explicabo fugiat hic itaque laudantium minus necessitatibus, nemo provident, quasi qui quo sequi sit sunt tempora ut veniam veritatis vero vitae? Aliquid culpa cupiditate, deleniti, dicta eaque earum eveniet facere fuga in ipsum iusto molestias nobis perspiciatis possimus praesentium quis quo repellat sed sit ut. Architecto blanditiis debitis delectus ex hic laudantium nihil, placeat provident quis sequi? Adipisci in mollitia quia voluptas? Animi cumque, cupiditate deleniti ea error exercitationem, facere fuga fugit harum ipsum maxime minima modi molestias mollitia nisi nostrum perspiciatis quae quam quas quasi, qui rem sapiente similique temporibus ut vel vitae voluptas? Accusantium ad animi, atque deleniti eum fuga hic id illum laudantium molestias neque odio officia praesentium quas sed sint, sunt tempora voluptatem? Debitis enim explicabo facilis incidunt libero optio, quam tempora. Accusamus adipisci corporis dicta dolorem excepturi expedita ipsa ipsam itaque labore laboriosam magni minima modi natus, odit ratione repellat vel velit voluptatum! Aliquam aspernatur at, atque aut cum cupiditate, doloribus enim fugit hic ipsam magni odio officiis perspiciatis possimus, quia similique sit temporibus veritatis voluptates voluptatum? Aperiam eaque hic in. Fugit id in, laudantium nesciunt nulla pariatur perspiciatis praesentium quam quia quibusdam recusandae, saepe sed unde vel veniam. Alias amet aperiam aut cum deleniti dolorum eum incidunt iure libero mollitia nesciunt omnis, provident quia? Alias amet asperiores deleniti dolor error eveniet facilis harum inventore ipsa iure labore magni, nam optio provident quaerat quas quia quis quod repellat rerum temporibus ut veritatis voluptatem! Architecto at aut eius, excepturi exercitationem illo incidunt iusto laborum magnam maxime modi molestias officia omnis quibusdam recusandae temporibus veritatis voluptas. Cum dicta ipsam odit sapiente voluptates. Amet culpa impedit laudantium necessitatibus velit. Aliquam blanditiis corporis culpa ducimus et excepturi hic ipsam magnam, natus neque quam sint tenetur voluptates? A ab accusamus alias atque cumque, cupiditate dolore doloremque eum ex exercitationem explicabo ipsam maiores minus obcaecati officiis, quaerat quasi qui ratione sed sunt tempora, vel veritatis vero voluptate voluptatum? Adipisci animi, at, dicta dolorum eius error esse eum harum inventore itaque iure labore non odio omnis quaerat quasi suscipit, temporibus vel velit voluptate! A accusantium amet asperiores consectetur consequatur corporis debitis dignissimos dolore dolorum eligendi eos error est eveniet facere fugiat fugit harum hic ipsam ipsum iste labore laboriosam magnam nesciunt nihil, porro quae quas reprehenderit rerum sit tempora temporibus velit veritatis voluptatem! Ab, amet consectetur consequatur corporis delectus dolore dolores eum ipsa maxime minus molestiae nisi nobis omnis, quaerat qui quod reiciendis repellat veritatis vitae voluptate! Aspernatur eos inventore nesciunt nihil pariatur. Enim minus neque suscipit? Accusamus ad assumenda delectus dicta saepe. Amet dignissimos facilis incidunt, nam natus sint? Dolores eius est ipsa provident quia recusandae.</p>
+      <p>Estatuts de la Fundació Privada ESCOLA de PUNTAIRES de BARCELONA adaptats Llei 4/2008 del llibre tercer del Codi Civil de Catalunya.</p>
+      <ul class="accordion">
+        <li class="block">
+          <h3 class="title">Capítol I. Denominació, naturalesa, durada, domicili, àmbit d’actuació i règim jurídic.</h3>
+          <ul class="content">
+            <li>
+              <article>
+                <h4>Article 1. <em>Denominació, naturalesa i durada.</em></h4>
+                <p>La Fundació és una entitat sense ànim de lucre que té el patrimoni, els rendiments i els recursos obtinguts afectats de forma permanent a la realització de les finalitats d’interès general previstes en aquests estatuts. La fundació es denomina FUNDACIÓ PRIVADA ESCOLA DE PUNTAIRES DE BARCELONA.</p>
+              </article>
+              <article>
+                <h4>Article 2. <em>Domicili.</em></h4>
+                <p>El domicili de la Fundació queda fixat a la ciutat de Barcelona (08001), carrer Sant Erasme, número 1, Baixos.</p>
+              </article>
+              <article>
+                <h4>Article 3. <em>Àmbit d’actuació.</em></h4>
+                <p>La Fundació exerceix les seves funcions majoritàriament a Catalunya. No obstant això, pot actuar a la resta del territori de l’Estat espanyol així com a escala internacional.</p>
+              </article>
+              <article>
+                <h4>Article 4. <em>Règim jurídic.</em></h4>
+                <p>La Fundació té personalitat jurídica pròpia i gaudeix de plena capacitat jurídica i d’obrar per aconseguir els seus fins sense altres limitacions que les establertes en aquests estatuts i en les disposicions legals vigents.</p>
+                <p>La Fundació es regeix per les declaracions contingudes a la carta fundacional, per les disposicions legals que li són d’aplicació, per les establertes en aquests estatuts i pels acords que adopti el Patronat en l’exercici de les seves funcions.</p>
+              </article>
+            </li>
+          </ul>
+        </li>
+        <li class="block">
+          <h3 class="title">Capítol II. Finalitats i activitats.</h3>
+          <ul class="content">
+            <li>
+              <article>
+                <h4>Article 5. <em>Finalitats fundacionals.</em></h4>
+                <p>La Fundació té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
+              </article>
+              <article>
+                <h4>Article 6. <em>Activitats.</em></h4>
+                <p>Per a la consecució dels fins fundacionals, la Fundació desenvolupa les activitats que el Patronat considera necessàries directament i/o en col•laboració amb altres entitats, institucions o persones, d’acord amb el que estableix la normativa sobre fundacions. En concret, a fi de dur a terme la finalitat fundacional, la Fundació desenvolupa, entre altres, les activitats que, sense ànim exhaustiu, s’enumeren a continuació:</p>
+                <ul class="ul-table">
+                  <li>L’establiment d’escoles d’aprenentatge.</li>
+                  <li>La concessió de beques i ajuts per l’estudi de les especialitats.</li>
+                  <li>L’organització de la propaganda de les puntes i randes oralment i per escrit.</li>
+                  <li>La venda dels productes fabricats per les escoles de la fundació.</li>
+                </ul>
+              </article>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </article>
   </section>
 </Layout>
 
 <style>
+  .accordionItem {
+    margin-bottom: .5rem;
+  }
+
+  .accordionTitle {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .accordionTitle + .accordionContent {
+    display: none;
+  }
+
+  .accordionTitle {
+    font-size: 1rem;
+    position: relative;
+    color: var(--fg-primary);
+
+    &::after {
+      content: "\64";
+      font-family: "epbicons";
+      position: absolute;
+      right: .5rem;
+      transition: all .1s ease;
+    }
+  }
+
+  .accordionTitle.is-open + .accordionContent {
+    display: block;
+  }
+
+  .accordionTitle.is-open {
+    &::after {
+      rotate: 180deg;
+      transition: all .1s ease;
+    }
+  }
+
+  .accordionContent {
+    background-color: var(--bg-lightest);
+    border: 1px solid var(--fg-primary);
+    border-radius: 4px;
+    color: var(--fg-secondary);
+    padding: 1rem;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: .5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ul-table {
+    list-style-type: square;
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+
+  .accordion {
+    margin-top: 1rem;
+
+    & .block {
+      padding: 0;
+
+      &:last-child {
+        padding: 0;
+      }
+
+      &.is-active .content {
+        height: auto;
+        padding: 1rem;
+        border: 1px solid var(--bg-dark);
+        border-radius: 4px;
+      }
+
+      &.is-active .title {
+        &:after {
+          rotate: 180deg;
+          transition: all .1s ease;
+        }
+      }
+    }
+
+    & .title {
+      color: var(--fg-primary);
+      font-size: 1rem;
+      margin: 0 0 .2rem;
+      padding: 0 1rem 0 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor : pointer;
+
+      &:after {
+        content: "\64";
+        font-family: 'epbicons';
+        font-size: 1rem;
+        font-style: normal;
+        position: absolute;
+        right: .5rem;
+      }
+    }
+
+    & .content {
+      background-color: var(--bg-lightest);
+      color: var(--fg-primary);
+      height: 0;
+      margin: 0 0 .5rem;
+      padding: 0;
+      overflow: hidden;
+      transition: background-color .5s ease;
+      font-size: .9rem;
+
+      & p {
+        padding: 0;
+        margin: .2rem;
+      }
+    }
+  }
+
+  .hero {
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    position: relative;
+
+    & h1 {
+      color: var(--fg-primary);
+    }
+
+    & .line-separator {
+      width: 50%;
+      height: 1px;
+      background-color: var(--fg-primary);
+      position: absolute;
+      bottom: calc(var(--header-height) - calc(var(--header-height) + calc(var(--header-height) / 1.7)));
+    }
+  }
+
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -110,16 +344,36 @@ const pageTitle = "L'escola"
 
   article {
     h2 {
-      padding-bottom: 2rem;
+      margin-bottom: 1.1rem;
+      color: var(--fg-primary);
+      border-bottom: 1px solid var(--fg-primary);
+      font-size: 1.3rem;
     }
 
     p {
-      padding-bottom: 1rem;
-      text-wrap: pretty;
+      margin-bottom: 1rem;
 
       &:last-child {
-        padding-bottom: 0;
+        margin-bottom: 0;
       }
     }
   }
 </style>
+
+<script>
+  const accordionTitles = document.querySelectorAll(".accordionTitle")
+
+  accordionTitles.forEach((accordionTitle) => {
+    accordionTitle.addEventListener("click", () => {
+      if (accordionTitle.classList.contains("is-open")) {
+        accordionTitle.classList.remove("is-open")
+      } else {
+        const accordionTitlesWithIsOpen = document.querySelectorAll(".is-open")
+        accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
+          accordionTitleWithIsOpen.classList.remove("is-open")
+        })
+        accordionTitle.classList.add("is-open")
+      }
+    })
+  })
+</script>

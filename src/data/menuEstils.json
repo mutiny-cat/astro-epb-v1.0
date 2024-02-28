@@ -1,10 +1,10 @@
 [
-  {"url": "/estils-i-mostres/macrame", "title": "Macramé"},
-  {"url": "/estils-i-mostres/malles", "title": "Malles"},
-  {"url": "/estils-i-mostres/puntes-populars-catalanes", "title": "Puntes populars catalanes"},
-  {"url": "/estils-i-mostres/puntes-al-coixi-rodo", "title": "Puntes al coixí rodó"},
-  {"url": "/estils-i-mostres/puntes-a-la-agulla", "title": "Puntes a l'agulla"},
-  {"url": "/estils-i-mostres/punta-de-barcelona", "title": "Punta de Barcelona"},
-  {"url": "/estils-i-mostres/punta-de-arenys", "title": "Punta d'Arenys"},
-  {"url": "/estils-i-mostres/punta-del-arbos", "title": "Punta de l'Arboç"}
+  {"url": "/estils-i-mostres#macrame", "title": "Macramé"},
+  {"url": "/estils-i-mostres#malles", "title": "Malles"},
+  {"url": "/estils-i-mostres#puntes-populars-catalanes", "title": "Puntes populars catalanes"},
+  {"url": "/estils-i-mostres#puntes-al-coixi-rodo", "title": "Puntes al coixí rodó"},
+  {"url": "/estils-i-mostres#puntes-a-la-agulla", "title": "Puntes a l'agulla"},
+  {"url": "/estils-i-mostres#punta-de-barcelona", "title": "Punta de Barcelona"},
+  {"url": "/estils-i-mostres#punta-de-arenys", "title": "Punta d'Arenys"},
+  {"url": "/estils-i-mostres#punta-del-arbos", "title": "Punta de l'Arboç"}
 ]

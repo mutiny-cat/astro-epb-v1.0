@@ -1,4 +1,4 @@
 [
-  {"url": "/projectes/catedral-de-barcelona", "title": "Catedral de Barcelona"},
-  {"url": "/projectes/sagrada-familia", "title": "Sagrada Família"}
+  {"url": "/projectes#catedral-de-barcelona", "title": "Catedral de Barcelona"},
+  {"url": "/projectes#sagrada-familia", "title": "Sagrada Família"}
 ]
