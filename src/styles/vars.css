@@ -55,6 +55,6 @@
 
   @media (width < 1366px) {
     --header-height: 48px;
-    --footer-height: 48px;
+    --footer-height: 40px;
   }
 }

@@ -21,9 +21,14 @@ const { url, pageTitle, Menu } = Astro.props
 
   .nav-aside-title {
     padding: 0;
-    background-color: transparent;
+    color: var(--fg-primary);
     text-decoration: none;
-    color: var(--fg-secondary);
+
+    h2 {
+      border-bottom: 1px solid var(--fg-primary);
+      margin-right: .5rem;
+      font-size: 1.1rem;
+    }
   }
 
   ul {
@@ -35,6 +40,7 @@ const { url, pageTitle, Menu } = Astro.props
     display: block;
     text-decoration: none;
     font-family: 'Jaldi', sans-serif;
+    font-weight: 400;
     color: var(--fg-primary);
     padding: .2rem .3rem;
     margin-right: .5rem;
@@ -58,7 +64,7 @@ const { url, pageTitle, Menu } = Astro.props
     &.is-active {
       background-color: var(--fg-primaryAlt);
       color: white;
-      font-weight: 700;
+      font-weight: 400;
       border-radius: 2px;
 
       &:after {
