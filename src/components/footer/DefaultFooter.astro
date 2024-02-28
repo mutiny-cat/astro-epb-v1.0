@@ -24,10 +24,11 @@
     color: white;
     display: flex;
     align-items: center;
-
-    @media (width < 1366px) {
-      height: var(--footer-height);
-    }
+    height: var(--footer-height);
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
   }
 
   .wrapper {
