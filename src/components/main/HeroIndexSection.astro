@@ -61,7 +61,11 @@ import Button from "../buttons/button.astro"
   }
 
   h1 {
-    font-size: 52px;
+    font-size: 64px;
+
+    @media (768px <= width < 1580px) {
+      font-size: 52px;
+    }
 
     @media (width < 768px) {
       font-size: 24px;
@@ -69,7 +73,11 @@ import Button from "../buttons/button.astro"
   }
 
   strong {
-    font-size: 24px;
+    font-size: 48px;
+
+    @media (768px <= width < 1580px) {
+      font-size: 24px;
+    }
 
     @media (width < 768px) {
       font-size: 20px;
