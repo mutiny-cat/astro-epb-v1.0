@@ -84,11 +84,6 @@ const { pageTitle } = Astro.props
     top: calc(var(--header-height) + 2rem);
   }
 
-  .nav-aside {
-    border-right: 1px solid black;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 2rem - 2rem);
-  }
-
   .container-main {
     margin-left: 2rem;
     margin-bottom: calc(var(--footer-height) + 2rem);
@@ -109,6 +104,8 @@ const { pageTitle } = Astro.props
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    line-height: 1.4;
+    color: var(--color-text);
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -3,12 +3,89 @@ const { url, pageTitle, Menu } = Astro.props
 ---
 
 <nav class="nav-aside">
-  <a href={url} title={pageTitle}><h2>{pageTitle}</h2></a>
+  <a class="nav-aside-title" href={url} title={pageTitle}><h2>{pageTitle}</h2></a>
   <ul>
     {
       Menu.map((option) =>
-        <li><a href={option.url}>{option.title}</a></li>
+        <li class="nav-aside-item"><a class="nav-aside-link" href={option.url}>{option.title}</a></li>
       )
     }
   </ul>
 </nav>
+
+<style>
+  nav {
+    border-right: 1px solid var(--border-light);
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 2rem - 2rem);
+  }
+
+  .nav-aside-title {
+    padding: 0;
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--fg-secondary);
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .nav-aside-link {
+    display: block;
+    text-decoration: none;
+    font-family: 'Jaldi', sans-serif;
+    color: var(--fg-primary);
+    padding: .2rem .3rem;
+    margin-right: .5rem;
+    position: relative;
+
+    &:hover {
+      background-color: var(--bg-lighter);
+      color: var(--fg-primaryAlt);
+      border-radius: 2px;
+
+      &:after {
+        content: "\67";
+        font-family: "epbicons";
+        font-weight: 400;
+        font-size: .9rem;
+        position: absolute;
+        right: .3rem;
+      }
+    }
+
+    &.is-active {
+      background-color: var(--fg-primaryAlt);
+      color: white;
+      font-weight: 700;
+      border-radius: 2px;
+
+      &:after {
+        content: "\67";
+        font-family: "epbicons";
+        font-weight: 700;
+        font-size: .9rem;
+        position: absolute;
+        right: .3rem;
+      }
+    }
+  }
+</style>
+
+<script>
+  const menuLi = document.querySelectorAll('.nav-aside-item')
+  const menuItem = document.querySelectorAll('.nav-aside-link')
+
+  menuLi.forEach((cadLi, i) => {
+    menuLi[i].addEventListener('click', () => {
+      menuLi.forEach((cadaLi, i) => {
+        menuLi[i].classList.remove('is-active')
+        menuItem[i].classList.remove('is-active')
+      })
+
+      menuLi[i].classList.add('is-active')
+      menuItem[i].classList.add('is-active')
+    })
+  })
+</script>
