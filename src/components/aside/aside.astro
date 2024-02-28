@@ -1,0 +1,14 @@
+---
+const { url, pageTitle, Menu } = Astro.props
+---
+
+<nav class="nav-aside">
+  <a href={url} title={pageTitle}><h2>{pageTitle}</h2></a>
+  <ul>
+    {
+      Menu.map((option) =>
+        <li><a href={option.url}>{option.title}</a></li>
+      )
+    }
+  </ul>
+</nav>

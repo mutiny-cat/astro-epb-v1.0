@@ -1,3 +1,121 @@
 ---
+import '@fontsource-variable/cinzel'
+import '@fontsource/jaldi/400.css'
+import '@fontsource/jaldi/700.css'
+import "../styles/myfonts.css"
+import "../styles/vars.css"
 
+import Footer from "../components/footer/DefaultFooter.astro"
+import Header from "../components/header/DefaultHeader.astro"
+
+const { pageTitle } = Astro.props
 ---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>EPB | {pageTitle}</title>
+  </head>
+
+  <body>
+    <Header></Header>
+
+    <div class="wrapper-main">
+      <div class="wrapper-content">
+        <aside>
+          <div class="container-aside">
+            <slot name="aside"></slot>
+          </div>
+        </aside>
+        <main>
+          <div class="container-main">
+            <slot></slot>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <Footer></Footer>
+  </body>
+</html>
+
+<style is:global>
+  .wrapper-main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    margin-top: var(--header-height);
+  }
+
+  .wrapper-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    width: 90%;
+
+    @media (1366px <= width < 1600px) {
+      grid-template-columns: 1fr 5fr;
+    }
+
+    @media (1024px <= width < 1366px) {
+      grid-template-columns: 1fr 4fr;
+    }
+
+    @media (width < 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  aside {
+    @media (width < 1024px) {
+      display: none;
+    }
+  }
+
+  .container-aside, .container-main {
+    margin-top: 2rem;
+  }
+  
+  .container-aside {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+  }
+
+  .nav-aside {
+    border-right: 1px solid black;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 2rem - 2rem);
+  }
+
+  .container-main {
+    margin-left: 2rem;
+    margin-bottom: calc(var(--footer-height) + 2rem);
+
+    @media (width < 1024px) {
+      margin-left: 0;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

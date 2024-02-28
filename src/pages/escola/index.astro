@@ -1,9 +1,119 @@
 ---
-import Layout from "../../layouts/DefaultLayout.astro"
+import Layout from "../../layouts/AsideLayout.astro"
+import Aside from "../../components/aside/aside.astro"
 
+import Menu from "../../data/menuEscola.json"
+
+const url = "/escola"
 const pageTitle = "L'escola"
 ---
 
 <Layout pageTitle={pageTitle}>
+  <Aside slot="aside" url={url} pageTitle={pageTitle} Menu={Menu} />
+  <h1>Banner</h1>
 
+  <section>
+    <article>
+      <p>L’ Escola de Puntaires de Barcelona es dedica a l’ensenyament de tot tipus de puntes, des de les més elementals fins a les d’estil propi, ja sigui en les tècniques de coixí o agulla, tant del nostre país com de la resta d’Europa. En són exemples en coixí les puntes belgues, angleses i italianes, i en agulla, les italianes i les franceses.</p>
+      <p>L’especialitat de l’Escola és la ”Punta de Barcelona” creada al segle XX per les seves fundadores, les germanes Raventós. Es tracta d’una punta elegant i original de característiques pròpies.</p>
+      <p>Els coneixements i les investigacions de les esmentades germanes Raventós, les portaren a publicar el llibre ”Puntes“ un ampli tractat de les dues tècniques.</p>
+      <p>La Fundació té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
+      <p>En l’ànim de l’Escola està combinar, en una perfecta simbiosi, d’una banda la promoció de les puntes a l’agulla i al coixí, per tal d’evitar que es perdin definitivament les més belles i antigues tècniques, i d’una altra la formació de puntaires capaces de crear nous punts i nous dissenys.</p>
+      <p>Aquest mateix fou l’esperit de les germanes Raventós, conegudes com “les senyoretes” en iniciar la nova escola, i l’esperit amb què el 1952 reberen, amb motiu de la celebració del Congrés Eucarístic, l’encàrrec d’elaborar unes tovalles per l’altar major de la catedral de Barcelona, combinant la punta a l’agulla i la punta al coixí. El resultat fou una peça amb caràcter propi, nou i diferent, que donà origen al que aleshores es batejà com a “Punta de Barcelona”, reconeguda arreu del món.</p>
+      <p>Des fa anys l’Escola de Puntaires de Barcelona és considerada la “universitat de les puntes”, ja que es dedica a l’ensenyament de la major part de les puntes que es fan a Europa. Els seus treballs són reproduïts en llibres i revistes de tot el món.</p>
+    </article>
+  </section>
+
+  <section id="historia-escola">
+    <article>
+      <h2>Història de l'escola</h2>
+      <p>Antònia (1885) i Montserrat (1889) Raventós i Ventura van néixer a Barcelona, però provenien d'una família de Vilafranca del Penedès. El pare fou enginyer i director d'una empresa del Poblenou, barri on les dues germanes van venir al món i on va viure amb la família fins a la mort del pare l'any 1932.</p>
+      <p>Després anaren a viure, fins a la mort, a la dreta de l'Eixample barceloní. Les dues foren alumnes del col•legi de les Germanes Franciscanes del Poblenou.</p>
+      <p>Persones molt cultes i cultivades, participaren de les activitats culturals del seu temps, eren expertes dibuixants, brodaven, tocaven el piano, entre d’altres.</p>
+      <p>Mossén Ildefons Gatell, demanà a benemèrites dames barcelonines que fundessin una biblioteca femenina per instruir la Dona. Aquesta fundació tingué lloc als claustres de Santa Anna, a l'ombra de l'Associació de Bones Lectures. Aquestes senyores aviat s'adonaran que la dona no estava preparada per fer ús d'una biblioteca.</p>
+      <p>Uns mesos més tard, precisament el 23 d'abril del 1910, hom inaugurava l'Institut de Cultura i Biblioteca Popular de la Dona en un bell edifici del carrer d'Elisabets, al costat de la Casa de La Misericòrdia.</p>
+      <p>Diverses dames tenien cura d’aquesta obra; n’era presidenta la Sra. LLopart de Sivatte i vicepresidenta la Sra. Francesca Bonnemaison de Verdaguer i ambdues eren secundades per les senyoretes; Vicenta Carreras, germanes Baladia, Concepció Torner, Cot de Gimenez, Clara Font, Maria Lorente, etc.</p>
+      <p>La Sra. Verdaguer, persona molt culta i molt dinàmica, a part de les classes d'estudi n'hi posà moltes d'altres de treballs manuals i d'artístics i, entre elles, de puntes: fou encomanada la de "Punt a l'Agulla" a Eugenia Torres, i la de "Punta al Coixí" a Julia Faralt.</p>
+      <p>Com que ens agradaven els treballs manuals assistirem a aquestes classes de puntes i tafaneres, començàrem a mirar llibres i ens adonàrem que hi havia coses de les quals ningú no sabia com es feien. Aquí començà la nostra tasca de desxifrar les puntes, les tècniques de les quals s’havia perdut a casa nostra, i a còpia de paciència, de voluntat i de fer i desfer, arribàrem a descobrir els seus secrets.</p>
+      <p>Per casualitat férem una visita a l'Arxiu Històric de la Ciutat i ens assabentàrem que hi havia una col•lecció de llibres de puntes procedent de la Col•lecció Massana. Tot llegint aquests llibres, beguérem la importància que havien tingut les puntes, en els sentits social, econòmic i artístic i anàvem pensant com podríem fer-ho per retornar-les al món.</p>
+      <p>Al Arxiu ens foren donades totes les facilitats per dur a terme els nostres treballs d’estudi. Veient que no era suficient de prendre notes amb l’estilogràfica, ens permeteren de portar-hi les nostres eines de treball. Aquesta col•lecció del Sr. Massana és la més important de totes les de Barcelona i després segueix la del Museu.</p>
+      <p>El gener del 1935, férem una exposició a la Casa de l’Ardiaca, en la qual presentàrem els treballs que havíem fet amb l’estudi dels llibres de la Casa. Després se’ns obriren les portes del Museu i el Sr. Joaquim Folch i Torres, molt gentilment, posà totes les puntes del Museu a la nostra disposició per a estudiar-les. En aquesta casa férem coneixença amb el Sr. Francesc Bofill, actualment Director del Museu de les Arts Decoratives i amb Dª Adelaida Ferré, que en aquell temps feia fitxes de les puntes del Museu, i que casualment abans que nosaltres, havia estat deixebla de les nostres professores de puntes.</p>
+      <p>La sra. Adelaida Ferré, distingida mestra municipal que professava a l'Escola Lluïsa Cura, quan fou nomenada directora ens demanà si voldríem donar-hi unes classes de puntes. No volguérem dir-li que no, però anàrem amb poca fe, perquè aquell mateix curs, l'intent d'unes classes de puntes a l'Escola Massana, havien fracassat.</p>
+      <p>La nostra sorpresa fou, el primer dia de classe, en trobar-nos amb setanta deixebles, disposades a endinsar-se en aquesta branca de les Belles Arts. Amb dinou anys de lliçons a l'Escola Lluïsa Cura s'han format un planter de deixebles i un renaixement de les puntes.</p>
+    </article>
+  </section>
+
+  <section id="recursos-humans">
+    <article>
+      <h2>Recursos humans</h2>
+      <p>L’Escola de Puntaires de Barcelona és una Fundació Privada, inscrita en el registre de Fundacions amb el nº 40, subjecta a la legislació de la Generalitat de Catalunya.</p>
+      <table>
+        <tr><th>Fundadores</th></tr>
+        <tr><td>Antònia Raventós i Ventura</td></tr>
+        <tr><td>Montserrat Raventós i Ventura</td></tr>
+      </table>
+      <table>
+        <tr><th>Presidència</th></tr>
+        <tr><td>Angelina Clar i Furnells</td></tr>
+      </table>
+      <table>
+        <tr><th>Vice-presidència</th></tr>
+        <tr><td>Glòria Bachs i Carceller</td></tr>
+      </table>
+      <table>
+        <tr><th>Secretaría</th></tr>
+        <tr><td>Isabel Moreno i Gili</td></tr>
+      </table>
+      <table>
+        <tr><th>Vocalies</th></tr>
+        <tr><td>Montserrat Sanarau i Roig</td><tr>
+        <tr><td>Nativitat Gasulla i Fonfreda</td></tr>
+        <tr><td>Montserrat Viader i Crous</td></tr>
+        <tr><td>Anna M. Riera i Villarrubia</td></tr>
+      </table>
+      <table>
+        <tr><th>Vocalies representants</th></tr>
+        <tr><td>Institut Municipal d’Educació, Ajuntament de Barcelona</td></tr>
+        <tr><td>Departament d’Ensenyament, Generalitat de Catalunya</td></tr>
+      </table>
+    </article>
+  </section>
+
+  <section id="cronologia">
+    <h2>Cronologia</h2>
+  </section>
+
+  <section id="estatuts">
+    <h2>Estatuts</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam amet beatae, blanditiis consequatur culpa cum deserunt dicta dolor dolorum eaque eos eveniet ex excepturi facilis fuga harum id illo iste, itaque laboriosam minima molestias natus nisi nostrum obcaecati quasi quidem quis reiciendis repellat, saepe similique sunt voluptatum. Doloribus dolorum laborum minus nihil. A ab asperiores corporis earum eum excepturi expedita facere id inventore iusto libero molestias nemo non praesentium provident quae repellat, tempora tempore? Adipisci, culpa cum eius exercitationem illum nihil omnis placeat provident tenetur velit. Esse eum nobis quae reprehenderit totam velit. Aspernatur, consequuntur delectus doloribus earum explicabo hic impedit iste mollitia necessitatibus nesciunt nisi non nostrum optio perferendis quis ratione rem. Ab beatae corporis distinctio eius est et impedit in modi, nulla numquam optio pariatur perferendis placeat provident quas repudiandae sunt totam vel vero vitae. Assumenda doloremque dolorum ducimus eaque, molestiae natus nihil qui reiciendis! Aliquid delectus, exercitationem facere minus quaerat unde? A aliquam asperiores aut blanditiis consectetur debitis dolores ducimus eius eligendi enim facere fugiat maiores necessitatibus numquam provident qui quidem quis quod suscipit, tempora, veniam, voluptates voluptatum? Alias autem corporis culpa doloribus illo quo sapiente tenetur ut. Assumenda beatae explicabo incidunt nostrum sunt vel veniam. Aperiam, consequatur cumque dolorem doloremque ex, fuga fugiat incidunt laborum modi officiis praesentium tempora vero voluptatum! Distinctio dolorem doloribus itaque modi nisi, porro quisquam? Adipisci aliquam amet asperiores at cum eius id minima modi molestiae natus officia placeat quos recusandae repellendus sapiente totam, ullam. Accusantium aspernatur beatae consequuntur corporis cupiditate illo impedit, iste labore magnam minima nesciunt quaerat quidem ratione recusandae sapiente sequi sint. Ab accusamus alias aliquid consequatur dignissimos dolorem dolores error ex facere inventore, ipsum iste libero nam nemo officia praesentium provident quas qui quibusdam reiciendis sequi sint tempora unde ut veniam voluptas voluptates voluptatibus. Dicta dolore eveniet neque pariatur placeat quibusdam. Accusamus adipisci at aut commodi dolorum error excepturi fugiat id ipsum iure laboriosam laudantium magni necessitatibus nobis nulla odit quasi, quis ratione, recusandae soluta suscipit tempora ut vero! Accusantium aperiam architecto aut, cumque dignissimos doloremque doloribus ducimus est exercitationem facere illum impedit inventore ipsam laudantium magni maiores nemo nesciunt nisi odit officia optio perferendis praesentium provident qui, quibusdam recusandae reiciendis repudiandae sint sit totam unde vel, velit voluptate. Assumenda commodi dignissimos earum eligendi eos facilis hic illum ipsum, laboriosam, laborum non pariatur quisquam ratione saepe, sapiente tempore temporibus voluptates? Commodi, deserunt fuga in iure neque obcaecati? Ad asperiores autem consequatur culpa, ea, facere fugit iusto nam nulla praesentium provident quod quos sed sit veniam? Accusantium autem blanditiis, eaque eius esse nisi quibusdam soluta? Animi asperiores ea impedit in incidunt ipsam minima perferendis provident quas vitae? Autem, quas, tempore. Ab ad, culpa delectus ducimus eaque hic nemo non nulla obcaecati omnis pariatur repellat repellendus sapiente sed tenetur totam veniam voluptatibus voluptatum. Consequuntur dolorem ducimus, eos et eveniet hic recusandae. A ab alias dolore dolorem dolorum eaque enim eos error id illo magni maxime minus nam nesciunt, odit porro provident rem repellendus ullam, voluptatem. A aliquid animi assumenda delectus dolore doloremque est eveniet illum reiciendis, rerum sint soluta tempore. Ab aspernatur dolorum explicabo molestiae, voluptate voluptatibus! Ad aliquid, aspernatur assumenda autem, distinctio dolorum explicabo ipsam ipsum minima modi nihil officia possimus, reiciendis repudiandae sapiente. Architecto assumenda dolorem ea eos eum hic ipsa repellat repudiandae. Ab accusamus ad adipisci alias aspernatur assumenda at aut consectetur consequuntur cumque cupiditate distinctio dolorem doloremque, enim eos excepturi explicabo fugiat hic itaque laudantium minus necessitatibus, nemo provident, quasi qui quo sequi sit sunt tempora ut veniam veritatis vero vitae? Aliquid culpa cupiditate, deleniti, dicta eaque earum eveniet facere fuga in ipsum iusto molestias nobis perspiciatis possimus praesentium quis quo repellat sed sit ut. Architecto blanditiis debitis delectus ex hic laudantium nihil, placeat provident quis sequi? Adipisci in mollitia quia voluptas? Animi cumque, cupiditate deleniti ea error exercitationem, facere fuga fugit harum ipsum maxime minima modi molestias mollitia nisi nostrum perspiciatis quae quam quas quasi, qui rem sapiente similique temporibus ut vel vitae voluptas? Accusantium ad animi, atque deleniti eum fuga hic id illum laudantium molestias neque odio officia praesentium quas sed sint, sunt tempora voluptatem? Debitis enim explicabo facilis incidunt libero optio, quam tempora. Accusamus adipisci corporis dicta dolorem excepturi expedita ipsa ipsam itaque labore laboriosam magni minima modi natus, odit ratione repellat vel velit voluptatum! Aliquam aspernatur at, atque aut cum cupiditate, doloribus enim fugit hic ipsam magni odio officiis perspiciatis possimus, quia similique sit temporibus veritatis voluptates voluptatum? Aperiam eaque hic in. Fugit id in, laudantium nesciunt nulla pariatur perspiciatis praesentium quam quia quibusdam recusandae, saepe sed unde vel veniam. Alias amet aperiam aut cum deleniti dolorum eum incidunt iure libero mollitia nesciunt omnis, provident quia? Alias amet asperiores deleniti dolor error eveniet facilis harum inventore ipsa iure labore magni, nam optio provident quaerat quas quia quis quod repellat rerum temporibus ut veritatis voluptatem! Architecto at aut eius, excepturi exercitationem illo incidunt iusto laborum magnam maxime modi molestias officia omnis quibusdam recusandae temporibus veritatis voluptas. Cum dicta ipsam odit sapiente voluptates. Amet culpa impedit laudantium necessitatibus velit. Aliquam blanditiis corporis culpa ducimus et excepturi hic ipsam magnam, natus neque quam sint tenetur voluptates? A ab accusamus alias atque cumque, cupiditate dolore doloremque eum ex exercitationem explicabo ipsam maiores minus obcaecati officiis, quaerat quasi qui ratione sed sunt tempora, vel veritatis vero voluptate voluptatum? Adipisci animi, at, dicta dolorum eius error esse eum harum inventore itaque iure labore non odio omnis quaerat quasi suscipit, temporibus vel velit voluptate! A accusantium amet asperiores consectetur consequatur corporis debitis dignissimos dolore dolorum eligendi eos error est eveniet facere fugiat fugit harum hic ipsam ipsum iste labore laboriosam magnam nesciunt nihil, porro quae quas reprehenderit rerum sit tempora temporibus velit veritatis voluptatem! Ab, amet consectetur consequatur corporis delectus dolore dolores eum ipsa maxime minus molestiae nisi nobis omnis, quaerat qui quod reiciendis repellat veritatis vitae voluptate! Aspernatur eos inventore nesciunt nihil pariatur. Enim minus neque suscipit? Accusamus ad assumenda delectus dicta saepe. Amet dignissimos facilis incidunt, nam natus sint? Dolores eius est ipsa provident quia recusandae.</p>
+  </section>
 </Layout>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  section {
+    padding-top: calc(var(--header-height) + 2rem);
+
+    @media (width < 1024px) {
+      padding-top: var(--header-height);
+    }
+  }
+
+  article {
+    h2 {
+      padding-bottom: 2rem;
+    }
+
+    p {
+      padding-bottom: 1rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+</style>

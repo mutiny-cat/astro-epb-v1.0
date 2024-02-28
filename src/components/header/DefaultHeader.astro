@@ -127,6 +127,14 @@ const menuItems = [
     background-color: transparent;
     padding: .2rem;
     text-align: center;
+
+    &:last-child {
+      padding-left: .5rem;
+
+      @media screen (width < 1366px) {
+        padding-left: 0;
+      }
+    }
   }
 
   .menu-a {
@@ -150,10 +158,12 @@ const menuItems = [
     }
 
     @media (width < 1366px) {
+      border-bottom: none;
       color: white;
 
       &:hover {
-        color: var(--fg-primary);
+        color: var(--bg-darkest);
+        border-bottom: none;
       }
     }
   }
@@ -170,6 +180,10 @@ const menuItems = [
       background-color: var(--fg-primaryAlt);
       border: none;
       color: white;
+
+      @media (width < 1366px) {
+        background-color: var(--bg-darkest);
+      }
     }
 
     &.is-active {
