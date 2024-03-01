@@ -111,11 +111,43 @@ const pageTitle = "L'escola"
           <h3 class="accordionTitle">1930 - 1939</h3>
           <div class="accordionContent">
             <ul>
-              <li><strong>1931:</strong> Adelaida Ferrer publica l’article ”Col·lecció de patrons de puntes al coixí” al Butlletí dels Museus d’Art de Barcelona.</li>
-              <li>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol•licitades per impartir els seus coneixements com a professores a la mateixa escola.</li>
-              <li><strong>1932:</strong> Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol•licitades per impartir els seus coneixements com a professores a la mateixa escola.</li>
-              <li><strong>1934:</strong> Adelaida Ferrer publica l’article ”Estris per a fer una punts de coixí ” al Butlletí dels Museus d’Art de Barcelona.</li>
-              <li><strong>1935:</strong> Aquest any varen participar en una exposició a la Casa de l’Ardiaca de Barcelona, seu de l’Institut de Cultura i Biblioteca Popular de La Dona, actual Arxiu Històric de la Ciutat. Els documents antics ja ens parlen d’aquesta exposició de l’any 35, possiblement dins del programa d’actes de l’Institut de Cultura de l’època. Dissortadament dins dels arxius de l’Escola de Puntaires de Barcelona no se’n conserva cap imatge.</li>
+              <li>
+                <strong>1931:</strong>
+                <ul class="content">
+                  <li>
+                    <p>Adelaida Ferrer publica l’article ”Col·lecció de patrons de puntes al coixí” al Butlletí dels Museus d’Art de Barcelona.</p>
+                  </li>
+                  <li>
+                    <p>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</p>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>1932:</strong>
+                <ul class="content">
+                  <li><p>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</p>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>1934:</strong>
+                <ul class="content">
+                  <li>
+                    <p>Adelaida Ferrer publica l’article ”Estris per a fer una punts de coixí ” al Butlletí dels Museus d’Art de Barcelona.</p>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>1935:</strong>
+                <ul class="content">
+                  <li>
+                    <p>Aquest any varen participar en una exposició a la Casa de l’Ardiaca de Barcelona, seu de l’Institut de Cultura i Biblioteca Popular de La Dona, actual Arxiu Històric de la Ciutat. Els documents antics ja ens parlen d’aquesta exposició de l’any 35, possiblement dins del programa d’actes de l’Institut de Cultura de l’època. Dissortadament dins dels arxius de l’Escola de Puntaires de Barcelona no se’n conserva cap imatge.</p>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -179,6 +211,16 @@ const pageTitle = "L'escola"
 </Layout>
 
 <style>
+  .content {
+    list-style-type: square;
+    padding-left: 2rem;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   .accordionItem {
     margin-bottom: .5rem;
   }
@@ -199,7 +241,7 @@ const pageTitle = "L'escola"
 
     &::after {
       content: "\64";
-      font-family: "epbicons";
+      font-family: "epbicons", sans-serif;
       position: absolute;
       right: .5rem;
       transition: all .1s ease;
@@ -233,75 +275,6 @@ const pageTitle = "L'escola"
 
       &:last-child {
         margin-bottom: 0;
-      }
-    }
-  }
-
-  .ul-table {
-    list-style-type: square;
-    margin-left: 1rem;
-    padding-left: 1rem;
-  }
-
-  .accordion {
-    margin-top: 1rem;
-
-    & .block {
-      padding: 0;
-
-      &:last-child {
-        padding: 0;
-      }
-
-      &.is-active .content {
-        height: auto;
-        padding: 1rem;
-        border: 1px solid var(--bg-dark);
-        border-radius: 4px;
-      }
-
-      &.is-active .title {
-        &:after {
-          rotate: 180deg;
-          transition: all .1s ease;
-        }
-      }
-    }
-
-    & .title {
-      color: var(--fg-primary);
-      font-size: 1rem;
-      margin: 0 0 .2rem;
-      padding: 0 1rem 0 0;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor : pointer;
-
-      &:after {
-        content: "\64";
-        font-family: 'epbicons';
-        font-size: 1rem;
-        font-style: normal;
-        position: absolute;
-        right: .5rem;
-      }
-    }
-
-    & .content {
-      background-color: var(--bg-lightest);
-      color: var(--fg-primary);
-      height: 0;
-      margin: 0 0 .5rem;
-      padding: 0;
-      overflow: hidden;
-      transition: background-color .5s ease;
-      font-size: .9rem;
-
-      & p {
-        padding: 0;
-        margin: .2rem;
       }
     }
   }
