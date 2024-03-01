@@ -1,0 +1,30 @@
+---
+import Item from "./itemCronologia.astro"
+const { Any, numberItems } = Astro.props
+---
+<div>
+  <h4>{Any}</h4>
+
+  <ul>
+    <slot></slot>
+  </ul>
+
+</div>
+
+<style>
+  div {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style-type: square;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+</style>

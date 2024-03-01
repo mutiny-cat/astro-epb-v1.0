@@ -1,0 +1,94 @@
+---
+const { periode } = Astro.props
+---
+
+<div>
+  <div class="accordionItem">
+    <h3 class="accordionTitle">{periode}</h3>
+    <div class="accordionContent">
+      <slot></slot>
+    </div>
+  </div>
+</div>
+
+<style>
+  .accordionItem {
+    margin-bottom: .5rem;
+  }
+
+  .accordionTitle {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .accordionTitle + .accordionContent {
+    display: none;
+  }
+
+  .accordionTitle {
+    font-size: 1rem;
+    position: relative;
+    color: var(--fg-primary);
+
+    &::after {
+      content: "\64";
+      font-family: "epbicons", sans-serif;
+      position: absolute;
+      right: .5rem;
+      transition: all .1s ease;
+    }
+  }
+
+  .accordionTitle.is-open + .accordionContent {
+    display: block;
+  }
+
+  .accordionTitle.is-open {
+    &::after {
+      rotate: 180deg;
+      transition: all .1s ease;
+    }
+  }
+
+  .accordionContent {
+    background-color: var(--bg-lighter);
+    //border: 1px solid var(--fg-primary);
+    margin-top: .5rem;
+    border-radius: 4px;
+    color: var(--color-text);
+    padding: 1rem;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: .5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+</style>
+
+<script>
+  const accordionTitles = document.querySelectorAll(".accordionTitle")
+
+  accordionTitles.forEach((accordionTitle) => {
+    accordionTitle.addEventListener("click", () => {
+      if (accordionTitle.classList.contains("is-open")) {
+        accordionTitle.classList.remove("is-open")
+      } else {
+
+        const accordionTitlesWithIsOpen = document.querySelectorAll(".is-open")
+
+        accordionTitlesWithIsOpen.forEach((accordionTitleWithIsOpen) => {
+          accordionTitleWithIsOpen.classList.remove("is-open")
+        })
+        accordionTitle.classList.add("is-open")
+      }
+    })
+  })
+</script>
