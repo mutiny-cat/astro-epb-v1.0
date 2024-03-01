@@ -112,39 +112,37 @@ const pageTitle = "L'escola"
           <div class="accordionContent">
             <ul>
               <li>
-                <strong>1931:</strong>
+                <strong class="title">1931:</strong>
                 <ul class="content">
                   <li>
-                    <p>Adelaida Ferrer publica l’article ”Col·lecció de patrons de puntes al coixí” al Butlletí dels Museus d’Art de Barcelona.</p>
-                  </li>
-                  <li>
-                    <p>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</p>
+                    <p><em>Adelaida Ferrer</em> publica l’article <em>Col·lecció de patrons de puntes al coixí</em> al <strong>Butlletí dels Museus d’Art de Barcelona</strong>.</p>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <strong>1932:</strong>
+                <strong class="title">1932:</strong>
                 <ul class="content">
-                  <li><p>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</p>
+                  <li>
+                    <p>Les germanes <em>Antònia i Montserrat Raventós i Ventura</em> van començar a investigar en profunditat el món de les <strong>Puntes</strong>. Les senyoretes <em>Raventós</em> assistien a les classes de l’<em>Escola LLuïsa Cura</em> quan era la directora la Sra. <em>Adelaida Farré</em>. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</p>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <strong>1934:</strong>
+                <strong class="title">1934:</strong>
                 <ul class="content">
                   <li>
-                    <p>Adelaida Ferrer publica l’article ”Estris per a fer una punts de coixí ” al Butlletí dels Museus d’Art de Barcelona.</p>
+                    <p><em>Adelaida Ferrer</em> publica l’article <em>Estris per a fer una punts de coixí</em> al <strong>Butlletí dels Museus d’Art de Barcelona</strong>.</p>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <strong>1935:</strong>
+                <strong class="title">1935:</strong>
                 <ul class="content">
                   <li>
-                    <p>Aquest any varen participar en una exposició a la Casa de l’Ardiaca de Barcelona, seu de l’Institut de Cultura i Biblioteca Popular de La Dona, actual Arxiu Històric de la Ciutat. Els documents antics ja ens parlen d’aquesta exposició de l’any 35, possiblement dins del programa d’actes de l’Institut de Cultura de l’època. Dissortadament dins dels arxius de l’Escola de Puntaires de Barcelona no se’n conserva cap imatge.</p>
+                    <p>Aquest any varen participar en una exposició a la <strong>Casa de l’Ardiaca</strong> de Barcelona, seu de l’<em>Institut de Cultura i Biblioteca Popular de La Dona</em>, actual <strong>Arxiu Històric de la Ciutat</strong>. Els documents antics ja ens parlen d’aquesta exposició de l’any 1935, possiblement dins del programa d’actes de l’<strong>Institut de Cultura</strong> de l’època. Dissortadament dins dels arxius de l’<strong>Escola de Puntaires de Barcelona</strong> no se’n conserva cap imatge.</p>
                   </li>
                 </ul>
               </li>
@@ -211,6 +209,11 @@ const pageTitle = "L'escola"
 </Layout>
 
 <style>
+  .title {
+    margin-top: 1.5rem;
+    display: inline-block;
+  }
+
   .content {
     list-style-type: square;
     padding-left: 2rem;
@@ -218,6 +221,10 @@ const pageTitle = "L'escola"
     li {
       margin: 0;
       padding: 0;
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -260,10 +267,10 @@ const pageTitle = "L'escola"
   }
 
   .accordionContent {
-    background-color: var(--bg-lightest);
-    border: 1px solid var(--fg-primary);
+    background-color: var(--bg-lighter);
+    //border: 1px solid var(--fg-primary);
     border-radius: 4px;
-    color: var(--fg-secondary);
+    color: var(--color-text);
     padding: 1rem;
 
     ul {
