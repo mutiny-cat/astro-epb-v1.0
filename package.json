@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@fontsource-variable/cinzel": "^5.0.8",
+    "@fontsource-variable/manrope": "^5.0.19",
+    "@fontsource/almendra-display": "^5.0.19",
+    "@fontsource/italianno": "^5.0.19",
     "@fontsource/jaldi": "^5.0.8",
+    "@fontsource/martel": "^5.0.12",
     "astro": "^4.4.5"
   },
   "devDependencies": {

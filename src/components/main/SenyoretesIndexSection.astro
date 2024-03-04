@@ -1,11 +1,12 @@
 ---
-
+import "@fontsource/italianno"
 ---
 
 <section>
   <div class="wrapper">
+    <h2>les senyoretes</h2>
     <img src="/assets/images/heros/senyoretes.png">
-    <h2>"El 1962 es crea la Fundació del Patronat de la Fundació Antònia i Montserrat Raventós i Ventura, Escola de Puntaires de Barcelona, integrada a l'Escola Massana."</h2>
+    <p>El 1962 es crea la Fundació del Patronat de la Fundació Antònia i Montserrat Raventós i Ventura, Escola de Puntaires de Barcelona, integrada a l'Escola Massana</p>
   </div>
 </section>
 
@@ -21,7 +22,7 @@
 
   .wrapper {
     width: 90%;
-    max-width: 960px;
+    max-width: 640px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -33,6 +34,39 @@
     h2 {
       color: white;
       text-align: center;
+      font-family: var(--font-ofici);
+      font-style: oblique;
+      font-size: 5rem;
+      font-weight: 400;
+
+      @media (width < 1024px) {
+        font-size: 2rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 50%;
+      filter: drop-shadow(0 0 5rem var(--fg-primaryAlt));
+
+      @media (width < 1366px) {
+        filter: drop-shadow(0 0 3rem var(--fg-primaryAlt));
+      }
+    }
+
+    p {
+      color: white;
+      text-align: center;
+      font-weight: 700;
+
+      &::before, &::after {
+        content: '"';
+        padding: 0 .2rem;
+      }
+
+      @media (width < 1024px) {
+        font-size: 1rem;
+      }
     }
   }
 </style>

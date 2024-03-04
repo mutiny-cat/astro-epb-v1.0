@@ -1,7 +1,7 @@
 ---
-import '@fontsource-variable/cinzel'
 import '@fontsource/jaldi/400.css'
 import '@fontsource/jaldi/700.css'
+import "@fontsource/martel/400.css"
 import "../styles/myfonts.css"
 import "../styles/vars.css"
 
@@ -100,7 +100,7 @@ const { pageTitle } = Astro.props
 
   body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: var(--font-default);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
