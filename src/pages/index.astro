@@ -1,8 +1,26 @@
 ---
 import Layout from "../layouts/DefaultLayout.astro"
 import HeroSection from "../components/main/HeroIndexSection.astro"
+import SenyoretesSection from "../components/main/SenyoretesIndexSection.astro"
 ---
 
 <Layout pageTitle="Inici">
-  <HeroSection></HeroSection>
+  <div class="snap-center">
+    <HeroSection></HeroSection>
+  </div>
+  <div class="snap-center">
+    <SenyoretesSection></SenyoretesSection>
+  </div>
+  <div class="snap-center">
+    <HeroSection></HeroSection>
+  </div>
+  <div class="snap-center">
+    <SenyoretesSection></SenyoretesSection>
+  </div>
 </Layout>
+
+<style>
+  .snap-center {
+    scroll-snap-align: center;
+  }
+</style>

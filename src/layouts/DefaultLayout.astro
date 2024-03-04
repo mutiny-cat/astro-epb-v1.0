@@ -9,12 +9,13 @@ import Header from "../components/header/DefaultHeader.astro"
 import Footer from "../components/footer/DefaultFooter.astro"
 
 const { pageTitle } = Astro.props
+const { title, description, faviconURL = "/assets/favicons/favicon-96.png", image = "/assets/images/opengraph/epb-hero.jpg" } = Astro.props
 ---
 
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" type="image/png" href={faviconURL}>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>EPB | {pageTitle}</title>
@@ -22,7 +23,7 @@ const { pageTitle } = Astro.props
 
   <body>
     <Header></Header>
-    <main>
+    <main class="wrapper">
       <slot></slot>
     </main>
     <Footer></Footer>
@@ -49,5 +50,14 @@ const { pageTitle } = Astro.props
 
   p {
     margin: 0;
+  }
+</style>
+
+<style>
+  .wrapper {
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
   }
 </style>
