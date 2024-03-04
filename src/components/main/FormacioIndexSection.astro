@@ -1,0 +1,81 @@
+---
+import CardFormacio from "../cards/partials/cardFormacio.astro"
+---
+
+<section>
+  <div class="wrapper">
+    <ul>
+    <CardFormacio
+      titleCard="CF Grau Superior"
+      textCard1="Puntes artístiques"
+      textCard2="Brodats i Rebosters"
+      titleCopy="cicles"
+      subtitleCopy="formatius"
+      url="/formacio/cfgs"
+      textButton="CF Grau Superior"
+      iconName="icon-arrow-right" />
+    <CardFormacio
+      titleCard="Mestratge Tècnic"
+      textCard1="Punta al coixí"
+      textCard2="Punta a l'agulla"
+      titleCopy="tècnic"
+      subtitleCopy="mestratge"
+      url="/formacio/mestratge-tecnic"
+      textButton="Mestratge tècnic"
+      iconName="icon-arrow-right" />
+    <CardFormacio
+      titleCard="Cursos"
+      textCard1="Trimestrals de"
+      textCard2="Punta de Barcelona"
+      titleCopy="Punta"
+      subtitleCopy="de Barcelona"
+      url="/formacio/cursos-trimestrals"
+      textButton="Cursos"
+      iconName="icon-arrow-right" />
+    <CardFormacio
+      titleCard="Tallers Oberts"
+      textCard1="3 hores setmanals"
+      textCard2="6 hores setmanals"
+      titleCopy="tallers"
+      subtitleCopy="oberts"
+      url="/formacio/tallers-oberts"
+      textButton="Tallers oberts"
+      iconName="icon-arrow-right" />
+</ul>
+  </div>
+</section>
+
+<style>
+  section {
+    background: linear-gradient(var(--bg-light), var(--bg-light));
+    padding: var(--header-height) 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+    gap: 2rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    justify-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+</style>

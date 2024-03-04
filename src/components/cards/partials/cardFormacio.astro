@@ -1,0 +1,66 @@
+---
+import Button from "../../buttons/button.astro"
+const { titleCard, textCard1, textCard2, titleCopy, subtitleCopy, url, textButton, iconName } = Astro.props
+---
+
+<li>
+    <article>
+        <h2>{titleCard}</h2>
+        <p>{textCard1}</p>
+        <p>{textCard2}</p>
+        <div class="copy">
+            <p class="copy-title">{titleCopy}</p>
+            <p class="copy-subtitle">{subtitleCopy}</p>
+        </div>
+        <Button typeButton="" url={url} textButton={textButton} iconName={iconName} />
+    </article>
+</li>
+
+<style lang="scss">
+    li {
+      border-radius: var(--border-radius);
+      background-color: var(--bg-white);
+      box-shadow: var(--box-shadow);
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    h2 {
+      padding-bottom: .3rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--fg-primary);
+      color: var(--fg-primary);
+      font-family: var(--font-title);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .copy {
+      font-family: var(--font-card-formacio);
+      margin: 2rem 0 3.5rem;
+
+      &-title {
+        font-size: 5.5rem;
+        color: var(--fg-black);
+        line-height: 1;
+        letter-spacing: -.2rem;
+        text-transform: lowercase;
+        text-align: left;
+      }
+
+      &-subtitle {
+        font-size: 2.5rem;
+        line-height: .5;
+        text-align: right;
+        color: var(--fg-primary);
+        letter-spacing: -.1rem;
+        text-transform: lowercase
+      }
+    }
+</style>

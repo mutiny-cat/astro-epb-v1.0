@@ -2,6 +2,9 @@
 import Layout from "../layouts/DefaultLayout.astro"
 import HeroSection from "../components/main/HeroIndexSection.astro"
 import SenyoretesSection from "../components/main/SenyoretesIndexSection.astro"
+import DiferentsSection from "../components/main/DiferentsIndexSection.astro"
+import ObjectiusSection from "../components/main/ObjectiusIndexSection.astro"
+import FormacioSection from "../components/main/FormacioIndexSection.astro"
 ---
 
 <Layout pageTitle="Inici">
@@ -12,10 +15,13 @@ import SenyoretesSection from "../components/main/SenyoretesIndexSection.astro"
     <SenyoretesSection></SenyoretesSection>
   </div>
   <div class="snap-center">
-    <HeroSection></HeroSection>
+    <DiferentsSection></DiferentsSection>
   </div>
   <div class="snap-center">
-    <SenyoretesSection></SenyoretesSection>
+    <ObjectiusSection></ObjectiusSection>
+  </div>
+  <div class="snap-center">
+    <FormacioSection></FormacioSection>
   </div>
 </Layout>
 
@@ -24,3 +30,4 @@ import SenyoretesSection from "../components/main/SenyoretesIndexSection.astro"
     scroll-snap-align: center;
   }
 </style>
+
