@@ -5,5 +5,62 @@ const pageTitle = "Visita'ns"
 ---
 
 <Layout pageTitle={pageTitle}>
-
+  <section>
+    <div class="wrapper">
+      <h1>Visita'ns</h1>
+      <ul>
+        <li>
+          <div>
+            <h3>Dades de contacte</h3>
+            <ol>
+              <li>Adreça</li>
+              <li>Telèfon</li>
+              <li>e-mail</li>
+            </ol>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Com arribar</h3>
+            <ol>
+              <li>Metro</li>
+              <li>Bus</li>
+              <li>Tram</li>
+              <li>Tren</li>
+            </ol>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Ubicació</h3>
+            <ol>
+              <li>Mapa</li>
+            </ol>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  section {
+    padding: var(--header-height) 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+</style>

@@ -48,11 +48,12 @@
 
   --font-button: 'Jaldi', sans-serif;
   /*--font-default: "Manrope Variable", sans-serif;*/
-  --font-default: "Martel", serif;
+  --font-default: "Open Sans Variable", sans-serif;
   --font-title: "Jaldi", sans-serif;
-  --font-hero: "Cinzel Variable";
+  --font-hero: "Cinzel Variable", serif;
+  --font-hero-content: "Martel", serif;
   --font-pb: "Almendra Display";
-  --font-ofici: "Italianno";
+  --font-ofici: "Italianno", decorative;
   --font-card-formacio: "epbcardbold", sans-serif;
   --font-icon: "epbicons";
 }

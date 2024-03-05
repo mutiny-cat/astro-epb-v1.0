@@ -5,6 +5,7 @@ const { pageTitle } = Astro.props
 <div class="hero">
   <h1>{pageTitle}</h1>
   <span class="line-separator"></span>
+
 </div>
 
 <style>
@@ -20,6 +21,9 @@ const { pageTitle } = Astro.props
 
     & h1 {
       color: var(--fg-primary);
+      font-family: var(--font-hero);
+      font-weight: 700;
+      font-size: 2.5rem;
     }
 
     & .line-separator {
