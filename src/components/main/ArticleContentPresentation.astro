@@ -1,0 +1,23 @@
+---
+
+---
+
+<section class="section-scroll">
+  <article>
+    <slot></slot>
+  </article>
+</section>
+
+<style>
+  section {
+    padding-top: calc(var(--header-height) + 2rem);
+
+    @media (width < 1024px) {
+      padding-top: var(--header-height);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+</style>

@@ -4,39 +4,35 @@ import Aside from "../../components/aside/aside.astro"
 
 import Menu from "../../data/menuEscola.json"
 
+import Hero from "../../components/main/HeroContent.astro"
+import ArticlePresentation from "../../components/main/ArticleContentPresentation.astro"
+import Article from "../../components/main/ArticleContent.astro"
 import Accordion from "../../components/accordions/accordion.astro"
 import AccordionItem from "../../components/accordions/partials/accordionCronologia.astro"
 import Item from "../../components/accordions/partials/itemCronologia.astro"
 
 const url = "/escola"
 const pageTitle = "L'escola"
+const MENU = Menu
 ---
 
 <Layout pageTitle={pageTitle}>
   <Aside slot="aside" url={url} pageTitle={pageTitle} Menu={Menu} />
 
-  <div class="hero">
-    <h1>Hero Banner L'escola</h1>
-    <p>Fotografia de l'escola</p>
-    <span class="line-separator"></span>
-  </div>
+  <Hero pageTitle={pageTitle}></Hero>
 
-  <section class="section-scroll">
-    <article>
-      <p><strong>L'Escola de Puntaires de Barcelona</strong> es dedica a l’ensenyament de tot tipus de puntes, des de les més elementals fins a les d’estil propi, ja sigui en les tècniques de <em>coixí</em> o <em>agulla</em>, tant del nostre país com de la resta d’Europa. En són exemples en coixí les puntes belgues, angleses i italianes, i en agulla, les italianes i les franceses.</p>
-      <p>L’especialitat de l’Escola és la <em>Punta de Barcelona</em> creada al segle XX per les seves fundadores, les germanes Raventós. Es tracta d’una punta elegant i original de característiques pròpies.</p>
-      <p>Els coneixements i les investigacions de les esmentades germanes Raventós, les portaren a publicar el llibre <em>Puntes</em> un ampli tractat de les dues tècniques.</p>
-      <p>La <strong>Fundació</strong> té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
-      <p>En l’ànim de l’Escola està combinar, en una perfecta simbiosi, d’una banda la promoció de les puntes a l’agulla i al coixí, per tal d’evitar que es perdin definitivament les més belles i antigues tècniques, i d’una altra la formació de puntaires capaces de crear nous punts i nous dissenys.</p>
-      <p>Aquest mateix fou l’esperit de les germanes Raventós, conegudes com <em>les senyoretes</em> en iniciar la nova escola, i l’esperit amb què el 1952 reberen, amb motiu de la celebració del Congrés Eucarístic, l’encàrrec d’elaborar unes tovalles per l’altar major de la catedral de Barcelona, combinant la punta a l’agulla i la punta al coixí. El resultat fou una peça amb caràcter propi, nou i diferent, que donà origen al que aleshores es batejà com a <strong>Punta de Barcelona</strong>, reconeguda arreu del món.</p>
-      <p>Des fa anys l’Escola de Puntaires de Barcelona és considerada la <em>Universitat de les puntes</em>, ja que es dedica a l’ensenyament de la major part de les puntes que es fan a Europa. Els seus treballs són reproduïts en llibres i revistes de tot el món.</p>
-    </article>
-  </section>
+  <ArticlePresentation>
+    <p><strong>L'Escola de Puntaires de Barcelona</strong> es dedica a l’ensenyament de tot tipus de puntes, des de les més elementals fins a les d’estil propi, ja sigui en les tècniques de <em>coixí</em> o <em>agulla</em>, tant del nostre país com de la resta d’Europa. En són exemples en coixí les puntes belgues, angleses i italianes, i en agulla, les italianes i les franceses.</p>
+    <p>L’especialitat de l’Escola és la <em>Punta de Barcelona</em> creada al segle XX per les seves fundadores, les germanes Raventós. Es tracta d’una punta elegant i original de característiques pròpies.</p>
+    <p>Els coneixements i les investigacions de les esmentades germanes Raventós, les portaren a publicar el llibre <em>Puntes</em> un ampli tractat de les dues tècniques.</p>
+    <p>La <strong>Fundació</strong> té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
+    <p>En l’ànim de l’Escola està combinar, en una perfecta simbiosi, d’una banda la promoció de les puntes a l’agulla i al coixí, per tal d’evitar que es perdin definitivament les més belles i antigues tècniques, i d’una altra la formació de puntaires capaces de crear nous punts i nous dissenys.</p>
+    <p>Aquest mateix fou l’esperit de les germanes Raventós, conegudes com <em>les senyoretes</em> en iniciar la nova escola, i l’esperit amb què el 1952 reberen, amb motiu de la celebració del Congrés Eucarístic, l’encàrrec d’elaborar unes tovalles per l’altar major de la catedral de Barcelona, combinant la punta a l’agulla i la punta al coixí. El resultat fou una peça amb caràcter propi, nou i diferent, que donà origen al que aleshores es batejà com a <strong>Punta de Barcelona</strong>, reconeguda arreu del món.</p>
+    <p>Des fa anys l’Escola de Puntaires de Barcelona és considerada la <em>Universitat de les puntes</em>, ja que es dedica a l’ensenyament de la major part de les puntes que es fan a Europa. Els seus treballs són reproduïts en llibres i revistes de tot el món.</p>
+  </ArticlePresentation>
 
-  <section id="historia-escola" class="section-scroll">
-    <article>
-      <h2>Història de l'escola</h2>
-      <p>Antònia (1885) i Montserrat (1889) Raventós i Ventura van néixer a Barcelona, però provenien d'una família de Vilafranca del Penedès. El pare fou enginyer i director d'una empresa del Poblenou, barri on les dues germanes van venir al món i on va viure amb la família fins a la mort del pare l'any 1932.</p>
+  <Article idName={MENU[0].id} title={MENU[0].title}>
+    <p>Antònia (1885) i Montserrat (1889) Raventós i Ventura van néixer a Barcelona, però provenien d'una família de Vilafranca del Penedès. El pare fou enginyer i director d'una empresa del Poblenou, barri on les dues germanes van venir al món i on va viure amb la família fins a la mort del pare l'any 1932.</p>
       <p>Després anaren a viure, fins a la mort, a la dreta de l'Eixample barceloní. Les dues foren alumnes del col•legi de les Germanes Franciscanes del Poblenou.</p>
       <p>Persones molt cultes i cultivades, participaren de les activitats culturals del seu temps, eren expertes dibuixants, brodaven, tocaven el piano, entre d’altres.</p>
       <p>Mossén Ildefons Gatell, demanà a benemèrites dames barcelonines que fundessin una biblioteca femenina per instruir la Dona. Aquesta fundació tingué lloc als claustres de Santa Anna, a l'ombra de l'Associació de Bones Lectures. Aquestes senyores aviat s'adonaran que la dona no estava preparada per fer ús d'una biblioteca.</p>
@@ -49,797 +45,709 @@ const pageTitle = "L'escola"
       <p>El gener del 1935, férem una exposició a la Casa de l’Ardiaca, en la qual presentàrem els treballs que havíem fet amb l’estudi dels llibres de la Casa. Després se’ns obriren les portes del Museu i el Sr. Joaquim Folch i Torres, molt gentilment, posà totes les puntes del Museu a la nostra disposició per a estudiar-les. En aquesta casa férem coneixença amb el Sr. Francesc Bofill, actualment Director del Museu de les Arts Decoratives i amb Dª Adelaida Ferré, que en aquell temps feia fitxes de les puntes del Museu, i que casualment abans que nosaltres, havia estat deixebla de les nostres professores de puntes.</p>
       <p>La sra. Adelaida Ferré, distingida mestra municipal que professava a l'Escola Lluïsa Cura, quan fou nomenada directora ens demanà si voldríem donar-hi unes classes de puntes. No volguérem dir-li que no, però anàrem amb poca fe, perquè aquell mateix curs, l'intent d'unes classes de puntes a l'Escola Massana, havien fracassat.</p>
       <p>La nostra sorpresa fou, el primer dia de classe, en trobar-nos amb setanta deixebles, disposades a endinsar-se en aquesta branca de les Belles Arts. Amb dinou anys de lliçons a l'Escola Lluïsa Cura s'han format un planter de deixebles i un renaixement de les puntes.</p>
-    </article>
-  </section>
+  </Article>
+  <Article idName={MENU[1].id} title={MENU[1].title}>
+    <p>L’Escola de Puntaires de Barcelona és una Fundació Privada, inscrita en el registre de Fundacions amb el nº 40, subjecta a la legislació de la Generalitat de Catalunya.</p>
+    <table>
+      <tr><th>Fundadores</th></tr>
+      <tr><td>Antònia Raventós i Ventura</td></tr>
+      <tr><td>Montserrat Raventós i Ventura</td></tr>
+    </table>
+    <table>
+      <tr><th>Presidència</th></tr>
+      <tr><td>Angelina Clar i Furnells</td></tr>
+    </table>
+    <table>
+      <tr><th>Vice-presidència</th></tr>
+      <tr><td>Glòria Bachs i Carceller</td></tr>
+    </table>
+    <table>
+      <tr><th>Secretaría</th></tr>
+      <tr><td>Isabel Moreno i Gili</td></tr>
+    </table>
+    <table>
+      <tr><th>Vocalies</th></tr>
+      <tr><td>Montserrat Sanarau i Roig</td><tr>
+      <tr><td>Nativitat Gasulla i Fonfreda</td></tr>
+      <tr><td>Montserrat Viader i Crous</td></tr>
+      <tr><td>Anna M. Riera i Villarrubia</td></tr>
+    </table>
+    <table>
+      <tr><th>Vocalies representants</th></tr>
+      <tr><td>Institut Municipal d’Educació, Ajuntament de Barcelona</td></tr>
+      <tr><td>Departament d’Ensenyament, Generalitat de Catalunya</td></tr>
+    </table>
+  </Article>
+  <Article idName={MENU[2].id} title={MENU[2].title}>
+    <Accordion periode="1890 - 1899">
+      <AccordionItem Any="1885">
+        <Item>Neix Antònia Raventós i Ventura</Item>
+      </AccordionItem>
+      <AccordionItem Any="1889">
+        <Item>Neix Montserrat Raventós i Ventura</Item>
+      </AccordionItem>
+      <AccordionItem></AccordionItem>
+    </Accordion>
 
-  <section id="recursos-humans" class="section-scroll">
-    <article>
-      <h2>Recursos humans</h2>
-      <p>L’Escola de Puntaires de Barcelona és una Fundació Privada, inscrita en el registre de Fundacions amb el nº 40, subjecta a la legislació de la Generalitat de Catalunya.</p>
-      <table>
-        <tr><th>Fundadores</th></tr>
-        <tr><td>Antònia Raventós i Ventura</td></tr>
-        <tr><td>Montserrat Raventós i Ventura</td></tr>
-      </table>
-      <table>
-        <tr><th>Presidència</th></tr>
-        <tr><td>Angelina Clar i Furnells</td></tr>
-      </table>
-      <table>
-        <tr><th>Vice-presidència</th></tr>
-        <tr><td>Glòria Bachs i Carceller</td></tr>
-      </table>
-      <table>
-        <tr><th>Secretaría</th></tr>
-        <tr><td>Isabel Moreno i Gili</td></tr>
-      </table>
-      <table>
-        <tr><th>Vocalies</th></tr>
-        <tr><td>Montserrat Sanarau i Roig</td><tr>
-        <tr><td>Nativitat Gasulla i Fonfreda</td></tr>
-        <tr><td>Montserrat Viader i Crous</td></tr>
-        <tr><td>Anna M. Riera i Villarrubia</td></tr>
-      </table>
-      <table>
-        <tr><th>Vocalies representants</th></tr>
-        <tr><td>Institut Municipal d’Educació, Ajuntament de Barcelona</td></tr>
-        <tr><td>Departament d’Ensenyament, Generalitat de Catalunya</td></tr>
-      </table>
-    </article>
-  </section>
+    <Accordion periode="1910 - 1919">
+      <AccordionItem Any="1910">
+        <Item>Montserrat i Antònia Raventós i Ventura van iniciar un procés d’investigació i estudi de les puntes catalanes a la bibliografia de la col·lecció Massana, que les portà a recuperar els punts i les tècniques que s’havien perdut a casa nostra.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1931">
+        <Item>Lorem ipsum dolor sit amet.</Item>
+      </AccordionItem>
+      <AccordionItem></AccordionItem>
+    </Accordion>
 
-  <section id="cronologia" class="section-scroll">
-    <article>
-      <h2>Cronologia</h2>
+    <Accordion periode="1930 - 1939">
+      <AccordionItem Any="1931">
+        <Item>Adelaida Ferrer publica l’article Col·lecció de patrons de puntes al coixí al Butlletí dels Museus d’Art de Barcelona</Item>
+      </AccordionItem>
+      <AccordionItem Any="1932">
+        <Item>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1934">
+        <Item>Adelaida Ferrer publica l’article Estris per a fer una punts de coixí al Butlletí dels Museus d’Art de Barcelona.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1935">
+        <Item>Aquest any varen participar en una exposició a la Casa de l’Ardiaca de Barcelona, seu de l’Institut de Cultura i Biblioteca Popular de La Dona, actual Arxiu Històric de la Ciutat. Els documents antics ja ens parlen d’aquesta exposició de l’any 1935, possiblement dins del programa d’actes de l’Institut de Cultura de l’època. Dissortadament dins dels arxius de l’Escola de Puntaires de Barcelona no se’n conserva cap imatge.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1890 - 1899">
-        <AccordionItem Any="1885">
-          <Item>Neix Antònia Raventós i Ventura</Item>
-        </AccordionItem>
-        <AccordionItem Any="1889">
-          <Item>Neix Montserrat Raventós i Ventura</Item>
-        </AccordionItem>
-        <AccordionItem></AccordionItem>
-      </Accordion>
+    <Accordion periode="1940 - 1949">
+      <AccordionItem Any="1944">
+        <Item>Les germanes Raventós donen classes de punta al Coixí i de punta a l’Agulla a l’Escola Lluïsa Cura.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1910 - 1919">
-        <AccordionItem Any="1910">
-          <Item>Montserrat i Antònia Raventós i Ventura van iniciar un procés d’investigació i estudi de les puntes catalanes a la bibliografia de la col·lecció Massana, que les portà a recuperar els punts i les tècniques que s’havien perdut a casa nostra.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1931">
-          <Item>Lorem ipsum dolor sit amet.</Item>
-        </AccordionItem>
-        <AccordionItem></AccordionItem>
-      </Accordion>
+    <Accordion periode="1950 - 1959">
+      <AccordionItem Any="1951">
+        <Item>Els tallers de les germanes Raventós sovint reben encàrrecs destinats a entitats i institucions, entre els quals un del Capítol Catedralici per fer unes Tovalles per l’altar Major de la Catedral de la ciutat, seran estrenades durant el Congrés Eucarístic de l’any 1952 i per primera vegada es treballarà la Punta de Barcelona.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1959">
+        <Item>Exposició a la sala d’actes Escola Luisa Cura dels treballs de les seves alumnes.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1930 - 1939">
-        <AccordionItem Any="1931">
-          <Item>Adelaida Ferrer publica l’article Col·lecció de patrons de puntes al coixí al Butlletí dels Museus d’Art de Barcelona</Item>
-        </AccordionItem>
-        <AccordionItem Any="1932">
-          <Item>Les germanes Antònia i Montserrat Raventós i Ventura van començar a investigar en profunditat el món de les Puntes. Les senyoretes Raventós assistien a les classes de l’Escola LLuïsa Cura quan era la directora la Sra. Adelaida Farré. Al poc temps varen ser sol·licitades per impartir els seus coneixements com a professores a la mateixa escola.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1934">
-          <Item>Adelaida Ferrer publica l’article Estris per a fer una punts de coixí al Butlletí dels Museus d’Art de Barcelona.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1935">
-          <Item>Aquest any varen participar en una exposició a la Casa de l’Ardiaca de Barcelona, seu de l’Institut de Cultura i Biblioteca Popular de La Dona, actual Arxiu Històric de la Ciutat. Els documents antics ja ens parlen d’aquesta exposició de l’any 1935, possiblement dins del programa d’actes de l’Institut de Cultura de l’època. Dissortadament dins dels arxius de l’Escola de Puntaires de Barcelona no se’n conserva cap imatge.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="1960 - 1969">
+      <AccordionItem Any="1960">
+        <Item>Exposició ”El Encaje de Seda” al Saló del Tinell de Barcelona, organitzada per el ”Colegio del Arte Mayor de la Seda”.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1961">
+        <Item>Exposició a l’Escola Lluïsa Cura dels treballs de les seves alumnes durant els darrers 20 anys. L’escriptora i periodista Llucieta Canya creu necessari no deixar perdre l’Art de les puntes.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1962">
+        <Item>Neix l’Escola de Puntaires de Barcelona. Arran de les exposicions muntades al saló del Tinell al 1960 i a l’Escola LLuisa Cura al 1961, així com una retrospectiva l’any 1962, on s’exposaven moltes de les peces de punta que durant 20 anys havien realitzat les seves alumnes, va sorgir la possibilitat de crear un Patronat i al seu entorn “l’Escola de Puntaires de Barcelona“, institució que va començar a funcionar dins les dependències de L’Escola Massana de Barcelona. L’Ajuntament de la ciutat els hi dedica un acte d’homenatge.</Item>
+        <Item>A les aules de l’Escola Massana també s’impartien les assignatures teòriques per obtenir la titulació de Professorat. Classes de Dibuix, Història de l’Art, Història de la Indumentària, etc.</Item>
+        <Item>Un cop acabats els 5 cursos d’estudi, les futures mestres presentaven els seus treballs i desprès de superar l’examen de Llotja obtenien la titulació de Professores.</Item>
+        <Item>Al mes de novembre surt la nota de premsa al diari La Vanguardia … ”La escuela de puntaires” incorporada al Conservatori Massana.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1963">
+        <Item>Exposició retrospectiva amb les puntes de les alumnes treballades durant vint anys, 533 treballs catalogats, a la sala Marès del Conservatori de les Arts del Llibre, carrer del Carme 47, del 12 al 23 de juny.</Item>
+        <Item>Exposició dels treballs de les Alumnes de l’Escola de Puntaires de Barcelona a la Capella de l’Antic Hospital de la Santa Creu de Barcelona.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1964">
+        <Item>Exposició a Sant Sebastià per difondre l’art de les puntes a Catalunya.</Item>
+        <Item>Article de la periodista Llucieta Canya al suplement femení de “El Correo Catalan”.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1965">
+        <Item>L’Escola de Puntaires de Barcelona, juntament amb la Junta de Veïns del Carrer Hospital, organitzen una exposició dels treballs de les alumnes a les estances del Palau de la Virreina, La Rambla, 99 de la ciutat.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1967">
+        <Item>L’Alcalde Josep M. Porcioles posa a disposició de l’Escola l’edifici annex al Palau de La Virreina.</Item>
+        <Item>L’Escola de Puntaires de Barcelona es trasllada al primer pis de la nova seu, al segon hi haurà el Museu de Puntes i la Biblioteca, i al tercer estarà dedicat a una exposició de mantellines. Ell 30 de maig comencen les classes.</Item>
+        <Item>Publicació del llibre ”Puntes” on les fundadores de l’Escola de Puntaires de Barcelona, les Senyoretes Raventós i Ventura expliquen els seus inicis; també podrem trobar una síntesi de la Història de la Punta i una classificació dels seus tipus. Trobem els estudis teòrics de puntes que tenen lloc al palau de La Virreina, per completar les classes pràctiques que son donades a l’Escola de Puntaires de Barcelona. Està editat en versió Catalana i versió Castellana. La Presentació dels llibres està a càrrec del Sr. Joan Ainaud de Lasarte, Director General dels Museus d’Art de Barcelona.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1968">
+        <Item>Exposició del 8 al 28 de gener al Palau de la Virreina amb motiu de la inauguració oficial i benedicció de la nova seu.</Item>
+        <Item>Puntaires al Liceu, alumnes de l’Escola participen a l’obra ”Marina“.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1940 - 1949">
-        <AccordionItem Any="1944">
-          <Item>Les germanes Raventós donen classes de punta al Coixí i de punta a l’Agulla a l’Escola Lluïsa Cura.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="1970 - 1979">
+      <AccordionItem Any="1970">
+        <Item>L’Ajuntament de Barcelona encarrega unes Tovalles per la sala-menjador del Palauet Albèniz, residència a La ciutat aleshores dels prínceps d’Espanya.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1971">
+        <Item>Les germanes Raventós reben els premis Sant Martí al Poble Nou com a personalitat destacades al districte.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1972">
+        <Item>Finalitzen els seus estudis oficials la 1a. promoció titulada de Professorat a l’Escola de Puntaires de Barcelona, els quals es vinculen al  Pla General d’Ensenyament i Tècniques de l’Escola Massana. La primera promoció de Professores titulades que surt de les seves aules va ser formada per les senyores Barata, Vergés, Cadira, Ballester i Padró.</Item>
+        <Item>Col•laboració amb l’escultor Josep Viladomat i Massanas a l’obra ”La Puntaire“, actualment als jardins mossèn Costa i Llobera de Montjuïc a Barcelona. El “peu” del coixí que va servir de model per fer aquesta obra, es pot veure encara a l’escola.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1979">
+        <Item>El 27 de febrer mor Montserrat Raventós i Ventura.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1950 - 1959">
-        <AccordionItem Any="1951">
-          <Item>Els tallers de les germanes Raventós sovint reben encàrrecs destinats a entitats i institucions, entre els quals un del Capítol Catedralici per fer unes Tovalles per l’altar Major de la Catedral de la ciutat, seran estrenades durant el Congrés Eucarístic de l’any 1952 i per primera vegada es treballarà la Punta de Barcelona.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1959">
-          <Item>Exposició a la sala d’actes Escola Luisa Cura dels treballs de les seves alumnes.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="1980 - 1989">
+      <AccordionItem Any="1980">
+        <Item>Exposició ”Taula de Nadal” del 24 de desembre al 15 de gener, Delegació Serveis de Cultura.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1981">
+        <Item>Mor Antònia Raventós i Ventura.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1982">
+        <Item>El 6 de desembre es constitueix L’Escola de Puntaires de Barcelona, fundació privada sense ànim de lucre. La professora de punta al Coixí Sra. Roser Abelló es escollida per portar la direcció.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1984">
+        <Item>La Fundació Privada Escola de Puntaires de Barcelona s’inscriu al Registre de Fundacions de la Generalitat de Catalunya amb el nº 40.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1988">
+        <Item>Edició catàleg exposició ”25 Anys de l’Escola de Puntaires” Museu Textil i d’Indumentària 31 de maig 1988 al 30 d’abril 1989.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1989">
+        <Item>Nomenament com a Conselleres OIDFA-Espanya de la Directora i la Secretaria de l’Escola. Participació al congres del 1988 a “Le Puy en Velay”, Franca.</Item>
+        <Item>La direcció de l’Escola de Puntaires de Barcelona col•labora activament amb el Sr. Jordi Palomer, director del Museu Marès de la Punta, en la fundació de l’Associació Catalana de Puntaires que durant un temps serà acollida a les seves dependències del  Palau de la Virreina. Membres del Patronat de l’escola formaran part de la Junta de Constitució i del grup de persones que varen signar els estatuts.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1960 - 1969">
-        <AccordionItem Any="1960">
-          <Item>Exposició ”El Encaje de Seda” al Saló del Tinell de Barcelona, organitzada per el ”Colegio del Arte Mayor de la Seda”.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1961">
-          <Item>Exposició a l’Escola Lluïsa Cura dels treballs de les seves alumnes durant els darrers 20 anys. L’escriptora i periodista Llucieta Canya creu necessari no deixar perdre l’Art de les puntes.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1962">
-          <Item>Neix l’Escola de Puntaires de Barcelona. Arran de les exposicions muntades al saló del Tinell al 1960 i a l’Escola LLuisa Cura al 1961, així com una retrospectiva l’any 1962, on s’exposaven moltes de les peces de punta que durant 20 anys havien realitzat les seves alumnes, va sorgir la possibilitat de crear un Patronat i al seu entorn “l’Escola de Puntaires de Barcelona“, institució que va començar a funcionar dins les dependències de L’Escola Massana de Barcelona. L’Ajuntament de la ciutat els hi dedica un acte d’homenatge.</Item>
-          <Item>A les aules de l’Escola Massana també s’impartien les assignatures teòriques per obtenir la titulació de Professorat. Classes de Dibuix, Història de l’Art, Història de la Indumentària, etc.</Item>
-          <Item>Un cop acabats els 5 cursos d’estudi, les futures mestres presentaven els seus treballs i desprès de superar l’examen de Llotja obtenien la titulació de Professores.</Item>
-          <Item>Al mes de novembre surt la nota de premsa al diari La Vanguardia … ”La escuela de puntaires” incorporada al Conservatori Massana.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1963">
-          <Item>Exposició retrospectiva amb les puntes de les alumnes treballades durant vint anys, 533 treballs catalogats, a la sala Marès del Conservatori de les Arts del Llibre, carrer del Carme 47, del 12 al 23 de juny.</Item>
-          <Item>Exposició dels treballs de les Alumnes de l’Escola de Puntaires de Barcelona a la Capella de l’Antic Hospital de la Santa Creu de Barcelona.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1964">
-          <Item>Exposició a Sant Sebastià per difondre l’art de les puntes a Catalunya.</Item>
-          <Item>Article de la periodista Llucieta Canya al suplement femení de “El Correo Catalan”.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1965">
-          <Item>L’Escola de Puntaires de Barcelona, juntament amb la Junta de Veïns del Carrer Hospital, organitzen una exposició dels treballs de les alumnes a les estances del Palau de la Virreina, La Rambla, 99 de la ciutat.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1967">
-          <Item>L’Alcalde Josep M. Porcioles posa a disposició de l’Escola l’edifici annex al Palau de La Virreina.</Item>
-          <Item>L’Escola de Puntaires de Barcelona es trasllada al primer pis de la nova seu, al segon hi haurà el Museu de Puntes i la Biblioteca, i al tercer estarà dedicat a una exposició de mantellines. Ell 30 de maig comencen les classes.</Item>
-          <Item>Publicació del llibre ”Puntes” on les fundadores de l’Escola de Puntaires de Barcelona, les Senyoretes Raventós i Ventura expliquen els seus inicis; també podrem trobar una síntesi de la Història de la Punta i una classificació dels seus tipus. Trobem els estudis teòrics de puntes que tenen lloc al palau de La Virreina, per completar les classes pràctiques que son donades a l’Escola de Puntaires de Barcelona. Està editat en versió Catalana i versió Castellana. La Presentació dels llibres està a càrrec del Sr. Joan Ainaud de Lasarte, Director General dels Museus d’Art de Barcelona.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1968">
-          <Item>Exposició del 8 al 28 de gener al Palau de la Virreina amb motiu de la inauguració oficial i benedicció de la nova seu.</Item>
-          <Item>Puntaires al Liceu, alumnes de l’Escola participen a l’obra ”Marina“.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="1990 - 1999">
+      <AccordionItem Any="1993">
+        <Item>L’Escola es traslladada al 3r. pis de les dependències del Museu Textil i d’Indumentària.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1994">
+        <Item>Organització VI Congrés Internacional OIDFA a Barcelona. 19, 20 i 21 setembre, Hotel Princesa Sofia de Barcelona, juntament amb OIDFA.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1995">
+        <Item>Exposició “RandeSednar”. Les alumnes  professorat de l’Escola de Puntaires de Barcelona, que cursen a l’Escola Massana l’especialitat de ”disseny de puntes” de 3er, 4rt i 5è curs, exposen els seus treballs a l’exposició RandeSendar, ofici antic, art nou, gener 1995.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1996">
+        <Item>El 20 de maig de l’any 1996 la Reina Fabiola de Bèlgica visita l’Escola de Puntaires de Barcelona durant una de les jornades de classe. A les Aules del Museu Tèxtil i de la Indumentària les alumnes treballen als corresponents tallers i responen a les preguntes que cordialment els fa la monarca.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1998">
+        <Item>Participació destacada a la I Mostra de Puntaires, Festes de la Mercè, presentant la “Punta de Barcelona”.</Item>
+      </AccordionItem>
+      <AccordionItem Any="1999">
+        <Item>Exposició Homenatge al Museu Textil i d’Indumentària, a les Senyoretes Raventós amb motiu del centenari del seu naixement.
+          <div>
+            <cite>…Un grupo de encajeras está realizando tres diseños sobre el tema del agua en el Museu Tèxtil i de la Indumentaria, donde luego se expondrán en una segunda fase del proyecto. La paciencia, la colaboración, la imaginación, son algunas de las cualidades que quiere destacar Hannah Collins con este  “voyage work in progress”...</cite>
+            <br>
+            <cite>… de estas reflexiones surgió la idea de invitar a artistas contemporáneos a crear obras sobre las colecciones municipales. El objetivo era confrontar pasado y presente para generar perspectivas renovadas: un proceso de descubrimiento mutuo que sacaría a la luz nuevas lecturas del rico legado patrimonial de Barcelona. Y, como consecuencia de ello mezclar públicos. O “duplicarlos” como indica el nombre de la exposición.</cite>
+            <br>
+            <cite>La propuesta “Dobles Vidas” atrae al público de arte contemporáneo hacia espacios culturales de la ciudad a veces extremadamente ignorados…. los creadores visitaron los museos y escogieron personalmente el emplazamiento antes de elaborar sus proyectos“.</cite>
+          </div>
+        </Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1970 - 1979">
-        <AccordionItem Any="1970">
-          <Item>L’Ajuntament de Barcelona encarrega unes Tovalles per la sala-menjador del Palauet Albèniz, residència a La ciutat aleshores dels prínceps d’Espanya.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1971">
-          <Item>Les germanes Raventós reben els premis Sant Martí al Poble Nou com a personalitat destacades al districte.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1972">
-          <Item>Finalitzen els seus estudis oficials la 1a. promoció titulada de Professorat a l’Escola de Puntaires de Barcelona, els quals es vinculen al  Pla General d’Ensenyament i Tècniques de l’Escola Massana. La primera promoció de Professores titulades que surt de les seves aules va ser formada per les senyores Barata, Vergés, Cadira, Ballester i Padró.</Item>
-          <Item>Col•laboració amb l’escultor Josep Viladomat i Massanas a l’obra ”La Puntaire“, actualment als jardins mossèn Costa i Llobera de Montjuïc a Barcelona. El “peu” del coixí que va servir de model per fer aquesta obra, es pot veure encara a l’escola.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1979">
-          <Item>El 27 de febrer mor Montserrat Raventós i Ventura.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="2000 - 2009">
+      <AccordionItem Any="2000">
+        <Item>L’Alcalde de la ciutat Joan Clos, inaugura la placa commemorativa col•locada a la façana de la casa on varen viure les Senyoretes Raventós, Passeig de Sant Joan, de Barcelona, dins del marc de la XII Diada de la Puntaire.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2002">
+        <Item>Exposició a la Sala d’Actes d’Assistència Sanitària de Barcelona.</Item>
+        <Item>Article sobre l’Escola de Puntaires de Barcelona al Butlletí n1 d’Artesania Catalunya.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2004">
+        <Item>Exposició Centre Català Artesania.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2005">
+        <Item>Exposició ”Aire”. L’escola exposa al Centre permanent d’Artesania de la ciutat una col•lecció de 50 ventalls realitzats per les alumnes amb gran èxit de públic.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2007">
+        <Item>Trasllat a la nova seu del carrer de Sant Erasme, 1 de Barcelona, en previsió d’obres al Museu Tèxtil i d’Indumentària.</Item>
+        <Item>Acte inaugural de la nova seu de l’Escola amb la presencia de les autoritats de la ciutat Excm. Sr. Jordi Hereu i Boher ,Alcalde de Barcelona, Sr. Jordi Martí i Grau, Delegat de Cultura Àrea Benestar Social i Cohesió Territorial, Sr. Francesc Fabregat, Director Departament de Festes Institut de Cultura de Barcelona, Sra. Itziar Gonzalez, Regidora Districte Ciutat Vella i Sra. Marta Selva i Masoliver,  Presidenta Institut Català per les Dones de la Generalitat de Catalunya.</Item>
+        <Item>Jornada de Portes Obertes durant les festes de la Mercè.</Item>
+        <Item>Un nou equip directiu pren el relleu al front de l’Escola de Puntaires de Barcelona a més de les participacions i assistències a actes relacionats amb la nostra artesania i continua fent periòdicament les tasques que corresponen a un curs qualsevol (tallers oberts, estudis de professorat, exposicions, xerrades, demostracions, etc.).</Item>
+        <Item>Edició de la Pagina Web de l’Escola: www.escolapuntairesbcn.cat.</Item>
+        <Item>Curset “Nadal amb Puntes”.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2008">
+        <Item>Tallers d’iniciació a la punta de coixí per a nois i noies.</Item>
+        <Item>Curset “Iniciació a la Punta de Barcelona” de maig a juliol. Exposició treballs final de curs.</Item>
+        <Item>Recuperació patrons antics del fons patrimonial i Inventari de la Biblioteca de l’Escola.</Item>
+        <Item>Participació a la XXI Diada de la Puntaire a Viladecans i participació al Concurs 20×20.</Item>
+        <Item>Participació a la Trobada de Puntaires de les festes de la Mercè, jornada de portes obertes i “Tast de puntes”.</Item>
+        <Item>“De puntilla a puntilla” - Crònica per Maritza García (El País).</Item>
+        <Item>Curset “Nadal amb Puntes”.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2009">
+        <Item>Curset “Iniciació a la Malla” impartit per la professora Carme Martí.</Item>
+        <Item>Curset “Dibuix artístic” impartit per la professora Glòria Bachs.</Item>
+        <Item>Participació a la Mostra Artesana Dones de Ciutat Vella “Dona, la Sal de la Vida”.</Item>
+        <Item>Acolliment de la XVIII Jornada de Primavera OIDFA (Organisation Internationale de la Dentelle au Fuseau et a l’Aguille). Puntaires vingudes d’arreu del territori es retroben per fer la seva reunió de Junta habitual, alhora que desenvolupen un taller monogràfic proposat per l’organització. En aquesta ocasió es tracta de treballar amb diverses tècniques de puntes unes peces en forma de rajola tradicional catalana, aquestes un cop acabades composaran un mosaic que serà presentat a l’estand de l’organització al Congrés 2010, a Kobe, Japó.</Item>
+        <Item>Participació a la XXII Diada de la Puntaire a Lleida.</Item>
+        <Item>I Setmana Creativa, proposa un repte a les alumnes. Es tracta de  desenvolupar un projecte complet. De la primera idea inicial, a l’execució de la peça.</Item>
+        <Item>Amb l’ajut de la professora de dibuix han fet els esborranys fins aconseguir un disseny atractiu, amb  les professores de puntes han preparat el patró i l’han desenvolupat fins aconseguir un treball acabat i documentat, producte de tot un estudi acurat de possibilitats, tècniques, textures, etc. El resultat ha estat molt variat segons cadascuna de les participants, però força enriquidor per a tothom.</Item>
+        <Item>Exposició dels  treballs de les alumnes i jornades de portes obertes per la Festa Major del Raval.</Item>
+        <Item>Participació a la Trobada de Puntaires de la Merce’09 i jornada de portes obertes.</Item>
+        <Item>II Congrés de les Dones de Barcelona, participació a les jornades de treball  i a la posterior participació a la filmació d’un DVD, que recull un film col•lectiu de la ciutat, producte de les sessions participatives dels Consells de Dones del febrer gener 2006 al febrer 2007, dels diversos districtes de la ciutat.</Item>
+        <Item>Participació al projecte “Sopa de Llengües”  treballs de puntes que contenien lletres, dins del context “Artesania, un llenguatge universal” a les Reials Drassanes de Barcelona.</Item>
+        <Item>Participació a les jornades de preparació de la “I Jornada de Diagnosi”.</Item>
+        <Item>Exposició dels  treballs de les alumnes i jornades de portes obertes per la Festa Major del Raval.</Item>
+        <Item>Article a la revista Nova Ciutat Vella “Fil per randa” per Carme Moreno.</Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1980 - 1989">
-        <AccordionItem Any="1980">
-          <Item>Exposició ”Taula de Nadal” del 24 de desembre al 15 de gener, Delegació Serveis de Cultura.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1981">
-          <Item>Mor Antònia Raventós i Ventura.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1982">
-          <Item>El 6 de desembre es constitueix L’Escola de Puntaires de Barcelona, fundació privada sense ànim de lucre. La professora de punta al Coixí Sra. Roser Abelló es escollida per portar la direcció.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1984">
-          <Item>La Fundació Privada Escola de Puntaires de Barcelona s’inscriu al Registre de Fundacions de la Generalitat de Catalunya amb el nº 40.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1988">
-          <Item>Edició catàleg exposició ”25 Anys de l’Escola de Puntaires” Museu Textil i d’Indumentària 31 de maig 1988 al 30 d’abril 1989.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1989">
-          <Item>Nomenament com a Conselleres OIDFA-Espanya de la Directora i la Secretaria de l’Escola. Participació al congres del 1988 a “Le Puy en Velay”, Franca.</Item>
-          <Item>La direcció de l’Escola de Puntaires de Barcelona col•labora activament amb el Sr. Jordi Palomer, director del Museu Marès de la Punta, en la fundació de l’Associació Catalana de Puntaires que durant un temps serà acollida a les seves dependències del  Palau de la Virreina. Membres del Patronat de l’escola formaran part de la Junta de Constitució i del grup de persones que varen signar els estatuts.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="2010 - 2019">
+      <AccordionItem Any="2010">
+        <Item>II Setmana Creativa. Les alumnes han pogut treballar dins les seves respectives classes per realitzar les peces previstes, han escollit entre les tècniques de Punta al Coixí, Punta a l’Agulla i Macramé, independentment de la tècnica on estiguin matriculades a principi de curs. Això ha permès que hagin pogut experimentar en altres tècniques, obrint el ventall de possibilitats per posteriorment poder continuar l’aprenentatge si ho creuen adient. D’altra banda el fet de durant uns dies “barrejar” l’alumnat dels tallers “de sempre” ha donat un ambient molt agradable als grups resultants. En resum, les alumnes han compartit les 5 sessions de la setmana creativa, repartides durant els mesos de novembre-desembre realitzant petits projectes de Nadal.</Item>
+        <Item>Participació a la XXIII Diada de la Puntaire a Badalona.</Item>
+        <Item>Participació a la I Jornada de Diagnosi i Reptes de Futur de la Punta de Coixí “Puntaires i Palilleiras”, Castell Jalpi, Arenys de Munt.</Item>
+        <Item>L’Escola es membre de “l’Observatori de Puntes” creat arrel de la Jornada “Puntaires i Palilleiras” per l’estudi del sector puntaire.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2011">
+        <Item>Participació a la Festa Major del Raval amb jornada de Portes Obertes i exposició.</Item>
+        <Item>Projecte Sagrada Família reunions de treball internes.</Item>
+        <Item>Assistència a les xerrades Torre Jussana.</Item>
+        <Item>Exposició final de curs dels treball alumnes.</Item>
+        <Item>Participació a la I Fira Internacional de Puntaires de Lloret de Mar.</Item>
+        <Item>Reunió treball amb arquitectes Sagrada Família pel disseny Tovalles.</Item>
+        <Item>Participació a la 16 Mostra Associacions, Festa de la Merce’11.</Item>
+        <Item>La Punta de Barcelona es reconeguda dins del projecte com un dels “oficis singulars” del programa Empremtes de Catalunya del CCAM.</Item>
+        <Item>Coedició amb OIDFA delegació Espanya del llibre de “Modernisme una nova visió” que relliga les Puntes al Coixí i les Punes a l’Agulla amb el Modernisme català, interpretant d’obres arquitectòniques reconegudes arreu amb puntes, traduït al castellà , francès i anglès.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2012">
+        <Item>Adaptació dels Estatuts a la Llei 4/2008 del Llibre Tercer del Codi Civil de Catalunya mitjançant Escriptura degudament registrada.</Item>
+        <Item>Assistència a les reunions Observatori de Puntes.</Item>
+        <Item>Participació a la 25 trobada de puntaires d’Arenys de Mar.</Item>
+        <Item>Assistència a la Jornada de tardor OIDFA, Saragossa.</Item>
+        <Item>Participació a la Festa Major del Raval amb Jornades de Portes Obertes i Tast de Puntes.</Item>
+        <Item>Participació a la 17 Mostra Associacions festes de la Mercè.</Item>
+        <Item>Actes celebració 60 anys Punta de Barcelona.</Item>
+        <Item>Presentació oficial a les autoritats de la ciutat i del patronat Sagrada Família del disseny final de les Tovalles de l’Altar Major.</Item>
+        <Item>Assistència al taller demostració Marató pobresa.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2013">
+        <Item>Primer curs de “La Petita Escola” taller per a nois i noies de 5 a 12 anys els dissabtes matí.</Item>
+        <Item>Assistència a les reunions Observatori de Puntes.</Item>
+        <Item>Inici del taller obert Tovalles Altar Major Sagrada Família amb Punta de Barcelona.</Item>
+        <Item>Reconeixement institucional per part de l’Ajuntament de Barcelona com a “entitat que s’ha distingit en el món puntaire barceloní” en un acte d’homenatge al Saló de Cent del consistori.</Item>
+        <Item>Participació a la Festa Major del Raval amb Jornades de Portes Obertes i Tast de Puntes.</Item>
+        <Item>Participació a la 18 Mostra Associacions festes de la Mercè.</Item>
+        <Item>Assistència al taller demostració Punta de Barcelona a la Fira Internacional de Lloret de Mar.</Item>
+        <Item>Edició pàgina www.facebook.com/escolapuntairesbcn.</Item>
+        <Item>Participació a les Jornades Puntaires de Sant Andreu, taller demostració Punta de Barcelona, Taula Rodona, xerrada “L’ensenyament”.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2014">
+        <Item>Seguiment reunions amb Departament d’Ensenyament de la Generalitat de Catalunya i l’escola de Llotja per la preparació currículum titulació oficial de grau superior de Puntes, Brodats i Rebosters.</Item>
+        <Item>Participació a la Festa Major del Raval amb Jornades de Portes Obertes i Exposició dels treballs alumnes curs.</Item>
+        <Item>Participació a la 19 Mostra Associacions festes de la Mercè.</Item>
+        <Item>Assistència a les reunions Observatori de Puntes.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2015">
+        <Item>Tast de Puntes per a petits i grans, festes de la Mercè, 20, 21 i 24 setembre.</Item>
+        <Item>Seguiment i preparació currículum definitius de les titulacions oficials dels cicles formatius dels graus superiors de “Puntes Artístiques” i de “Brodats i Rebosters” pertanyents a la família de Tèxtils Artístics.</Item>
+        <Item>Creació de l’espai de trobada per alumnes i ex-alumnes de l’escola com a comunitat a Facebook: ”Café, Te i Puntes…. t’apuntes? ”.</Item>
+        <Item>Durant el curs 2015-2016 s’impartiran els tallers del 1er curs per assolir la titulació de “Tècnic/ca Superior d’Arts Plàstiques i Disseny en Puntes Artístiques” que juntament amb Llotja, (Escola Superior de Disseny i Art de Barcelona) qualificaran oficialment a les alumnes futures professores d’aquesta artesania tradicional.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2016">
+        <Item>Durant aquest curs continuen les classes de 1er i 2n dels CFGS “Puntes Artístiques”, els Tallers Oberts i les classes dels Mestratges Tècnics de Coixí i d’Agulla.</Item>
+      </AccordionItem>
+      <AccordionItem Any="2017">
+        <Item></Item>
+      </AccordionItem>
+      <AccordionItem Any="2018">
+        <Item></Item>
+      </AccordionItem>
+      <AccordionItem Any="2019">
+        <Item></Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="1990 - 1999">
-        <AccordionItem Any="1993">
-          <Item>L’Escola es traslladada al 3r. pis de les dependències del Museu Textil i d’Indumentària.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1994">
-          <Item>Organització VI Congrés Internacional OIDFA a Barcelona. 19, 20 i 21 setembre, Hotel Princesa Sofia de Barcelona, juntament amb OIDFA.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1995">
-          <Item>Exposició “RandeSednar”. Les alumnes  professorat de l’Escola de Puntaires de Barcelona, que cursen a l’Escola Massana l’especialitat de ”disseny de puntes” de 3er, 4rt i 5è curs, exposen els seus treballs a l’exposició RandeSendar, ofici antic, art nou, gener 1995.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1996">
-          <Item>El 20 de maig de l’any 1996 la Reina Fabiola de Bèlgica visita l’Escola de Puntaires de Barcelona durant una de les jornades de classe. A les Aules del Museu Tèxtil i de la Indumentària les alumnes treballen als corresponents tallers i responen a les preguntes que cordialment els fa la monarca.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1998">
-          <Item>Participació destacada a la I Mostra de Puntaires, Festes de la Mercè, presentant la “Punta de Barcelona”.</Item>
-        </AccordionItem>
-        <AccordionItem Any="1999">
-          <Item>Exposició Homenatge al Museu Textil i d’Indumentària, a les Senyoretes Raventós amb motiu del centenari del seu naixement.
-            <div>
-              <cite>…Un grupo de encajeras está realizando tres diseños sobre el tema del agua en el Museu Tèxtil i de la Indumentaria, donde luego se expondrán en una segunda fase del proyecto. La paciencia, la colaboración, la imaginación, son algunas de las cualidades que quiere destacar Hannah Collins con este  “voyage work in progress”...</cite>
-              <br>
-              <cite>… de estas reflexiones surgió la idea de invitar a artistas contemporáneos a crear obras sobre las colecciones municipales. El objetivo era confrontar pasado y presente para generar perspectivas renovadas: un proceso de descubrimiento mutuo que sacaría a la luz nuevas lecturas del rico legado patrimonial de Barcelona. Y, como consecuencia de ello mezclar públicos. O “duplicarlos” como indica el nombre de la exposición.</cite>
-              <br>
-              <cite>La propuesta “Dobles Vidas” atrae al público de arte contemporáneo hacia espacios culturales de la ciudad a veces extremadamente ignorados…. los creadores visitaron los museos y escogieron personalmente el emplazamiento antes de elaborar sus proyectos“.</cite>
-            </div>
-          </Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="2020 - 2029">
+      <AccordionItem Any="2020">
+        <Item></Item>
+      </AccordionItem>
+      <AccordionItem Any="2021">
+        <Item></Item>
+      </AccordionItem>
+      <AccordionItem Any="2022">
+        <Item></Item>
+      </AccordionItem>
+      <AccordionItem Any="2023">
+        <Item></Item>
+      </AccordionItem>
+      <AccordionItem Any="2024">
+        <Item></Item>
+      </AccordionItem>
+    </Accordion>
+  </Article>
+  <Article idName={MENU[3].id} title={MENU[3].title}>
+    <p>Estatuts de la Fundació Privada ESCOLA de PUNTAIRES de BARCELONA adaptats Llei 4/2008 del llibre tercer del Codi Civil de Catalunya.</p>
 
-      <Accordion periode="2000 - 2009">
-        <AccordionItem Any="2000">
-          <Item>L’Alcalde de la ciutat Joan Clos, inaugura la placa commemorativa col•locada a la façana de la casa on varen viure les Senyoretes Raventós, Passeig de Sant Joan, de Barcelona, dins del marc de la XII Diada de la Puntaire.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2002">
-          <Item>Exposició a la Sala d’Actes d’Assistència Sanitària de Barcelona.</Item>
-          <Item>Article sobre l’Escola de Puntaires de Barcelona al Butlletí n1 d’Artesania Catalunya.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2004">
-          <Item>Exposició Centre Català Artesania.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2005">
-          <Item>Exposició ”Aire”. L’escola exposa al Centre permanent d’Artesania de la ciutat una col•lecció de 50 ventalls realitzats per les alumnes amb gran èxit de públic.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2007">
-          <Item>Trasllat a la nova seu del carrer de Sant Erasme, 1 de Barcelona, en previsió d’obres al Museu Tèxtil i d’Indumentària.</Item>
-          <Item>Acte inaugural de la nova seu de l’Escola amb la presencia de les autoritats de la ciutat Excm. Sr. Jordi Hereu i Boher ,Alcalde de Barcelona, Sr. Jordi Martí i Grau, Delegat de Cultura Àrea Benestar Social i Cohesió Territorial, Sr. Francesc Fabregat, Director Departament de Festes Institut de Cultura de Barcelona, Sra. Itziar Gonzalez, Regidora Districte Ciutat Vella i Sra. Marta Selva i Masoliver,  Presidenta Institut Català per les Dones de la Generalitat de Catalunya.</Item>
-          <Item>Jornada de Portes Obertes durant les festes de la Mercè.</Item>
-          <Item>Un nou equip directiu pren el relleu al front de l’Escola de Puntaires de Barcelona a més de les participacions i assistències a actes relacionats amb la nostra artesania i continua fent periòdicament les tasques que corresponen a un curs qualsevol (tallers oberts, estudis de professorat, exposicions, xerrades, demostracions, etc.).</Item>
-          <Item>Edició de la Pagina Web de l’Escola: www.escolapuntairesbcn.cat.</Item>
-          <Item>Curset “Nadal amb Puntes”.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2008">
-          <Item>Tallers d’iniciació a la punta de coixí per a nois i noies.</Item>
-          <Item>Curset “Iniciació a la Punta de Barcelona” de maig a juliol. Exposició treballs final de curs.</Item>
-          <Item>Recuperació patrons antics del fons patrimonial i Inventari de la Biblioteca de l’Escola.</Item>
-          <Item>Participació a la XXI Diada de la Puntaire a Viladecans i participació al Concurs 20×20.</Item>
-          <Item>Participació a la Trobada de Puntaires de les festes de la Mercè, jornada de portes obertes i “Tast de puntes”.</Item>
-          <Item>“De puntilla a puntilla” - Crònica per Maritza García (El País).</Item>
-          <Item>Curset “Nadal amb Puntes”.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2009">
-          <Item>Curset “Iniciació a la Malla” impartit per la professora Carme Martí.</Item>
-          <Item>Curset “Dibuix artístic” impartit per la professora Glòria Bachs.</Item>
-          <Item>Participació a la Mostra Artesana Dones de Ciutat Vella “Dona, la Sal de la Vida”.</Item>
-          <Item>Acolliment de la XVIII Jornada de Primavera OIDFA (Organisation Internationale de la Dentelle au Fuseau et a l’Aguille). Puntaires vingudes d’arreu del territori es retroben per fer la seva reunió de Junta habitual, alhora que desenvolupen un taller monogràfic proposat per l’organització. En aquesta ocasió es tracta de treballar amb diverses tècniques de puntes unes peces en forma de rajola tradicional catalana, aquestes un cop acabades composaran un mosaic que serà presentat a l’estand de l’organització al Congrés 2010, a Kobe, Japó.</Item>
-          <Item>Participació a la XXII Diada de la Puntaire a Lleida.</Item>
-          <Item>I Setmana Creativa, proposa un repte a les alumnes. Es tracta de  desenvolupar un projecte complet. De la primera idea inicial, a l’execució de la peça.</Item>
-          <Item>Amb l’ajut de la professora de dibuix han fet els esborranys fins aconseguir un disseny atractiu, amb  les professores de puntes han preparat el patró i l’han desenvolupat fins aconseguir un treball acabat i documentat, producte de tot un estudi acurat de possibilitats, tècniques, textures, etc. El resultat ha estat molt variat segons cadascuna de les participants, però força enriquidor per a tothom.</Item>
-          <Item>Exposició dels  treballs de les alumnes i jornades de portes obertes per la Festa Major del Raval.</Item>
-          <Item>Participació a la Trobada de Puntaires de la Merce’09 i jornada de portes obertes.</Item>
-          <Item>II Congrés de les Dones de Barcelona, participació a les jornades de treball  i a la posterior participació a la filmació d’un DVD, que recull un film col•lectiu de la ciutat, producte de les sessions participatives dels Consells de Dones del febrer gener 2006 al febrer 2007, dels diversos districtes de la ciutat.</Item>
-          <Item>Participació al projecte “Sopa de Llengües”  treballs de puntes que contenien lletres, dins del context “Artesania, un llenguatge universal” a les Reials Drassanes de Barcelona.</Item>
-          <Item>Participació a les jornades de preparació de la “I Jornada de Diagnosi”.</Item>
-          <Item>Exposició dels  treballs de les alumnes i jornades de portes obertes per la Festa Major del Raval.</Item>
-          <Item>Article a la revista Nova Ciutat Vella “Fil per randa” per Carme Moreno.</Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="Capítol I: Denominació, naturalesa, durada, domicili, àmbit d’actuació i règim jurídic.">
+      <AccordionItem Any="Article 1. Denominació, naturalesa i durada.">
+        <Item>
+          <article>
+            <p>La Fundació és una entitat sense ànim de lucre que té el patrimoni, els rendiments i els recursos obtinguts afectats de forma permanent a la realització de les finalitats d’interès general previstes en aquests estatuts. La fundació es denomina FUNDACIÓ PRIVADA ESCOLA DE PUNTAIRES DE BARCELONA.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 2. Domicili.">
+        <Item>
+          <article>
+            <p>El domicili de la Fundació queda fixat a la ciutat de Barcelona (08001), carrer Sant Erasme, número 1, Baixos.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 3. Àmbit d’actuació.">
+        <Item>
+          <article>
+            <p>La Fundació exerceix les seves funcions majoritàriament a Catalunya. No obstant això, pot actuar a la resta del territori de l’Estat espanyol així com a escala internacional.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 4. Règim jurídic.">
+        <Item>
+          <article>
+            <p>La Fundació té personalitat jurídica pròpia i gaudeix de plena capacitat jurídica i d’obrar per aconseguir els seus fins sense altres limitacions que les establertes en aquests estatuts i en les disposicions legals vigents.</p>
+          </article>
+        </Item>
+        <Item>
+          <article>
+            <p>La Fundació es regeix per les declaracions contingudes a la carta fundacional, per les disposicions legals que li són d’aplicació, per les establertes en aquests estatuts i pels acords que adopti el Patronat en l’exercici de les seves funcions.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="2010 - 2019">
-        <AccordionItem Any="2010">
-          <Item>II Setmana Creativa. Les alumnes han pogut treballar dins les seves respectives classes per realitzar les peces previstes, han escollit entre les tècniques de Punta al Coixí, Punta a l’Agulla i Macramé, independentment de la tècnica on estiguin matriculades a principi de curs. Això ha permès que hagin pogut experimentar en altres tècniques, obrint el ventall de possibilitats per posteriorment poder continuar l’aprenentatge si ho creuen adient. D’altra banda el fet de durant uns dies “barrejar” l’alumnat dels tallers “de sempre” ha donat un ambient molt agradable als grups resultants. En resum, les alumnes han compartit les 5 sessions de la setmana creativa, repartides durant els mesos de novembre-desembre realitzant petits projectes de Nadal.</Item>
-          <Item>Participació a la XXIII Diada de la Puntaire a Badalona.</Item>
-          <Item>Participació a la I Jornada de Diagnosi i Reptes de Futur de la Punta de Coixí “Puntaires i Palilleiras”, Castell Jalpi, Arenys de Munt.</Item>
-          <Item>L’Escola es membre de “l’Observatori de Puntes” creat arrel de la Jornada “Puntaires i Palilleiras” per l’estudi del sector puntaire.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2011">
-          <Item>Participació a la Festa Major del Raval amb jornada de Portes Obertes i exposició.</Item>
-          <Item>Projecte Sagrada Família reunions de treball internes.</Item>
-          <Item>Assistència a les xerrades Torre Jussana.</Item>
-          <Item>Exposició final de curs dels treball alumnes.</Item>
-          <Item>Participació a la I Fira Internacional de Puntaires de Lloret de Mar.</Item>
-          <Item>Reunió treball amb arquitectes Sagrada Família pel disseny Tovalles.</Item>
-          <Item>Participació a la 16 Mostra Associacions, Festa de la Merce’11.</Item>
-          <Item>La Punta de Barcelona es reconeguda dins del projecte com un dels “oficis singulars” del programa Empremtes de Catalunya del CCAM.</Item>
-          <Item>Coedició amb OIDFA delegació Espanya del llibre de “Modernisme una nova visió” que relliga les Puntes al Coixí i les Punes a l’Agulla amb el Modernisme català, interpretant d’obres arquitectòniques reconegudes arreu amb puntes, traduït al castellà , francès i anglès.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2012">
-          <Item>Adaptació dels Estatuts a la Llei 4/2008 del Llibre Tercer del Codi Civil de Catalunya mitjançant Escriptura degudament registrada.</Item>
-          <Item>Assistència a les reunions Observatori de Puntes.</Item>
-          <Item>Participació a la 25 trobada de puntaires d’Arenys de Mar.</Item>
-          <Item>Assistència a la Jornada de tardor OIDFA, Saragossa.</Item>
-          <Item>Participació a la Festa Major del Raval amb Jornades de Portes Obertes i Tast de Puntes.</Item>
-          <Item>Participació a la 17 Mostra Associacions festes de la Mercè.</Item>
-          <Item>Actes celebració 60 anys Punta de Barcelona.</Item>
-          <Item>Presentació oficial a les autoritats de la ciutat i del patronat Sagrada Família del disseny final de les Tovalles de l’Altar Major.</Item>
-          <Item>Assistència al taller demostració Marató pobresa.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2013">
-          <Item>Primer curs de “La Petita Escola” taller per a nois i noies de 5 a 12 anys els dissabtes matí.</Item>
-          <Item>Assistència a les reunions Observatori de Puntes.</Item>
-          <Item>Inici del taller obert Tovalles Altar Major Sagrada Família amb Punta de Barcelona.</Item>
-          <Item>Reconeixement institucional per part de l’Ajuntament de Barcelona com a “entitat que s’ha distingit en el món puntaire barceloní” en un acte d’homenatge al Saló de Cent del consistori.</Item>
-          <Item>Participació a la Festa Major del Raval amb Jornades de Portes Obertes i Tast de Puntes.</Item>
-          <Item>Participació a la 18 Mostra Associacions festes de la Mercè.</Item>
-          <Item>Assistència al taller demostració Punta de Barcelona a la Fira Internacional de Lloret de Mar.</Item>
-          <Item>Edició pàgina www.facebook.com/escolapuntairesbcn.</Item>
-          <Item>Participació a les Jornades Puntaires de Sant Andreu, taller demostració Punta de Barcelona, Taula Rodona, xerrada “L’ensenyament”.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2014">
-          <Item>Seguiment reunions amb Departament d’Ensenyament de la Generalitat de Catalunya i l’escola de Llotja per la preparació currículum titulació oficial de grau superior de Puntes, Brodats i Rebosters.</Item>
-          <Item>Participació a la Festa Major del Raval amb Jornades de Portes Obertes i Exposició dels treballs alumnes curs.</Item>
-          <Item>Participació a la 19 Mostra Associacions festes de la Mercè.</Item>
-          <Item>Assistència a les reunions Observatori de Puntes.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2015">
-          <Item>Tast de Puntes per a petits i grans, festes de la Mercè, 20, 21 i 24 setembre.</Item>
-          <Item>Seguiment i preparació currículum definitius de les titulacions oficials dels cicles formatius dels graus superiors de “Puntes Artístiques” i de “Brodats i Rebosters” pertanyents a la família de Tèxtils Artístics.</Item>
-          <Item>Creació de l’espai de trobada per alumnes i ex-alumnes de l’escola com a comunitat a Facebook: ”Café, Te i Puntes…. t’apuntes? ”.</Item>
-          <Item>Durant el curs 2015-2016 s’impartiran els tallers del 1er curs per assolir la titulació de “Tècnic/ca Superior d’Arts Plàstiques i Disseny en Puntes Artístiques” que juntament amb Llotja, (Escola Superior de Disseny i Art de Barcelona) qualificaran oficialment a les alumnes futures professores d’aquesta artesania tradicional.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2016">
-          <Item>Durant aquest curs continuen les classes de 1er i 2n dels CFGS “Puntes Artístiques”, els Tallers Oberts i les classes dels Mestratges Tècnics de Coixí i d’Agulla.</Item>
-        </AccordionItem>
-        <AccordionItem Any="2017">
-          <Item></Item>
-        </AccordionItem>
-        <AccordionItem Any="2018">
-          <Item></Item>
-        </AccordionItem>
-        <AccordionItem Any="2019">
-          <Item></Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="Capítol II: Finalitats i activitats.">
+      <AccordionItem Any="Article 5. Finalitats fundacionals.">
+        <Item>
+          <article>
+            <p>La Fundació té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 6. Activitats.">
+        <Item>
+          <article>
+            <p>Per a la consecució dels fins fundacionals, la Fundació desenvolupa les activitats que el Patronat considera necessàries directament i/o en col•laboració amb altres entitats, institucions o persones, d’acord amb el que estableix la normativa sobre fundacions. En concret, a fi de dur a terme la finalitat fundacional, la Fundació desenvolupa, entre altres, les activitats que, sense ànim exhaustiu, s’enumeren a continuació:</p>
+            <ul style="list-style-type: disc; margin-left: 1.5rem;">
+              <li>L’establiment d’escoles d’aprenentatge.</li>
+              <li>La concessió de beques i ajuts per l’estudi de les especialitats.</li>
+              <li>L’organització de la propaganda de les puntes i randes oralment i per escrit.</li>
+              <li>La venda dels productes fabricats per les escoles de la fundació.</li>
+            </ul>
+            <p>Les activitats relacionades amb els fins fundacionals s’han de dur a terme segons les normes que les regulen específicament, mitjançant l’obtenció, si escau, dels permisos o llicències pertinents.</p>
+            <p>El Patronat decideix lliurement les activitats que emprendrà dintre de la finalitat fundacional i amb els mitjans que cregui que seran més adients, tenint en compte, en cada cas, els ingressos de què disposi, sense que ningú pugui obligar-lo a prendre en aquest punt una determinada decisió.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 7. Regles bàsiques per a l’aplicació dels recursos a les finalitats.">
+        <Item>
+          <article>
+            <p>Les rendes i els altres ingressos anuals que obtingui l’entitat s’han de destinar al compliment dels fins fundacionals dins els límits establerts per la legislació vigent.</p>
+            <p>La Fundació pot realitzar tot tipus d’activitat econòmica, actes, contractes, operacions i negocis lícits, sense més restriccions que les imposades per la legislació aplicable.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="2020 - 2029">
-        <AccordionItem Any="2020">
-          <Item></Item>
-        </AccordionItem>
-        <AccordionItem Any="2021">
-          <Item></Item>
-        </AccordionItem>
-        <AccordionItem Any="2022">
-          <Item></Item>
-        </AccordionItem>
-        <AccordionItem Any="2023">
-          <Item></Item>
-        </AccordionItem>
-        <AccordionItem Any="2024">
-          <Item></Item>
-        </AccordionItem>
-      </Accordion>
-    </article>
-  </section>
+    <Accordion periode="Capítol III: Règim econòmic.">
+      <AccordionItem Any="Article 8. Patrimoni de la Fundació i activitats econòmiques.">
+        <Item>
+          <article>
+            <p>El patrimoni de la Fundació queda vinculat al compliment dels fins fundacionals.</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>pel capital fundacional, constituït per la dotació inicial, que consta a la carta fundacional;</li>
+              <li>per tots els béns i drets de contingut econòmic que accepti i rebi la fundació amb la finalitat d’incrementar el capital fundacional, i</li>
+              <li>per tots els rendiments, fruits, rendes i productes, i els altres béns incorporats al patrimoni de la fundació per qualsevol títol o concepte.</li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 9. Disposició i deure de reinversió.">
+        <Item>
+          <article>
+            <p>L’alineació, el gravamen o qualsevol altre acte de disposició dels béns i drets que integren el patrimoni fundacional s’ha de fer a títol onerós i respectant les condicions de la fundadora no dels donants d’aquest béns. En qualsevol cas, l’import obtingut s’ha de reinvertit en l’adquisició d’altres béns i drets que se subroguin en lloc dels alienats o en la millora dels béns de la Fundació.</p>
+            <p>La necessitat i la conveniència de les operacions de disposició o gravamen directe o indirecte han d’estar justificades i acreditades documentalment. El Patronat, abans de fer els actes de disposició, ha de comptar amb la informació adequada per prendre la decisió responsablement.</p>
+            <p>El Patronat ha de comunicar el Protectorat els actes de disposició o gravamen a què es refereix l’apartat 1 d’aquest article en el termini de trenta dies hàbils a partir del moment en què es fan.</p>
+            <p>Es requereix prèvia autorització del Protectorat per fer actes de disposició, gravamen o administració en els casos següents:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>si els béns o drets objecte de disposició s’han adquirit amb diners procedents de subvencions públiques,</li>
+              <li>si el donant ho ha exigit expressament,</li>
+              <li>si ho estableix una disposició estatutària,</li>
+              <li>si el producte de l’operació no es reinverteix totalment en el patrimoni de la fundació.</li>
+            </ol>
+            <p>El Patronat pot fer, sempre que sigui necessari i de conformitat amb el que aconsellin la conjuntura econòmica i la legislació vigent, les modificacions convenients en les inversions del patrimoni fundacional.</p>
+            <p>Per a la realització d’actes de disposició sobre els béns i drets que constitueixin el patrimoni fundacional i per a l’acceptació d’herències, llegats o altres béns i drets susceptibles d’integrar el capital fundacional, s’exigeix el vot favorable del Patronat amb la majoria simple i el compliment dels requisits legalment previstos.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 10. Regles bàsiques per la determinació dels beneficiaris.">
+        <Item>
+          <article>
+            <p>Podran ser beneficiaris de la Fundació aquelles persones que estiguin dintre del seu objecte i finalitat o qualsevol altres que el Patronat pugui determinar amb caràcter discrecional, de forma que ningú pugui al•legar, ni individualment ni col•lectivament, davant la Fundació cap dret d’ús ni gaudir dels beneficis o ajudes que la Fundació confereix, ni imposar la seva atribució a persones determinades.</p>
+            <p>L’elecció dels beneficiaris serà efectuada pel Patronat amb criteris d’imparcialitat i no-discriminació entre les persones que es trobin en les circumstàncies següents: formar part del sector de població atès per la Fundació, demanar la prestació o servei que la Fundació pugui oferir i que compleixin els requisits específics que, complementàriament, pugui acordar el Patronat.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 11. Règim comptable i documental.">
+        <Item>
+          <article>
+            <p>La Fundació ha de portar un llibre diari i un llibre d’inventari i de comptes anuals.</p>
+            <p>El Patronat de la Fundació ha de fer l’inventari i ha de formular els comptes anuals de manera simultània i amb data del dia del tancament de l’exercici econòmic, de conformitat amb els principis de comptabilitat generalment admesos i amb les disposicions que en cada cas siguin aplicable.</p>
+            <p>L’exercici s’ha de tancar el 31 d’agost de cada any.</p>
+            <p>Els comptes anuals formen una unitat i estan integrats per:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>el balanç de situació,</li>
+              <li>el compte de resultats,</li>
+              <li>el compte d’estat de situació de canvis en el patrimoni net,</li>
+              <li>el compte d’estat de situació de fluxos en efectiu i</li>
+              <li>la memòria, en la qual s’ha de completar, ampliar i comentar la informació continguda en el balanç i en el compte de resultats, i s’han de detallar les actuacions realitzades en compliment de les finalitats fundacionals i concretar el nombre de beneficiaris i els serveis que aquests han rebut, com també els recursos procedents d’altres exercicis pendents de destinació, si n’hi ha, i les societats participades majoritàriament, amb indicació del percentatge de participació.</li>
+            </ol>
+            <p>El Patronat ha d’aprovar dintre dels sis mesos següents a la data de tancament de l’exercici els comptes anuals, els quals ha de presentar en la forma prevista legalment al Protectorat de la Generalitat de Catalunya per al seu dipòsit en el termini de 30 dies a comptar de la seva aprovació.</p>
+            <p>El Patronat ha d’aprovar i presentar, en relació amb les inversions financeres temporals que realitzi en el mercat de valors, un informe anual sobre el grau de compliment del codi de conducta que han de seguir les entitats sense ànim de lucre, de conformitat amb la normativa vigent o amb el que disposi l’autoritat reguladora.</p>
+            <p>Els comptes anuals s’han de sotmetre a una auditoria externa quan es donen les circumstàncies legalment previstes.</p>
+            <p>Encara que no es produeixin les circumstàncies legalment previstes perquè els comptes s’hagin de sotmetre a una auditoria, si una tercera part dels patrons la demana per raons justificades, perquè considera que hi ha alguna circumstància excepcional en la gestió de la Fundació que aconsella que es dugui a terme, s’ha de convocar una reunió del Patronat en el termini màxim de 15 dies a comptar de la petició, a fi d’acordar de forma motivada la realització o no-realització de l’auditoria de comptes sol•licitada. Si no es convoca el Patronat en el termini indicat o si, un cop convocat amb aquesta finalitat, s’acorda no dur a terme l’auditoria, els patrons interessats poden adreçar la seva petició al Protectorat, d’acord amb el que estableix l’article 332.8.4 de la Llei 4/2008, de 24 d’abril, del llibre tercer del Codi civil de Catalunya, relatiu a les persones jurídiques.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 12. Recursos anuals.">
+        <Item>
+          <article>
+            <p>Els recursos econòmics anuals de la Fundació han d’estar integrats per:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>les rendes i rendiments produïts per l’actiu,</li>
+              <li>els saldos favorables que puguin resultar de les activitats fundacionals i</li>
+              <li>les subvencions i altres liberalitats rebudes amb aquesta finalitat que no hagin d’incorporar-se al capital fundacional.</li>
+            </ol>
+            <p>La Fundació complirà les obligacions administratives i fiscals assenyalades en les lleis, referides a la formulació de l’inventari de béns, balanços, liquidació dels pressupostos, memòria, registres de comptabilitat i presentació d’aquests documents a les autoritats competents.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 13. Aplicació obligatòria.">
+        <Item>
+          <article>
+            <p>La Fundació ha de destinar al compliment dels fins fundacionals almenys el setanta per cent de les rendes i altres ingressos nets anuals obtinguts. La resta l’ha de destinar o bé al compliment diferit de les finalitats o bé a l’increment dels seus fons propis. El Patronat ha d’aprovar l’aplicació dels ingressos.</p>
+            <p>Si la Fundació rep béns i drets sense que se n’especifiqui la destinació, el Patronat ha de decidir si han d’integrar la dotació o han d’aplicar-se directament a la consecució dels fins fundacionals.</p>
+            <p>L’aplicació d’almenys el setanta per cent dels ingressos al compliment de les finalitats fundacionals, s’ha de fer efectiva en el termini de quatre exercicis a comptar de l’inici del següent al de l’acreditació comptable.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 14. Despeses de funcionament.">
+        <Item>
+          <article>
+            <p>Les despeses derivades del funcionament del Patronat i dels seus òrgans delegats, sense comptar a aquest efecte el cost de les funcions de direcció o gerència, no poden ser superiors al 15% dels ingressos nets obtinguts durant l’exercici.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 15. Participació en societats.">
+        <Item>
+          <article>
+            <p>La Fundació ha de comunicar al Protectorat en el termini de 30 dies l’adquisició i tinença d’accions o participacions socials que li confereixin, directament o indirectament, el control de societats que limitin la responsabilitat dels socis.</p>
+            <p>La Fundació ha de comunicar al Protectorat en el termini de 30 dies l’adquisició i tinença d’accions o participacions socials que li confereixin, directament o indirectament, el control de societats que limitin la responsabilitat dels socis.</p>
+            <p>En tot cas, l’exercici per part de la Fundació de tasques d’administració de societats ha de ser compatible amb el compliment dels fins fundacionals.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+    </Accordion>
 
-  <section id="estatuts" class="section-scroll">
-    <article>
-      <h2>Estatuts</h2>
-      <p>Estatuts de la Fundació Privada ESCOLA de PUNTAIRES de BARCELONA adaptats Llei 4/2008 del llibre tercer del Codi Civil de Catalunya.</p>
+    <Accordion periode="Capítol IV: Organització i funcionament.">
+      <AccordionItem Any="Article 16. El Patronat.">
+        <Item>
+          <article>
+            <p>El Patronat és l’òrgan de govern i d’administració de la Fundació, la representa i gestiona, i assumeix totes les facultats i funcions necessàries per a la consecució dels fins fundacionals.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 17. Composició del Patronat i requisits per ser-ne membre.">
+        <Item>
+          <article>
+            <p>El Patronat és un òrgan col·legiat integrat per persones físiques o jurídiques i constituït per un mínim de 5 membres i un màxim de 9 membres. D’entre aquest membres hi haurà:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>Un patró designat pel titular del Departament de la Generalitat de Catalunya competent en matèria d’ensenyament.</li>
+              <li>Un patró designat per l’Ajuntament de Barcelona.</li>
+              <li>Tres persones que hagin estat alumnes de la Fundadora o de la seva germana Montserrat i quan manquin persones que tinguin aquesta qualitat ho seran aquelles que hagin estat alumnes de les Escoles sostingudes per la Fundació.</li>
+            </ol>
+            <p>Les persones físiques han de tenir capacitat d’obrar plena; que no es trobin inhabilitades o incapacitades per exercir funcions o càrrecs públics o per administrar béns i no hagin estat condemnades per delictes contra el patrimoni o contra l’ordre socioeconòmic o per delictes de falsedat.</p>
+            <p>Les persones jurídiques han d’estar representades en el Patronat, d’una manera estable, per la persona en qui recaigui aquesta funció d’acord amb les normes que les regulin, o per la persona que designi a aquest efecte el corresponent òrgan competent.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 18. Designació, renovació i exercici del càrrec.">
+        <Item>
+          <article>
+            <p>El primer Patronat s’ha de designar a la carta fundacional. Els nomenaments de nous patrons i el cobriment de vacants han de ser acordats pel Patronat amb la majoria exigida a l’article 25. Els patrons a què es refereixen les lletres a) i b) de l’article 17 d’aquests estatuts seran elegits i revocats lliurement pel titular del Departament de la Generalitat de Catalunya competent en matèria d’ensenyament i pel Ple de l’Ajuntament de Barcelona.</p>
+            <p>Els patrons designats pel Patronat exerceixen els seus càrrecs per un termini de 6 anys, i són reelegibles indefinidament per períodes d’igual durada.</p>
+            <p>Els patrons designats pel Patronat que per qualsevol causa cessin abans de complir el termini pel qual van ser designats, podran ser substituïts per nomenament del Patronat. La persona substituïda serà designada pel temps que falti perquè s’exhaureixi el mandat del patró substituït, però podrà ser reelegida pels mateixos terminis establerts per a la resta dels membres.</p>
+            <p>Els membres del Patronat entren en funcions després d’haver acceptat expressament el càrrec mitjançant alguna de les formes establertes en la legislació aplicable.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 19. Gratuïtat.">
+        <Item>
+          <article>
+            <p>Els patrons exerceixen el càrrec gratuïtament, sens perjudici del dret a ser reemborsats de les despeses degudament justificades i a la indemnització pels danys que els ocasioni el desenvolupament de les funcions pròpies del càrrec.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 20. Facultats i delegació de funcions.">
+        <Item>
+          <article>
+            <p>Corresponen al Patronat totes les facultats que té estatutàriament atribuïdes i, en general, les que requereixi per a la consecució dels fins fundacionals, sense més excepcions que les establertes en la legislació aplicable i en aquests estatuts.</p>
+            <p>El Patronat pot delegar les seves funcions de conformitat amb aquests estatuts i la legislació aplicable. En tot cas, són indelegables i corresponen al Patronat amb caràcter exclusiu les facultats següents:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>La modificació dels estatuts.</li>
+              <li>La fusió, l’escissió o la dissolució de la Fundació.</li>
+              <li>L’elaboració i l’aprovació del pressupost i dels documents que integren els comptes anuals.</li>
+              <li>Els actes de disposició sobre béns que, en conjunt o individualment, tinguin un valor superior a una vintena part de l’actiu de la Fundació, llevat que es tracti de la venda de títols valor amb cotització oficial per un preu que sigui al menys el de cotització. Tanmateix, es poden fer apoderaments per a l’atorgament de l’acte corresponent en les condicions aprovades pel Patronat.</li>
+              <li>La constitució o la dotació d’una altra persona jurídica.</li>
+              <li>La fusió, l’escissió i la cessió de tots o d’una part dels actius i els passius.</li>
+              <li>La dissolució de societats o d’altres persones jurídiques.</li>
+              <li>Els que requereixen l’autorització o l’aprovació del Protectorat.</li>
+            </ol>
+            <p>El que disposa aquest article s’ha d’entendre sense perjudici de les autoritzacions del Protectorat que siguin necessàries o de les comunicacions que se li hagin de fer de conformitat amb la legislació vigent.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 21. Règim de convocatòria.">
+        <Item>
+          <article>
+            <p>Poyas</p>
+            <ol style="list-style-type: none;  margin-left: 1.5rem;">
+              <li>21.1. El Patronat es reuneix en sessió ordinària almenys una vegada l’any, i obligatòriament durant el primer semestre de l’any natural amb la finalitat d’aprovar els comptes anuals de l’exercici anterior.</li>
+              <li>S’ha de reunir en sessió extraordinària, prèvia convocatòria i a iniciativa del seu president, tantes vegades com aquest ho consideri necessari per al bon funcionament de la Fundació. També s’ha de reunir quan ho sol•liciti una quarta part dels seus membres, i en aquest cas la reunió s’haurà de fer dins els trenta dies següents a la sol·licitud.</li>
+              <li>21.2. El Patronat es pot reunir excepcionalment mitjançant videoconferència, multiconferència o qualsevol altre sistema que no impliqui la presència física dels patrons. En aquest casos és necessari garantir la identificació dels assistents a la reunió, la continuïtat en la comunicació, la possibilitat d’intervenir en les deliberacions i l’emissió del vot. La reunió s’ha d’entendre celebrada al lloc on es trobi el president. En les reunions virtuals s’han de considerar patrons assistents aquells que hagin participat en la multiconferència i/o videoconferència.</li>
+              <li>La convocatòria de les reunions corresponen al president i ha de contenir l’ordre del dia de tots aquells assumptes que s’han de tractar en la reunió, fora dels quals no es poden prendre acords vàlids.</li>
+              <li>21.3. La reunió s’ha de convocar almenys amb cinc dies d’antelació respecte de la data prevista perquè tingui lloc.</li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 22. Càrrecs.">
+        <Item>
+          <article>
+            <p>El Patronat nomena entre els seus membres un president, un vicepresident i un secretari. Els patrons que no ocupen cap d’aquest càrrecs tenen la condició de vocals.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 23. El president.">
+        <Item>
+          <article>
+            <p>El president i, en la seva absència, el vicepresident tenen les facultats següents:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>Representar institucionalment la Fundació.</li>
+              <li>Ordenar la convocatòria, fixar-ne l’ordre del dia i presidir, suspendre i aixecar les sessions del Patronat, així com dirigir les deliberacions.</li>
+              <li>Decidir amb el seu vot de qualitat el resultat de les votacions en cas d’empat.</li>
+              <li>Disposar dels fons de comptes i dipòsits bancaris, juntament amb el secretari i el vicepresident, requerint-se la firma conjunta de dos d’ells.</li>
+              <li>La resta de facultats indicades en aquests estatuts i aquelles que li siguin expressament encomanades pel Patronat, d’acord amb el que preveu la normativa aplicable.</li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 24. El secretari.">
+        <Item>
+          <article>
+            <p>El secretari convoca, en nom del president, les reunions del Patronat i n’estén les actes, conserva el llibre d’actes i lliura els certificats amb el vistiplau del president o per ordre, en la seva absència, del vicepresident.</p>
+            <p>Així mateix exerceix les altres funcions que són inherents al seu càrrec i li atribueixen aquests estatuts, especialment per disposar dels fons dels comptes i dipòsits bancaris, juntament amb el president i el vicepresident, requerint-se la firma conjunta de dos d’ells.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 25. Manera de deliberar i adoptar acords.">
+        <Item>
+          <article>
+            <p>El Patronat queda vàlidament constituït en primera convocatòria quan assisteixen a la reunió, en persona o representats en la forma legalment permesa, la meitat més un dels patrons.</p>
+            <p>En segona convocatòria és necessària l’assistència d’una quarta part dels seus membres, sempre que com a mínim assisteixin 2 patrons.</p>
+            <p>Els membres del Patronat poden delegar per escrit a favor d’altres patrons el seu vot respecte d’actes concrets. Si un patró ho és perquè té la titularitat d’un càrrec d’una institució, pot actuar en nom seu la persona que pugui substituir-lo segons les regles d’organització de la mateixa institució.</p>
+            <p>Cada patró té un vot i els acords s’adopten per majoria de vots dels assistents, presents i representats, a la reunió. En cas d’empat decideix el vot de qualitat del president.</p>
+            <p>El director/a, si no és patró, pot assistir amb veu però sense vot a les reunions del Patronat quan hi és convocat. Si, d’acord amb la normativa legal, és patró, pot assistir-hi amb veu i vot.</p>
+            <p>El Patronat també pot convidar a assistir a les reunions, amb veu i sense vot, les persones que consideri convenient.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 26. Majoria qualificada.">
+        <Item>
+          <article>
+            <p>Serà necessari el vot favorable de les dues terceres parts dels membres del Patronat per a l’adopció dels següents acords:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>Modificar els estatuts.</li>
+              <li>Acordar la fusió.</li>
+              <li>Acordar l’escissió.</li>
+              <li>Acordar la dissolució de la Fundació.</li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 27. De les actes.">
+        <Item>
+          <article>
+            <p>De cada reunió, el secretari n’ha d’aixecar l’acta corresponent, que ha d’incloure la dat, el lloc, l’ordre del dia, les persones assistents, un resum dels assumptes tractats, les intervencions de què s’hagi sol•licitat que quedi constància i els acords adoptats, amb indicació del resultat de les votacions i de les majories.</p>
+            <p>Les actes han de ser redactades i firmades pel secretari amb el vistiplau del president i poden ser aprovades pel Patronat a continuació d’haver-se realitzat la sessió corresponent o bé en la pròxima reunió. No obstant això, els acords tenen força executiva de de la seva adopció, excepte si es preveu expressament, en els estatuts o a l’hora d’adoptar l’acord, que no són executius fins l’aprovació de l’acta. Si són d’inscripció obligatòria, tenen força executiva des del moment de la inscripció.</p>
+            <p>La Fundació ha de portar un llibre d’actes en el qual constin totes les que hagin estat aprovades pel Patronat.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 28. Cessament.">
+        <Item>
+          <article>
+            <p>Els cessaments poden venir atribuits per les següents causes:</p>
+            <ol style="list-style-type: decimal; margin-left: 1.5rem;">
+              <li>
+                Els Patrons cessen en el càrrec per les causes següents:
+                <ol style="list-style-type: lower-alpha; margin-left: 2.5rem;">
+                  <li>Mort o declaració d’absència, en el cas de les persones físiques, o extinció, en el cas de les persones jurídiques.</li>
+                  <li>Incapacitat o inhabilitació.</li>
+                  <li>Cessament de la persona en el càrrec per raó del qual formava part del Patronat.</li>
+                  <li>Finalització del termini del mandat, llevat que es renovi.</li>
+                  <li>Renúncia notificada al Patronat.</li>
+                  <li>Sentència judicial ferma que estimi l’acció de responsabilitat per danys a la Fundació o que decreti la remoció del càrrec.</li>
+                  <li>Les altres que estableixen la llei o els estatuts.</li>
+                </ol>
+              </li>
+              <li>
+                La renúncia al càrrec de patró ha de constar de qualsevol de les formes establertes per a l’acceptació del càrrec, però només produeix efectes davant tercers quan s’inscriu en el Registre de Fundacions.
+              </li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 29. Conflicte d’interès.">
+        <Item>
+          <article>
+            <p>Els patrons i les persones indicades en l’article 312-9.3 del llibre tercer del Codi civil de Catalunya, relatiu a les persones jurídiques, s’abstindran de participar en tot tipus de negocis i activitats financeres que puguin comprometre l’objectivitat en la gestió de la Fundació.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="Capítol I: Denominació, naturalesa, durada, domicili, àmbit d’actuació i règim jurídic.">
-        <AccordionItem Any="Article 1. Denominació, naturalesa i durada.">
-          <Item>
-            <article>
-              <p>La Fundació és una entitat sense ànim de lucre que té el patrimoni, els rendiments i els recursos obtinguts afectats de forma permanent a la realització de les finalitats d’interès general previstes en aquests estatuts. La fundació es denomina FUNDACIÓ PRIVADA ESCOLA DE PUNTAIRES DE BARCELONA.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 2. Domicili.">
-          <Item>
-            <article>
-              <p>El domicili de la Fundació queda fixat a la ciutat de Barcelona (08001), carrer Sant Erasme, número 1, Baixos.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 3. Àmbit d’actuació.">
-          <Item>
-            <article>
-              <p>La Fundació exerceix les seves funcions majoritàriament a Catalunya. No obstant això, pot actuar a la resta del territori de l’Estat espanyol així com a escala internacional.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 4. Règim jurídic.">
-          <Item>
-            <article>
-              <p>La Fundació té personalitat jurídica pròpia i gaudeix de plena capacitat jurídica i d’obrar per aconseguir els seus fins sense altres limitacions que les establertes en aquests estatuts i en les disposicions legals vigents.</p>
-            </article>
-          </Item>
-          <Item>
-            <article>
-              <p>La Fundació es regeix per les declaracions contingudes a la carta fundacional, per les disposicions legals que li són d’aplicació, per les establertes en aquests estatuts i pels acords que adopti el Patronat en l’exercici de les seves funcions.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-      </Accordion>
+    <Accordion periode="Capítol V: Regulació d’altres òrgans. Composició i funcions.">
+      <AccordionItem Any="Article 30. El director o directora general.">
+        <Item>
+          <article>
+            <p>El Patronat pot nomenar un director o directora que desenvolupi la direcció executiva de la Fundació. Aquest càrrec pot ser ocupat per un patró només si no concorren les circumstàncies a què fa referència l’article 332.2.1 de la Llei 4/2008, cas en què la relació laboral o professional s’ha d’articular mitjançant un contracte que determini clarament les tasques laborals o professionals que es retribueixen, les quals han de ser diferents de les pròpies del càrrec de patró, amb l’autorització prèvia del Protectorat.</p>
+            <p>Quan no és patró, el director assisteix a totes les reunions del Patronat a què se’l convoca i pot intervenir-hi amb veu però sense vot.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+    </Accordion>
 
-      <Accordion periode="Capítol II: Finalitats i activitats.">
-        <AccordionItem Any="Article 5. Finalitats fundacionals.">
-          <Item>
-            <article>
-              <p>La Fundació té per objecte l’ensenyament i el foment dels treballs artístics de randes i puntes d’agulla, a mà i amb boixets de qualsevol estil, amb especial suport als de l’estil tradicional català.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 6. Activitats.">
-          <Item>
-            <article>
-              <p>Per a la consecució dels fins fundacionals, la Fundació desenvolupa les activitats que el Patronat considera necessàries directament i/o en col•laboració amb altres entitats, institucions o persones, d’acord amb el que estableix la normativa sobre fundacions. En concret, a fi de dur a terme la finalitat fundacional, la Fundació desenvolupa, entre altres, les activitats que, sense ànim exhaustiu, s’enumeren a continuació:</p>
-              <ul style="list-style-type: disc; margin-left: 1.5rem;">
-                <li>L’establiment d’escoles d’aprenentatge.</li>
-                <li>La concessió de beques i ajuts per l’estudi de les especialitats.</li>
-                <li>L’organització de la propaganda de les puntes i randes oralment i per escrit.</li>
-                <li>La venda dels productes fabricats per les escoles de la fundació.</li>
-              </ul>
-              <p>Les activitats relacionades amb els fins fundacionals s’han de dur a terme segons les normes que les regulen específicament, mitjançant l’obtenció, si escau, dels permisos o llicències pertinents.</p>
-              <p>El Patronat decideix lliurement les activitats que emprendrà dintre de la finalitat fundacional i amb els mitjans que cregui que seran més adients, tenint en compte, en cada cas, els ingressos de què disposi, sense que ningú pugui obligar-lo a prendre en aquest punt una determinada decisió.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 7. Regles bàsiques per a l’aplicació dels recursos a les finalitats.">
-          <Item>
-            <article>
-              <p>Les rendes i els altres ingressos anuals que obtingui l’entitat s’han de destinar al compliment dels fins fundacionals dins els límits establerts per la legislació vigent.</p>
-              <p>La Fundació pot realitzar tot tipus d’activitat econòmica, actes, contractes, operacions i negocis lícits, sense més restriccions que les imposades per la legislació aplicable.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-      </Accordion>
-
-      <Accordion periode="Capítol III: Règim econòmic.">
-        <AccordionItem Any="Article 8. Patrimoni de la Fundació i activitats econòmiques.">
-          <Item>
-            <article>
-              <p>El patrimoni de la Fundació queda vinculat al compliment dels fins fundacionals.</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>pel capital fundacional, constituït per la dotació inicial, que consta a la carta fundacional;</li>
-                <li>per tots els béns i drets de contingut econòmic que accepti i rebi la fundació amb la finalitat d’incrementar el capital fundacional, i</li>
-                <li>per tots els rendiments, fruits, rendes i productes, i els altres béns incorporats al patrimoni de la fundació per qualsevol títol o concepte.</li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 9. Disposició i deure de reinversió.">
-          <Item>
-            <article>
-              <p>L’alineació, el gravamen o qualsevol altre acte de disposició dels béns i drets que integren el patrimoni fundacional s’ha de fer a títol onerós i respectant les condicions de la fundadora no dels donants d’aquest béns. En qualsevol cas, l’import obtingut s’ha de reinvertit en l’adquisició d’altres béns i drets que se subroguin en lloc dels alienats o en la millora dels béns de la Fundació.</p>
-              <p>La necessitat i la conveniència de les operacions de disposició o gravamen directe o indirecte han d’estar justificades i acreditades documentalment. El Patronat, abans de fer els actes de disposició, ha de comptar amb la informació adequada per prendre la decisió responsablement.</p>
-              <p>El Patronat ha de comunicar el Protectorat els actes de disposició o gravamen a què es refereix l’apartat 1 d’aquest article en el termini de trenta dies hàbils a partir del moment en què es fan.</p>
-              <p>Es requereix prèvia autorització del Protectorat per fer actes de disposició, gravamen o administració en els casos següents:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>si els béns o drets objecte de disposició s’han adquirit amb diners procedents de subvencions públiques,</li>
-                <li>si el donant ho ha exigit expressament,</li>
-                <li>si ho estableix una disposició estatutària,</li>
-                <li>si el producte de l’operació no es reinverteix totalment en el patrimoni de la fundació.</li>
-              </ol>
-              <p>El Patronat pot fer, sempre que sigui necessari i de conformitat amb el que aconsellin la conjuntura econòmica i la legislació vigent, les modificacions convenients en les inversions del patrimoni fundacional.</p>
-              <p>Per a la realització d’actes de disposició sobre els béns i drets que constitueixin el patrimoni fundacional i per a l’acceptació d’herències, llegats o altres béns i drets susceptibles d’integrar el capital fundacional, s’exigeix el vot favorable del Patronat amb la majoria simple i el compliment dels requisits legalment previstos.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 10. Regles bàsiques per la determinació dels beneficiaris.">
-          <Item>
-            <article>
-              <p>Podran ser beneficiaris de la Fundació aquelles persones que estiguin dintre del seu objecte i finalitat o qualsevol altres que el Patronat pugui determinar amb caràcter discrecional, de forma que ningú pugui al•legar, ni individualment ni col•lectivament, davant la Fundació cap dret d’ús ni gaudir dels beneficis o ajudes que la Fundació confereix, ni imposar la seva atribució a persones determinades.</p>
-              <p>L’elecció dels beneficiaris serà efectuada pel Patronat amb criteris d’imparcialitat i no-discriminació entre les persones que es trobin en les circumstàncies següents: formar part del sector de població atès per la Fundació, demanar la prestació o servei que la Fundació pugui oferir i que compleixin els requisits específics que, complementàriament, pugui acordar el Patronat.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 11. Règim comptable i documental.">
-          <Item>
-            <article>
-              <p>La Fundació ha de portar un llibre diari i un llibre d’inventari i de comptes anuals.</p>
-              <p>El Patronat de la Fundació ha de fer l’inventari i ha de formular els comptes anuals de manera simultània i amb data del dia del tancament de l’exercici econòmic, de conformitat amb els principis de comptabilitat generalment admesos i amb les disposicions que en cada cas siguin aplicable.</p>
-              <p>L’exercici s’ha de tancar el 31 d’agost de cada any.</p>
-              <p>Els comptes anuals formen una unitat i estan integrats per:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>el balanç de situació,</li>
-                <li>el compte de resultats,</li>
-                <li>el compte d’estat de situació de canvis en el patrimoni net,</li>
-                <li>el compte d’estat de situació de fluxos en efectiu i</li>
-                <li>la memòria, en la qual s’ha de completar, ampliar i comentar la informació continguda en el balanç i en el compte de resultats, i s’han de detallar les actuacions realitzades en compliment de les finalitats fundacionals i concretar el nombre de beneficiaris i els serveis que aquests han rebut, com també els recursos procedents d’altres exercicis pendents de destinació, si n’hi ha, i les societats participades majoritàriament, amb indicació del percentatge de participació.</li>
-              </ol>
-              <p>El Patronat ha d’aprovar dintre dels sis mesos següents a la data de tancament de l’exercici els comptes anuals, els quals ha de presentar en la forma prevista legalment al Protectorat de la Generalitat de Catalunya per al seu dipòsit en el termini de 30 dies a comptar de la seva aprovació.</p>
-              <p>El Patronat ha d’aprovar i presentar, en relació amb les inversions financeres temporals que realitzi en el mercat de valors, un informe anual sobre el grau de compliment del codi de conducta que han de seguir les entitats sense ànim de lucre, de conformitat amb la normativa vigent o amb el que disposi l’autoritat reguladora.</p>
-              <p>Els comptes anuals s’han de sotmetre a una auditoria externa quan es donen les circumstàncies legalment previstes.</p>
-              <p>Encara que no es produeixin les circumstàncies legalment previstes perquè els comptes s’hagin de sotmetre a una auditoria, si una tercera part dels patrons la demana per raons justificades, perquè considera que hi ha alguna circumstància excepcional en la gestió de la Fundació que aconsella que es dugui a terme, s’ha de convocar una reunió del Patronat en el termini màxim de 15 dies a comptar de la petició, a fi d’acordar de forma motivada la realització o no-realització de l’auditoria de comptes sol•licitada. Si no es convoca el Patronat en el termini indicat o si, un cop convocat amb aquesta finalitat, s’acorda no dur a terme l’auditoria, els patrons interessats poden adreçar la seva petició al Protectorat, d’acord amb el que estableix l’article 332.8.4 de la Llei 4/2008, de 24 d’abril, del llibre tercer del Codi civil de Catalunya, relatiu a les persones jurídiques.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 12. Recursos anuals.">
-          <Item>
-            <article>
-              <p>Els recursos econòmics anuals de la Fundació han d’estar integrats per:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>les rendes i rendiments produïts per l’actiu,</li>
-                <li>els saldos favorables que puguin resultar de les activitats fundacionals i</li>
-                <li>les subvencions i altres liberalitats rebudes amb aquesta finalitat que no hagin d’incorporar-se al capital fundacional.</li>
-              </ol>
-              <p>La Fundació complirà les obligacions administratives i fiscals assenyalades en les lleis, referides a la formulació de l’inventari de béns, balanços, liquidació dels pressupostos, memòria, registres de comptabilitat i presentació d’aquests documents a les autoritats competents.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 13. Aplicació obligatòria.">
-          <Item>
-            <article>
-              <p>La Fundació ha de destinar al compliment dels fins fundacionals almenys el setanta per cent de les rendes i altres ingressos nets anuals obtinguts. La resta l’ha de destinar o bé al compliment diferit de les finalitats o bé a l’increment dels seus fons propis. El Patronat ha d’aprovar l’aplicació dels ingressos.</p>
-              <p>Si la Fundació rep béns i drets sense que se n’especifiqui la destinació, el Patronat ha de decidir si han d’integrar la dotació o han d’aplicar-se directament a la consecució dels fins fundacionals.</p>
-              <p>L’aplicació d’almenys el setanta per cent dels ingressos al compliment de les finalitats fundacionals, s’ha de fer efectiva en el termini de quatre exercicis a comptar de l’inici del següent al de l’acreditació comptable.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 14. Despeses de funcionament.">
-          <Item>
-            <article>
-              <p>Les despeses derivades del funcionament del Patronat i dels seus òrgans delegats, sense comptar a aquest efecte el cost de les funcions de direcció o gerència, no poden ser superiors al 15% dels ingressos nets obtinguts durant l’exercici.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 15. Participació en societats.">
-          <Item>
-            <article>
-              <p>La Fundació ha de comunicar al Protectorat en el termini de 30 dies l’adquisició i tinença d’accions o participacions socials que li confereixin, directament o indirectament, el control de societats que limitin la responsabilitat dels socis.</p>
-              <p>La Fundació ha de comunicar al Protectorat en el termini de 30 dies l’adquisició i tinença d’accions o participacions socials que li confereixin, directament o indirectament, el control de societats que limitin la responsabilitat dels socis.</p>
-              <p>En tot cas, l’exercici per part de la Fundació de tasques d’administració de societats ha de ser compatible amb el compliment dels fins fundacionals.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-      </Accordion>
-
-      <Accordion periode="Capítol IV: Organització i funcionament.">
-        <AccordionItem Any="Article 16. El Patronat.">
-          <Item>
-            <article>
-              <p>El Patronat és l’òrgan de govern i d’administració de la Fundació, la representa i gestiona, i assumeix totes les facultats i funcions necessàries per a la consecució dels fins fundacionals.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 17. Composició del Patronat i requisits per ser-ne membre.">
-          <Item>
-            <article>
-              <p>El Patronat és un òrgan col·legiat integrat per persones físiques o jurídiques i constituït per un mínim de 5 membres i un màxim de 9 membres. D’entre aquest membres hi haurà:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>Un patró designat pel titular del Departament de la Generalitat de Catalunya competent en matèria d’ensenyament.</li>
-                <li>Un patró designat per l’Ajuntament de Barcelona.</li>
-                <li>Tres persones que hagin estat alumnes de la Fundadora o de la seva germana Montserrat i quan manquin persones que tinguin aquesta qualitat ho seran aquelles que hagin estat alumnes de les Escoles sostingudes per la Fundació.</li>
-              </ol>
-              <p>Les persones físiques han de tenir capacitat d’obrar plena; que no es trobin inhabilitades o incapacitades per exercir funcions o càrrecs públics o per administrar béns i no hagin estat condemnades per delictes contra el patrimoni o contra l’ordre socioeconòmic o per delictes de falsedat.</p>
-              <p>Les persones jurídiques han d’estar representades en el Patronat, d’una manera estable, per la persona en qui recaigui aquesta funció d’acord amb les normes que les regulin, o per la persona que designi a aquest efecte el corresponent òrgan competent.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 18. Designació, renovació i exercici del càrrec.">
-          <Item>
-            <article>
-              <p>El primer Patronat s’ha de designar a la carta fundacional. Els nomenaments de nous patrons i el cobriment de vacants han de ser acordats pel Patronat amb la majoria exigida a l’article 25. Els patrons a què es refereixen les lletres a) i b) de l’article 17 d’aquests estatuts seran elegits i revocats lliurement pel titular del Departament de la Generalitat de Catalunya competent en matèria d’ensenyament i pel Ple de l’Ajuntament de Barcelona.</p>
-              <p>Els patrons designats pel Patronat exerceixen els seus càrrecs per un termini de 6 anys, i són reelegibles indefinidament per períodes d’igual durada.</p>
-              <p>Els patrons designats pel Patronat que per qualsevol causa cessin abans de complir el termini pel qual van ser designats, podran ser substituïts per nomenament del Patronat. La persona substituïda serà designada pel temps que falti perquè s’exhaureixi el mandat del patró substituït, però podrà ser reelegida pels mateixos terminis establerts per a la resta dels membres.</p>
-              <p>Els membres del Patronat entren en funcions després d’haver acceptat expressament el càrrec mitjançant alguna de les formes establertes en la legislació aplicable.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 19. Gratuïtat.">
-          <Item>
-            <article>
-              <p>Els patrons exerceixen el càrrec gratuïtament, sens perjudici del dret a ser reemborsats de les despeses degudament justificades i a la indemnització pels danys que els ocasioni el desenvolupament de les funcions pròpies del càrrec.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 20. Facultats i delegació de funcions.">
-          <Item>
-            <article>
-              <p>Corresponen al Patronat totes les facultats que té estatutàriament atribuïdes i, en general, les que requereixi per a la consecució dels fins fundacionals, sense més excepcions que les establertes en la legislació aplicable i en aquests estatuts.</p>
-              <p>El Patronat pot delegar les seves funcions de conformitat amb aquests estatuts i la legislació aplicable. En tot cas, són indelegables i corresponen al Patronat amb caràcter exclusiu les facultats següents:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>La modificació dels estatuts.</li>
-                <li>La fusió, l’escissió o la dissolució de la Fundació.</li>
-                <li>L’elaboració i l’aprovació del pressupost i dels documents que integren els comptes anuals.</li>
-                <li>Els actes de disposició sobre béns que, en conjunt o individualment, tinguin un valor superior a una vintena part de l’actiu de la Fundació, llevat que es tracti de la venda de títols valor amb cotització oficial per un preu que sigui al menys el de cotització. Tanmateix, es poden fer apoderaments per a l’atorgament de l’acte corresponent en les condicions aprovades pel Patronat.</li>
-                <li>La constitució o la dotació d’una altra persona jurídica.</li>
-                <li>La fusió, l’escissió i la cessió de tots o d’una part dels actius i els passius.</li>
-                <li>La dissolució de societats o d’altres persones jurídiques.</li>
-                <li>Els que requereixen l’autorització o l’aprovació del Protectorat.</li>
-              </ol>
-              <p>El que disposa aquest article s’ha d’entendre sense perjudici de les autoritzacions del Protectorat que siguin necessàries o de les comunicacions que se li hagin de fer de conformitat amb la legislació vigent.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 21. Règim de convocatòria.">
-          <Item>
-            <article>
-              <p>Poyas</p>
-              <ol style="list-style-type: none;  margin-left: 1.5rem;">
-                <li>21.1. El Patronat es reuneix en sessió ordinària almenys una vegada l’any, i obligatòriament durant el primer semestre de l’any natural amb la finalitat d’aprovar els comptes anuals de l’exercici anterior.</li>
-                <li>S’ha de reunir en sessió extraordinària, prèvia convocatòria i a iniciativa del seu president, tantes vegades com aquest ho consideri necessari per al bon funcionament de la Fundació. També s’ha de reunir quan ho sol•liciti una quarta part dels seus membres, i en aquest cas la reunió s’haurà de fer dins els trenta dies següents a la sol·licitud.</li>
-                <li>21.2. El Patronat es pot reunir excepcionalment mitjançant videoconferència, multiconferència o qualsevol altre sistema que no impliqui la presència física dels patrons. En aquest casos és necessari garantir la identificació dels assistents a la reunió, la continuïtat en la comunicació, la possibilitat d’intervenir en les deliberacions i l’emissió del vot. La reunió s’ha d’entendre celebrada al lloc on es trobi el president. En les reunions virtuals s’han de considerar patrons assistents aquells que hagin participat en la multiconferència i/o videoconferència.</li>
-                <li>La convocatòria de les reunions corresponen al president i ha de contenir l’ordre del dia de tots aquells assumptes que s’han de tractar en la reunió, fora dels quals no es poden prendre acords vàlids.</li>
-                <li>21.3. La reunió s’ha de convocar almenys amb cinc dies d’antelació respecte de la data prevista perquè tingui lloc.</li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 22. Càrrecs.">
-          <Item>
-            <article>
-              <p>El Patronat nomena entre els seus membres un president, un vicepresident i un secretari. Els patrons que no ocupen cap d’aquest càrrecs tenen la condició de vocals.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 23. El president.">
-          <Item>
-            <article>
-              <p>El president i, en la seva absència, el vicepresident tenen les facultats següents:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>Representar institucionalment la Fundació.</li>
-                <li>Ordenar la convocatòria, fixar-ne l’ordre del dia i presidir, suspendre i aixecar les sessions del Patronat, així com dirigir les deliberacions.</li>
-                <li>Decidir amb el seu vot de qualitat el resultat de les votacions en cas d’empat.</li>
-                <li>Disposar dels fons de comptes i dipòsits bancaris, juntament amb el secretari i el vicepresident, requerint-se la firma conjunta de dos d’ells.</li>
-                <li>La resta de facultats indicades en aquests estatuts i aquelles que li siguin expressament encomanades pel Patronat, d’acord amb el que preveu la normativa aplicable.</li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 24. El secretari.">
-          <Item>
-            <article>
-              <p>El secretari convoca, en nom del president, les reunions del Patronat i n’estén les actes, conserva el llibre d’actes i lliura els certificats amb el vistiplau del president o per ordre, en la seva absència, del vicepresident.</p>
-              <p>Així mateix exerceix les altres funcions que són inherents al seu càrrec i li atribueixen aquests estatuts, especialment per disposar dels fons dels comptes i dipòsits bancaris, juntament amb el president i el vicepresident, requerint-se la firma conjunta de dos d’ells.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 25. Manera de deliberar i adoptar acords.">
-          <Item>
-            <article>
-              <p>El Patronat queda vàlidament constituït en primera convocatòria quan assisteixen a la reunió, en persona o representats en la forma legalment permesa, la meitat més un dels patrons.</p>
-              <p>En segona convocatòria és necessària l’assistència d’una quarta part dels seus membres, sempre que com a mínim assisteixin 2 patrons.</p>
-              <p>Els membres del Patronat poden delegar per escrit a favor d’altres patrons el seu vot respecte d’actes concrets. Si un patró ho és perquè té la titularitat d’un càrrec d’una institució, pot actuar en nom seu la persona que pugui substituir-lo segons les regles d’organització de la mateixa institució.</p>
-              <p>Cada patró té un vot i els acords s’adopten per majoria de vots dels assistents, presents i representats, a la reunió. En cas d’empat decideix el vot de qualitat del president.</p>
-              <p>El director/a, si no és patró, pot assistir amb veu però sense vot a les reunions del Patronat quan hi és convocat. Si, d’acord amb la normativa legal, és patró, pot assistir-hi amb veu i vot.</p>
-              <p>El Patronat també pot convidar a assistir a les reunions, amb veu i sense vot, les persones que consideri convenient.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 26. Majoria qualificada.">
-          <Item>
-            <article>
-              <p>Serà necessari el vot favorable de les dues terceres parts dels membres del Patronat per a l’adopció dels següents acords:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>Modificar els estatuts.</li>
-                <li>Acordar la fusió.</li>
-                <li>Acordar l’escissió.</li>
-                <li>Acordar la dissolució de la Fundació.</li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 27. De les actes.">
-          <Item>
-            <article>
-              <p>De cada reunió, el secretari n’ha d’aixecar l’acta corresponent, que ha d’incloure la dat, el lloc, l’ordre del dia, les persones assistents, un resum dels assumptes tractats, les intervencions de què s’hagi sol•licitat que quedi constància i els acords adoptats, amb indicació del resultat de les votacions i de les majories.</p>
-              <p>Les actes han de ser redactades i firmades pel secretari amb el vistiplau del president i poden ser aprovades pel Patronat a continuació d’haver-se realitzat la sessió corresponent o bé en la pròxima reunió. No obstant això, els acords tenen força executiva de de la seva adopció, excepte si es preveu expressament, en els estatuts o a l’hora d’adoptar l’acord, que no són executius fins l’aprovació de l’acta. Si són d’inscripció obligatòria, tenen força executiva des del moment de la inscripció.</p>
-              <p>La Fundació ha de portar un llibre d’actes en el qual constin totes les que hagin estat aprovades pel Patronat.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 28. Cessament.">
-          <Item>
-            <article>
-              <p>Els cessaments poden venir atribuits per les següents causes:</p>
-              <ol style="list-style-type: decimal; margin-left: 1.5rem;">
-                <li>
-                  Els Patrons cessen en el càrrec per les causes següents:
-                  <ol style="list-style-type: lower-alpha; margin-left: 2.5rem;">
-                    <li>Mort o declaració d’absència, en el cas de les persones físiques, o extinció, en el cas de les persones jurídiques.</li>
-                    <li>Incapacitat o inhabilitació.</li>
-                    <li>Cessament de la persona en el càrrec per raó del qual formava part del Patronat.</li>
-                    <li>Finalització del termini del mandat, llevat que es renovi.</li>
-                    <li>Renúncia notificada al Patronat.</li>
-                    <li>Sentència judicial ferma que estimi l’acció de responsabilitat per danys a la Fundació o que decreti la remoció del càrrec.</li>
-                    <li>Les altres que estableixen la llei o els estatuts.</li>
-                  </ol>
-                </li>
-                <li>
-                  La renúncia al càrrec de patró ha de constar de qualsevol de les formes establertes per a l’acceptació del càrrec, però només produeix efectes davant tercers quan s’inscriu en el Registre de Fundacions.
-                </li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 29. Conflicte d’interès.">
-          <Item>
-            <article>
-              <p>Els patrons i les persones indicades en l’article 312-9.3 del llibre tercer del Codi civil de Catalunya, relatiu a les persones jurídiques, s’abstindran de participar en tot tipus de negocis i activitats financeres que puguin comprometre l’objectivitat en la gestió de la Fundació.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-      </Accordion>
-
-      <Accordion periode="Capítol V: Regulació d’altres òrgans. Composició i funcions.">
-        <AccordionItem Any="Article 30. El director o directora general.">
-          <Item>
-            <article>
-              <p>El Patronat pot nomenar un director o directora que desenvolupi la direcció executiva de la Fundació. Aquest càrrec pot ser ocupat per un patró només si no concorren les circumstàncies a què fa referència l’article 332.2.1 de la Llei 4/2008, cas en què la relació laboral o professional s’ha d’articular mitjançant un contracte que determini clarament les tasques laborals o professionals que es retribueixen, les quals han de ser diferents de les pròpies del càrrec de patró, amb l’autorització prèvia del Protectorat.</p>
-              <p>Quan no és patró, el director assisteix a totes les reunions del Patronat a què se’l convoca i pot intervenir-hi amb veu però sense vot.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-      </Accordion>
-
-      <Accordion periode="Capítol VI: Modificacions estatutàries.">
-        <AccordionItem Any="Article 31. Modificacions estatutàries.">
-          <Item>
-            <article>
-              <p>El Patronat, mitjançant un acord adoptat de conformitat amb l’establert en l’article 26 d’aquests estatuts i la normativa aplicable, i prèvia convocatòria expressa, pot modificar els estatuts, acordar la fusió, l’escissió o la dissolució o extinció de la Fundació, amb l’autorització del Protectorat d’acord amb la legislació aplicable.</p>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 32. Causes de dissolució.">
-          <Item>
-            <article>
-              <p>La Fundació es dissoldrà per les causes següents:</p>
-              <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
-                <li>Compliment íntegre de la finalitat per a la qual s’ha constituït o impossibilitat d’assolir-la, llevat que sigui procedent de modificar-la i que el Patronat n’acordi la modificació.</li>
-                <li>Il·licitud civil o penal de les seves activitats o finalitats declarada per una sentència ferma.</li>
-                <li>Obertura de la fase de liquidació en el concurs.</li>
-                <li>Les altres que estableixen la llei.</li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-        <AccordionItem Any="Article 33. Procediment de dissolució i destí del seu patrimoni.">
-          <Item>
-            <article>
-              <p>El procediment de dissolució de l'entitat es farà de la següent manera:</p>
-              <ol style="list-style-type: decimala; margin-left: 1.5rem;">
-                <li>La dissolució de la Fundació requereix l’acord del Patronat adoptat de conformitat amb l’establert en l’article 26 d’aquests estatuts i ha de ser aprovada pel Protectorat.</li>
-                <li>La dissolució de la Fundació obre el període de liquidació, la qual han de dur a terme el Patronat, els liquidadors, si n’hi ha, o, subsidiàriament, el Protectorat. L’extinció determina la cessió global de tots els actius i els passius de la Fundació. Aquesta cessió global, un cop determinats l’actiu i el passiu, s’ha de publicar en els termes exigits per la normativa vigent i, amb l’autorització prèvia del Protectorat, s’ha d’adjudicar el patrimoni a altres fundacions o entitats d’ensenyament, sense ànim de lucre, amb finalitats anàlogues a les de la Fundació. En tot cas, les entitats destinatàries del patrimoni han de ser entitats beneficiàries del mecenatge d’acord amb la legislació fiscal vigent.</li>
-                <li>Si no es pot fer una cessió global, cal procedir a la liquidació dels actius i els passius, i l’haver que en resulta se li ha de donar l’aplicació establerta en l’apartat 2.</li>
-              </ol>
-            </article>
-          </Item>
-        </AccordionItem>
-      </Accordion>
-    </article>
-  </section>
+    <Accordion periode="Capítol VI: Modificacions estatutàries.">
+      <AccordionItem Any="Article 31. Modificacions estatutàries.">
+        <Item>
+          <article>
+            <p>El Patronat, mitjançant un acord adoptat de conformitat amb l’establert en l’article 26 d’aquests estatuts i la normativa aplicable, i prèvia convocatòria expressa, pot modificar els estatuts, acordar la fusió, l’escissió o la dissolució o extinció de la Fundació, amb l’autorització del Protectorat d’acord amb la legislació aplicable.</p>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 32. Causes de dissolució.">
+        <Item>
+          <article>
+            <p>La Fundació es dissoldrà per les causes següents:</p>
+            <ol style="list-style-type: lower-alpha; margin-left: 1.5rem;">
+              <li>Compliment íntegre de la finalitat per a la qual s’ha constituït o impossibilitat d’assolir-la, llevat que sigui procedent de modificar-la i que el Patronat n’acordi la modificació.</li>
+              <li>Il·licitud civil o penal de les seves activitats o finalitats declarada per una sentència ferma.</li>
+              <li>Obertura de la fase de liquidació en el concurs.</li>
+              <li>Les altres que estableixen la llei.</li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+      <AccordionItem Any="Article 33. Procediment de dissolució i destí del seu patrimoni.">
+        <Item>
+          <article>
+            <p>El procediment de dissolució de l'entitat es farà de la següent manera:</p>
+            <ol style="list-style-type: decimala; margin-left: 1.5rem;">
+              <li>La dissolució de la Fundació requereix l’acord del Patronat adoptat de conformitat amb l’establert en l’article 26 d’aquests estatuts i ha de ser aprovada pel Protectorat.</li>
+              <li>La dissolució de la Fundació obre el període de liquidació, la qual han de dur a terme el Patronat, els liquidadors, si n’hi ha, o, subsidiàriament, el Protectorat. L’extinció determina la cessió global de tots els actius i els passius de la Fundació. Aquesta cessió global, un cop determinats l’actiu i el passiu, s’ha de publicar en els termes exigits per la normativa vigent i, amb l’autorització prèvia del Protectorat, s’ha d’adjudicar el patrimoni a altres fundacions o entitats d’ensenyament, sense ànim de lucre, amb finalitats anàlogues a les de la Fundació. En tot cas, les entitats destinatàries del patrimoni han de ser entitats beneficiàries del mecenatge d’acord amb la legislació fiscal vigent.</li>
+              <li>Si no es pot fer una cessió global, cal procedir a la liquidació dels actius i els passius, i l’haver que en resulta se li ha de donar l’aplicació establerta en l’apartat 2.</li>
+            </ol>
+          </article>
+        </Item>
+      </AccordionItem>
+    </Accordion>
+  </Article>
 </Layout>
-
-<style>
-  .title {
-    margin-top: 1.5rem;
-    display: inline-block;
-  }
-
-  .content {
-    list-style-type: square;
-    padding-left: 2rem;
-
-    li {
-      margin: 0;
-      padding: 0;
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
-
-  .hero {
-    background-color: var(--bg-light);
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem;
-    position: relative;
-
-    & h1 {
-      color: var(--fg-primary);
-    }
-
-    & .line-separator {
-      width: 50%;
-      height: 1px;
-      background-color: var(--fg-primary);
-      position: absolute;
-      bottom: calc(var(--header-height) - calc(var(--header-height) + calc(var(--header-height) / 1.7)));
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  section {
-    padding-top: calc(var(--header-height) + 2rem);
-
-    @media (width < 1024px) {
-      padding-top: var(--header-height);
-    }
-  }
-
-  article {
-    h2 {
-      margin-bottom: 1.1rem;
-      color: var(--fg-primary);
-      border-bottom: 1px solid var(--fg-primary);
-      font-size: 1.3rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-</style>

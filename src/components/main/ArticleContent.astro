@@ -1,0 +1,43 @@
+---
+const { idName, title } = Astro.props
+---
+
+<section id={idName} class="section-scroll">
+  <article>
+    <h2>{title}</h2>
+    <slot></slot>
+  </article>
+</section>
+
+<style>
+  section {
+    padding-top: calc(var(--header-height) + 2rem);
+
+    @media (width < 1024px) {
+      padding-top: var(--header-height);
+    }
+  }
+
+  article {
+    h2 {
+      margin-bottom: 1.1rem;
+      color: var(--fg-primary);
+      border-bottom: 1px solid var(--fg-primary);
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+  }
+</style>

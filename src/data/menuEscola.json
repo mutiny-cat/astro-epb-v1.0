@@ -1,7 +1,22 @@
-
 [
-  {"url": "/escola#historia-escola", "title": "Història de l'escola"},
-  {"url": "/escola#recursos-humans", "title": "Recursos humans"},
-  {"url": "/escola#cronologia", "title": "Cronologia"},
-  {"url": "/escola#estatuts", "title": "Estatuts"}
+  {
+    "url": "/escola#historia-escola",
+    "id": "historia-escola",
+    "title": "Història de l'escola"
+  },
+  {
+    "url": "/escola#recursos-humans",
+    "id": "recursos-humans",
+    "title": "Recursos humans"
+  },
+  {
+    "url": "/escola#cronologia",
+    "id": "cronologia",
+    "title": "Cronologia"
+  },
+  {
+    "url": "/escola#estatuts",
+    "id": "estatuts",
+    "title": "Estatuts"
+  }
 ]

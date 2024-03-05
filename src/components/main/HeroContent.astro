@@ -1,0 +1,33 @@
+---
+const { pageTitle } = Astro.props
+---
+
+<div class="hero">
+  <h1>{pageTitle}</h1>
+  <span class="line-separator"></span>
+</div>
+
+<style>
+  .hero {
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    position: relative;
+
+    & h1 {
+      color: var(--fg-primary);
+    }
+
+    & .line-separator {
+      width: 50%;
+      height: 1px;
+      background-color: var(--fg-primary);
+      position: absolute;
+      bottom: calc(var(--header-height) - calc(var(--header-height) + calc(var(--header-height) / 1.7)));
+    }
+  }
+</style>
