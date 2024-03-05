@@ -36,25 +36,31 @@ const { url, pageTitle, Menu } = Astro.props
     padding-left: 0;
   }
 
+  .nav-aside-item {
+    transition: background 200ms;
+  }
+
   .nav-aside-link {
     display: block;
     text-decoration: none;
-    font-family: 'Jaldi', sans-serif;
+    padding: .5rem .3rem;
+    position: relative;
+    font-family: var(--font-default);
+    font-size: .8rem;
     font-weight: 400;
     color: var(--fg-primary);
-    padding: .2rem .3rem;
     margin-right: 2rem;
-    position: relative;
+    transition: background 200ms;
 
     &:hover {
       background-color: var(--bg-lighter);
-      color: var(--fg-primaryAlt);
+      color: var(--fg-primary);
       border-radius: 2px;
 
       &:after {
         content: "\67";
         font-family: "epbicons", sans-serif;
-        font-weight: 400;
+        font-weight: 700;
         font-size: .9rem;
         position: absolute;
         right: .3rem;
@@ -64,12 +70,12 @@ const { url, pageTitle, Menu } = Astro.props
     &.is-active {
       background-color: var(--fg-primaryAlt);
       color: white;
-      font-weight: 400;
+      font-weight: 700;
       border-radius: 2px;
 
       &:after {
         content: "\67";
-        font-family: "epbicons",sans-serif;
+        font-family: "epbicons", sans-serif;
         font-weight: 700;
         font-size: .9rem;
         position: absolute;
@@ -82,6 +88,21 @@ const { url, pageTitle, Menu } = Astro.props
 <script>
   const menuLi = document.querySelectorAll('.nav-aside-item')
   const menuItem = document.querySelectorAll('.nav-aside-link')
+  const makeNavLinksSmooth = ( ) => {
+    const navLinks = document.querySelectorAll( '.nav-aside-link' );
+
+    for ( let n in navLinks ) {
+      if ( navLinks.hasOwnProperty( n ) ) {
+        navLinks[ n ].addEventListener( 'click', e => {
+          e.preventDefault( );
+          document.querySelector( navLinks[ n ].hash )
+            .scrollIntoView( {
+              behavior: "smooth"
+            } );
+        } );
+      }
+    }
+  }
 
   menuLi.forEach((cadLi, i) => {
     menuLi[i].addEventListener('click', () => {
@@ -94,4 +115,6 @@ const { url, pageTitle, Menu } = Astro.props
       menuItem[i].classList.add('is-active')
     })
   })
+
+  makeNavLinksSmooth( );
 </script>
