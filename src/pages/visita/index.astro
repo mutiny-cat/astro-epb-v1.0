@@ -6,61 +6,446 @@ const pageTitle = "Visita'ns"
 
 <Layout pageTitle={pageTitle}>
   <section>
+    <article class="adaptat">
+      <p class="icon-visit-adapted"></p>
+      <h2>Local adaptat</h2>
+    </article>
+  </section>
+
+  <section>
+    <h2>Horaris</h2>
+    <div class="horaris">
+      <article class="card-horari">
+        <h3>Dimarts:</h3>
+        <ul>
+          <li>10 h a 13 h</li>
+          <li>17 h a 20 h</li>
+        </ul>
+      </article>
+      <article class="card-horari">
+        <h3>Dimecres:</h3>
+        <ul>
+          <li>10 h a 13 h</li>
+        </ul>
+      </article>
+      <article class="card-horari">
+        <h3>Dijous:</h3>
+        <ul>
+          <li>17 h a 20 h</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Com arribar</h2>
+    <article class="arribar">
+      <a href="https://w33.bcn.cat/planolBCN/ca/guia/address/Sant-Erasme,-1/zoom/3/position/430160,4581423/" title="Ves al mapa" target="_blank">
+        <img class="article-img" src="/assets/images/planol/planol.png">
+      </a>
+      <div>
+        <p><span class="icon-visit-geo"></span>C. de Sant Erasme, 1, Ciutat Vella, 08001 Barcelona</p>
+        <p><span class="icon-contact-phone"></span>93 329 65 38</p>
+      </div>
+    </article>
+    <article class="transport">
+      <div class="card-transport">
+        <header>
+          <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 54">
+            <path d="M0.00403823 27L36.1539 0L72.3079 27L36.1539 54L0 27H0.00403823Z" fill="#CC151D"/>
+            <path d="M36.0772 28.8225L31.8226 13.498H22.5983V38.0639H29.5034V29.2852L29.059 22.4658L33.2934 38.0679H38.8409L42.9864 23.1336L42.5177 29.1001V38.249H49.7138V13.5905H40.2227L36.0772 28.8225Z" fill="white"/>
+          </svg>
+        </header>
+        <footer>
+          <ul>
+            <li>
+              <div>
+                <h4 class="square l2">L2</h4>
+                <p><span class="icon icon-visit-metro"></span><strong>Sant Antoni</strong><em>Sortida Villarroel</em></p>
+                <p><span class="icon icon-visit-metro"></span><strong>Universitat</strong><em>Sortida Sant Antoni</em></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h4 class="square l1">L1</h4>
+                <p><span class="icon icon-visit-metro"></span><strong>Urgell</strong><em>Sortida Villarroel/Sepúlveda</em></p>
+                <p><span class="icon icon-visit-metro"></span><strong>Universitat</strong><em>Sortida Sant Antoni</em></p>
+              </div>
+            </li>
+          </ul>
+        </footer>
+      </div>
+      <div class="card-transport">
+        <header>
+          <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <path d="M26 51.9961C40.3579 51.9961 52 40.3579 52 25.9961C52 11.6344 40.3579 0 26 0C11.6421 0 0 11.6383 0 26C0 40.3617 11.6383 52 26 52V51.9961Z" fill="#E10F1B"/>
+            <path d="M34.5561 24.7656C36.832 23.616 38.2825 21.5175 38.2825 18.9175C38.2825 12.7416 32.932 11.4416 28.0561 11.5959H14.732V40.8439H28.3801C34.5561 40.8439 39.4282 38.7416 39.4282 31.7439C39.4282 28.3416 37.4801 25.7416 34.5522 24.7695L34.5561 24.7656ZM22.208 17.4439H27.8825C29.5065 17.4439 30.9608 18.092 30.9608 20.2175C30.9608 22.3431 29.1825 23.1416 27.8825 23.1416H22.208V17.4439ZM28.0561 34.8416H22.0344V28.0175H28.0561C30.332 28.0175 32.1296 28.8392 32.1296 31.5935C32.1296 34.0199 30.332 34.8416 28.0561 34.8416Z" fill="white"/>
+          </svg>
+        </header>
+        <footer>
+          <ul>
+            <li>
+              <div>
+                <p>icon</p>
+                <p>parada</p>
+                <p>parada</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>icon</p>
+                <p>parada</p>
+                <p>parada</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>icon</p>
+                <p>parada</p>
+                <p>parada</p>
+              </div>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+  </section>
+
+  <section>
     <div class="wrapper">
-      <h1>Visita'ns</h1>
-      <ul>
-        <li>
+      <article>
+        <h2>Com arribar</h2>
+        <div class="grid">
           <div>
-            <h3>Dades de contacte</h3>
-            <ol>
-              <li>Adreça</li>
-              <li>Telèfon</li>
-              <li>e-mail</li>
-            </ol>
+            <header>
+              <h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 54">
+                  <path d="M0.00403823 27L36.1539 0L72.3079 27L36.1539 54L0 27H0.00403823Z" fill="#CC151D"/>
+                  <path d="M36.0772 28.8225L31.8226 13.498H22.5983V38.0639H29.5034V29.2852L29.059 22.4658L33.2934 38.0679H38.8409L42.9864 23.1336L42.5177 29.1001V38.249H49.7138V13.5905H40.2227L36.0772 28.8225Z" fill="white"/>
+                </svg>
+              </h4>
+            </header>
+            <footer>
+              <div style="margin-bottom: 1.5rem;">
+                <h4 class="square l2">L2</h4>
+                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Sant Antoni
+                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Villarroel</span>
+                      </span>
+                    </p>
+                  </li>
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Universitat
+                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Sant Antoni</span>
+                      </span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-bottom: 1.5rem;">
+                <h4 class="square l1">L1</h4>
+                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Urgell
+                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Villarroel/Sepúlveda</span>
+                      </span>
+                    </p>
+                  </li>
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Universitat
+                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Ronda Sant Antoni</span>
+                      </span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </footer>
           </div>
-        </li>
-        <li>
           <div>
-            <h3>Com arribar</h3>
-            <ol>
-              <li>Metro</li>
-              <li>Bus</li>
-              <li>Tram</li>
-              <li>Tren</li>
-            </ol>
+            <header>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <path d="M26 51.9961C40.3579 51.9961 52 40.3579 52 25.9961C52 11.6344 40.3579 0 26 0C11.6421 0 0 11.6383 0 26C0 40.3617 11.6383 52 26 52V51.9961Z" fill="#E10F1B"/>
+                <path d="M34.5561 24.7656C36.832 23.616 38.2825 21.5175 38.2825 18.9175C38.2825 12.7416 32.932 11.4416 28.0561 11.5959H14.732V40.8439H28.3801C34.5561 40.8439 39.4282 38.7416 39.4282 31.7439C39.4282 28.3416 37.4801 25.7416 34.5522 24.7695L34.5561 24.7656ZM22.208 17.4439H27.8825C29.5065 17.4439 30.9608 18.092 30.9608 20.2175C30.9608 22.3431 29.1825 23.1416 27.8825 23.1416H22.208V17.4439ZM28.0561 34.8416H22.0344V28.0175H28.0561C30.332 28.0175 32.1296 28.8392 32.1296 31.5935C32.1296 34.0199 30.332 34.8416 28.0561 34.8416Z" fill="white"/>
+              </svg>
+            </header>
+            <footer>
+              <div style="margin-bottom: 1.5rem;">
+                <h4 class="circle red" style="font-weight: bold; font-size: 12px;">120</h4>
+                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-bus" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Riera Alta - Nou Dulce</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-bottom: 1.5rem;">
+                <ul style="display: flex">
+                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle red">55</li>
+                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle purple">D50</li>
+                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle green">V11</li>
+                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle blue">H16</li>
+                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle red" >120</li>
+                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle red">141</li>
+                </ul>
+                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-bus" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Tamarit - Mercat de Sant Antoni</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-bottom: 1.5rem;">
+                <ul style="display: flex">
+                  <li style="margin-right: .5rem" class="circle red">52</li>
+                  <li style="margin-right: .5rem" class="circle blue">H12</li>
+                </ul>
+                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
+                  <li>
+                    <p style="display: flex; align-items: center;">
+                      <span class="icon-visit-bus" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
+                      <span style="font-weight: bold">Gran Via - Urgell</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </footer>
           </div>
-        </li>
-        <li>
-          <div>
-            <h3>Ubicació</h3>
-            <ol>
-              <li>Mapa</li>
-            </ol>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </article>
     </div>
   </section>
 </Layout>
 
 <style>
-  section {
-    padding: var(--header-height) 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-
-  .wrapper {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
+  .card-transport {
+    background-color: chartreuse;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer {
+
+    }
+
+    ul {
+      background-color: cornflowerblue;
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li div h4 {
+      margin: 0 auto;
+    }
+  }
+
+  section {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: var(--header-height);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--footer-height);
+  }
+
+  .adaptat {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 5rem;
+      line-height: 0;
+    }
+  }
+
+  .horaris {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card-horari {
+    padding: 1.5rem 0;
+    width: auto;
+
+    @media (width < 640px) {
+      width: 100%;
+    }
+
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+      text-align: center;
+
+      &:before {
+        content: "\42";
+        font-family: var(--font-icon);
+        font-size: 2rem;
+        margin-right: .5rem;
+        line-height: 0;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 1rem 0 0 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: .5rem;
+      font-weight: 700;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &:before {
+        content: "\44";
+        font-family: var(--font-icon);
+        font-size: 1.5rem;
+        margin-right: .5rem;
+        line-height: 0;
+      }
+    }
+  }
+
+  .arribar {
+    img {
+      display: block;
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+      max-width: 960px;
+      width: 100%;
+      transition: box-shadow .3s ease-in-out;
+
+      &:hover {
+        box-shadow: var(--box-shadow2);
+        transition: box-shadow .3s ease-in-out;
+      }
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      font-size: .8rem;
+      font-weight: 700;
+
+      @media (width < 640px) {
+        flex-direction: column;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 0;
+        margin-bottom: 0;
+
+        @media (width < 640px) {
+          margin-bottom: .5rem;
+        }
+      }
+
+      span {
+        margin-right: .3rem;
+      }
+    }
+  }
+
+  .transport {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @media (width < 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .svg {
+    height: 48px;
+  }
+
+  .icon {
+    margin-right: .3rem;
+    line-height: 0;
+    font-size: 18px;
+  }
+
+  .square, .circle {
+    width: 32px;
+    height: 32px;
+    padding: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  .red {
+    background-color: var(--bus-color-red);
+  }
+
+  .blue {
+    background-color: var(--bus-color-blue);
+  }
+
+  .purple {
+    background-color: var(--bus-color-purple);
+  }
+
+  .green {
+    background-color: var(--bus-color-green);
+  }
+
+  .l2 {
+    background-color: var(--metro-color-l2);
+  }
+
+  .l1 {
+    background-color: var(--metro-color-l1);
   }
 </style>

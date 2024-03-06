@@ -58,6 +58,9 @@ const { title, description, faviconURL = "/assets/favicons/favicon-96.png", imag
 
 <style>
   .wrapper {
-    padding-top: var(--header-height);
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
   }
 </style>

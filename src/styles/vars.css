@@ -22,6 +22,14 @@
   --color-text: #687782;
   --color-title: #687782;
 
+  --bus-color-red: rgb(218, 41, 28); /*55 - 120 - 141 - 52*/
+  --bus-color-blue: rgb(0, 56 , 136); /*H16 - H12*/
+  --bus-color-purple: rgb(147, 16, 126); /*D50*/
+  --bus-color-green: rgb(106, 176, 35); /*V11*/
+
+  --metro-color-l1: rgb(206, 17, 38); /*L1*/
+  --metro-color-l2:  rgb(147, 36, 143); /*L2*/
+
   --sh-header: rgba(30, 136, 143, .1);
   --sh-card: rgba(27, 54, 92, .1);
 
