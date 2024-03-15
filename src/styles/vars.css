@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
 :root {
   --fg-primary: #00684F;
   --fg-primaryAlt: #00AA82;
@@ -56,7 +58,8 @@
 
   --font-button: 'Jaldi', sans-serif;
   /*--font-default: "Manrope Variable", sans-serif;*/
-  --font-default: "Open Sans Variable", sans-serif;
+  /*--font-default: "Open Sans Variable", sans-serif;*/
+  --font-default: "Alegreya", serif;
   --font-title: "Jaldi", sans-serif;
   --font-hero: "Cinzel Variable", serif;
   --font-hero-content: "Martel", serif;

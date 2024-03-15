@@ -59,17 +59,25 @@ const pageTitle = "Visita'ns"
         <footer>
           <ul>
             <li>
-              <div>
-                <h4 class="square l2">L2</h4>
-                <p><span class="icon icon-visit-metro"></span><strong>Sant Antoni</strong><em>Sortida Villarroel</em></p>
-                <p><span class="icon icon-visit-metro"></span><strong>Universitat</strong><em>Sortida Sant Antoni</em></p>
+              <div class="global">
+                <div class="lines">
+                  <span class="square l2">L2</span>
+                </div>
+                <div class="stop stop-metro">
+                  <p><span class="icon icon-visit-metro"></span><strong>Sant Antoni</strong><em>Sortida Villarroel</em></p>
+                  <p><span class="icon icon-visit-metro"></span><strong>Universitat</strong><em>Sortida Sant Antoni</em></p>
+                </div>
               </div>
             </li>
             <li>
-              <div>
-                <h4 class="square l1">L1</h4>
-                <p><span class="icon icon-visit-metro"></span><strong>Urgell</strong><em>Sortida Villarroel/Sepúlveda</em></p>
-                <p><span class="icon icon-visit-metro"></span><strong>Universitat</strong><em>Sortida Sant Antoni</em></p>
+              <div class="global">
+                <div class="lines">
+                  <span class="square l1">L1</span>
+                </div>
+                <div class="stop stop-metro">
+                  <p><span class="icon icon-visit-metro"></span><strong>Urgell</strong><em>Sortida Villarroel/Sepúlveda</em></p>
+                  <p><span class="icon icon-visit-metro"></span><strong>Universitat</strong><em>Sortida Sant Antoni</em></p>
+                </div>
               </div>
             </li>
           </ul>
@@ -85,24 +93,39 @@ const pageTitle = "Visita'ns"
         <footer>
           <ul>
             <li>
-              <div>
-                <p>icon</p>
-                <p>parada</p>
-                <p>parada</p>
+              <div class="global">
+                <div class="lines">
+                  <span class="circle red">55</span>
+                  <span class="circle purple">D50</span>
+                  <span class="circle green">V11</span>
+                  <span class="circle blue">H16</span>
+                  <span class="circle red">120</span>
+                  <span class="circle red">141</span>
+                </div>
+                <div class="stop stop-bus">
+                  <p><span class="icon icon-visit-bus"></span><strong>Tamarit - Mercat de Sant Antoni</strong></p>
+                </div>
               </div>
             </li>
             <li>
-              <div>
-                <p>icon</p>
-                <p>parada</p>
-                <p>parada</p>
+              <div class="global">
+                <div class="lines">
+                  <span class="circle red">52</span>
+                  <span class="circle blue">H12</span>
+                </div>
+                <div class="stop stop-bus">
+                  <p><span class="icon icon-visit-bus"></span><strong>Gran Via - Urgell</strong></p>
+                </div>
               </div>
             </li>
             <li>
-              <div>
-                <p>icon</p>
-                <p>parada</p>
-                <p>parada</p>
+              <div class="global">
+                <div class="lines">
+                  <span class="circle red">120</span>
+                </div>
+                <div class="stop stop-bus">
+                  <p><span class="icon icon-visit-bus"></span><strong>Riera Alta - Nou Dulce</strong></p>
+                </div>
               </div>
             </li>
           </ul>
@@ -110,136 +133,95 @@ const pageTitle = "Visita'ns"
       </div>
     </article>
   </section>
-
-  <section>
-    <div class="wrapper">
-      <article>
-        <h2>Com arribar</h2>
-        <div class="grid">
-          <div>
-            <header>
-              <h4>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 54">
-                  <path d="M0.00403823 27L36.1539 0L72.3079 27L36.1539 54L0 27H0.00403823Z" fill="#CC151D"/>
-                  <path d="M36.0772 28.8225L31.8226 13.498H22.5983V38.0639H29.5034V29.2852L29.059 22.4658L33.2934 38.0679H38.8409L42.9864 23.1336L42.5177 29.1001V38.249H49.7138V13.5905H40.2227L36.0772 28.8225Z" fill="white"/>
-                </svg>
-              </h4>
-            </header>
-            <footer>
-              <div style="margin-bottom: 1.5rem;">
-                <h4 class="square l2">L2</h4>
-                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Sant Antoni
-                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Villarroel</span>
-                      </span>
-                    </p>
-                  </li>
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Universitat
-                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Sant Antoni</span>
-                      </span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div style="margin-bottom: 1.5rem;">
-                <h4 class="square l1">L1</h4>
-                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Urgell
-                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Villarroel/Sepúlveda</span>
-                      </span>
-                    </p>
-                  </li>
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-metro" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Universitat
-                        <span style="font-weight: normal; font-size: 12px; font-style: italic;">- Sortida Ronda Sant Antoni</span>
-                      </span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </footer>
-          </div>
-          <div>
-            <header>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                <path d="M26 51.9961C40.3579 51.9961 52 40.3579 52 25.9961C52 11.6344 40.3579 0 26 0C11.6421 0 0 11.6383 0 26C0 40.3617 11.6383 52 26 52V51.9961Z" fill="#E10F1B"/>
-                <path d="M34.5561 24.7656C36.832 23.616 38.2825 21.5175 38.2825 18.9175C38.2825 12.7416 32.932 11.4416 28.0561 11.5959H14.732V40.8439H28.3801C34.5561 40.8439 39.4282 38.7416 39.4282 31.7439C39.4282 28.3416 37.4801 25.7416 34.5522 24.7695L34.5561 24.7656ZM22.208 17.4439H27.8825C29.5065 17.4439 30.9608 18.092 30.9608 20.2175C30.9608 22.3431 29.1825 23.1416 27.8825 23.1416H22.208V17.4439ZM28.0561 34.8416H22.0344V28.0175H28.0561C30.332 28.0175 32.1296 28.8392 32.1296 31.5935C32.1296 34.0199 30.332 34.8416 28.0561 34.8416Z" fill="white"/>
-              </svg>
-            </header>
-            <footer>
-              <div style="margin-bottom: 1.5rem;">
-                <h4 class="circle red" style="font-weight: bold; font-size: 12px;">120</h4>
-                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-bus" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Riera Alta - Nou Dulce</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div style="margin-bottom: 1.5rem;">
-                <ul style="display: flex">
-                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle red">55</li>
-                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle purple">D50</li>
-                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle green">V11</li>
-                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle blue">H16</li>
-                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle red" >120</li>
-                  <li style="margin-right: .5rem; font-weight: bold; font-size: 12px;" class="circle red">141</li>
-                </ul>
-                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-bus" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Tamarit - Mercat de Sant Antoni</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div style="margin-bottom: 1.5rem;">
-                <ul style="display: flex">
-                  <li style="margin-right: .5rem" class="circle red">52</li>
-                  <li style="margin-right: .5rem" class="circle blue">H12</li>
-                </ul>
-                <ul style="margin: .5rem 0; padding-left: 24px; font-size: 14px;">
-                  <li>
-                    <p style="display: flex; align-items: center;">
-                      <span class="icon-visit-bus" style="line-height: 0; margin-right: .5rem; font-size: 20px; font-weight: bold;"></span>
-                      <span style="font-weight: bold">Gran Via - Urgell</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
 </Layout>
 
 <style>
+  .global {
+    margin-bottom: 1rem;
+  }
+
+  .lines {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    gap: .5rem;
+
+    @media (width < 768px) {
+      justify-content: center;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  .stop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: .5rem;
+
+    @media (width < 768px) {
+      justify-content: center;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    strong {
+      line-height: 0;
+
+      &:before {
+        content: "-";
+        margin-right: .25rem;
+      }
+    }
+
+    em {
+      &:before {
+        content: "-";
+        margin: .25rem;
+      }
+    }
+  }
+
+  .stop-metro {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 3rem;
+
+    @media (width < 768px) {
+      align-items: center;
+      margin-left: 0;
+    }
+  }
+
+  .stop-bus {
+    margin-left: 3rem;
+
+    @media (width < 768px) {
+      margin-left: 0;
+    }
+  }
+
   .card-transport {
-    background-color: chartreuse;
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 
     header {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 1rem 0;
     }
 
     footer {
@@ -247,7 +229,6 @@ const pageTitle = "Visita'ns"
     }
 
     ul {
-      background-color: cornflowerblue;
       list-style-type: none;
       padding-left: 0;
     }
@@ -262,6 +243,10 @@ const pageTitle = "Visita'ns"
     width: 90%;
     margin: 0 auto;
     padding-top: var(--header-height);
+
+    &:last-child {
+      padding-bottom: var(--header-height);
+    }
   }
 
   h2 {
@@ -390,6 +375,7 @@ const pageTitle = "Visita'ns"
   }
 
   .transport {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -417,8 +403,6 @@ const pageTitle = "Visita'ns"
     justify-content: center;
     align-items: center;
     color: white;
-    font-weight: 700;
-    font-size: 16px;
   }
 
   .circle {

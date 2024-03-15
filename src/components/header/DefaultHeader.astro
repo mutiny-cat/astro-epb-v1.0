@@ -1,4 +1,6 @@
 ---
+import Logo from "./partials/logo.astro"
+
 const menuItems = [
   {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/escola", "title": "L'escola"},
   {"classItemLi": "menu-li", "classItemA": "menu-a", "url": "/formacio", "title": "Formació"},
@@ -14,12 +16,7 @@ const menuItems = [
 
 <header>
   <div class="wrapper">
-    <a class="header-logo" href="/" title="Inici">
-      <picture>
-        <source srcset="/assets/images/logotips/panot-bcn.svg" media="(max-width: 1365px)" />
-        <img class="header-img" src="/assets/images/logotips/logo-escola.svg" alt="Escola de Puntaires de Barcelona" />
-      </picture>
-    </a>
+    <Logo />
     <button class="header-toggle">
       <span class="header-icon icon-menu-open"></span>
     </button>
@@ -49,20 +46,6 @@ const menuItems = [
     left: 0;
     z-index: 3;
 
-    & .header-logo {
-      width: calc(var(--header-height) * 1.7);
-
-      @media (width < 1366px) {
-        width: calc(var(--header-height) / 1.5);
-        height: calc(var(--header-height) / 1.5);
-      }
-    }
-
-    & .header-img {
-      display: block;
-      width: 100%;
-    }
-
     & .header-toggle {
       background-color: transparent;
       color: var(--fg-primary);
@@ -90,7 +73,6 @@ const menuItems = [
   }
 
   nav {
-
     @media (width < 1366px) {
       display: none;
 
@@ -144,8 +126,9 @@ const menuItems = [
     padding: 0 .3rem;
     display: inline-block;
     text-decoration: none;
-    font-size: 1rem;
     font-family: var(--font-default);
+    font-size: 1rem;
+    font-weight: bold;
 
     &:hover {
       color: var(--fg-primary);
