@@ -35,13 +35,13 @@
     "title": "Mecanització de la punta"
   },
   {
-    "url": "/historia-de-la-punta#contes-i-llegendes",
-    "id": "contes-i-llegendes",
-    "title": "Contes i llegendes"
-  },
-  {
     "url": "/historia-de-la-punta#contraban-i-fils",
     "id": "contraban-i-fils",
     "title": "Contraban i fils"
+  },
+  {
+    "url": "/historia-de-la-punta#contes-i-llegendes",
+    "id": "contes-i-llegendes",
+    "title": "Contes i llegendes"
   }
 ]
